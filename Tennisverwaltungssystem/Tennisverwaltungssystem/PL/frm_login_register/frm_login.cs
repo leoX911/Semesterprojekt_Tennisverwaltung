@@ -31,6 +31,7 @@ namespace Tennisverwaltungssystem.frm_login
         private void Btn_login_Click(object sender, EventArgs e)
         {
             //zewas do war der Patrick
+            //zewas i ibin leo
 
             if (txtbox_EMail.Text != "" || txtbox_Passwort.Text != "")
             {
