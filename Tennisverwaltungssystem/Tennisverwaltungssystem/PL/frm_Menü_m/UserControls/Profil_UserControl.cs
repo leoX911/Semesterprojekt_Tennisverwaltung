@@ -16,7 +16,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
      
         public Profil_UserControl()
         {
-            MessageBox.Show("lolo");
+       
             InitializeComponent();
 
 
