@@ -16,35 +16,35 @@ namespace Tennisverwaltungssystem.frm_login
 {
     public partial class frm_login : Form
     {
-     
+
         public frm_login()
         {
             InitializeComponent();
             txtbox_Passwort.PasswordChar = '*';
             DAL.DAL_Login.CreateConnection();
             if (!DAL.DAL_Login.Connect()) return;
-            
+
             //login1.BringToFront();
             //register1.Hide();
         }
 
         private void Btn_login_Click(object sender, EventArgs e)
         {
-            
+            //zewas do war der Patrick
 
-            if (txtbox_EMail.Text !="" || txtbox_Passwort.Text!="")
+            if (txtbox_EMail.Text != "" || txtbox_Passwort.Text != "")
             {
                 User user1 = new User();
                 user1.EMail = txtbox_EMail.Text;
                 user1.Passwort = txtbox_Passwort.Text;
-                
+
                 if (DAL.DAL_Login.IsLogin(user1))
                 {
-                    if (user1.isAdmin==1)
+                    if (user1.isAdmin == 1)
                     {
                         DialogResult result = MessageBox.Show("Willst du dich als Admin anmelden", "Admin/Mitglied", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-                        if (result==DialogResult.Yes)
+                        if (result == DialogResult.Yes)
                         {
                             Close();
                         }
@@ -54,7 +54,7 @@ namespace Tennisverwaltungssystem.frm_login
                             überischtform.Show();
                             this.Hide();
                         }
-                        
+
                     }
                     else
                     {
@@ -62,7 +62,7 @@ namespace Tennisverwaltungssystem.frm_login
                         überischtform.Show();
                         this.Hide();
                     }
-               
+
                 }
                 else
                 {
@@ -73,9 +73,9 @@ namespace Tennisverwaltungssystem.frm_login
             {
                 MessageBox.Show("Eingabe ist fehlerhaft");
             }
-           
-             
-            
+
+
+
 
 
         }
