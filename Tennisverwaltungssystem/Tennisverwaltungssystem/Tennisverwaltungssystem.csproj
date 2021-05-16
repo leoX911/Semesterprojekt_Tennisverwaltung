@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D3C4F7E-661F-4D5F-A1B7-E09AF18E3AB6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tennisverwaltungssystem</RootNamespace>
+    <AssemblyName>Tennisverwaltungssystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="JTextBox">
+      <HintPath>..\..\..\JTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Schläger.cs" />
+    <Compile Include="BL\User.cs" />
+    <Compile Include="DAL\DAL_Ausleihen.cs" />
+    <Compile Include="DAL\DAL_Login.cs" />
+    <Compile Include="PL\frm_Kontakt_Hilfe\frm_Hilfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frm_Kontakt_Hilfe\frm_Hilfe.Designer.cs">
+      <DependentUpon>frm_Hilfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frm_Kontakt_Hilfe\frm_Kontakt_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frm_Kontakt_Hilfe\frm_Kontakt_.Designer.cs">
+      <DependentUpon>frm_Kontakt_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frm_login_register\frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frm_login_register\frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frm_login_register\frm_register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frm_login_register\frm_register.Designer.cs">
+      <DependentUpon>frm_register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\Ausleihen_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\Ausleihen_UserControl.Designer.cs">
+      <DependentUpon>Ausleihen_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\Buchen_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\Buchen_UserControl.Designer.cs">
+      <DependentUpon>Buchen_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\Profil_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\Profil_UserControl.Designer.cs">
+      <DependentUpon>Profil_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\Statistiken_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\Statistiken_UserControl.Designer.cs">
+      <DependentUpon>Statistiken_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\Überischt_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\Überischt_UserControl.Designer.cs">
+      <DependentUpon>Überischt_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\Übersicht_m.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\Übersicht_m.Designer.cs">
+      <DependentUpon>Übersicht_m.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\frm_Kontakt_Hilfe\frm_Hilfe.resx">
+      <DependentUpon>frm_Hilfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frm_Kontakt_Hilfe\frm_Kontakt_.resx">
+      <DependentUpon>frm_Kontakt_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frm_login_register\frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frm_login_register\frm_register.resx">
+      <DependentUpon>frm_register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frm_Menü_m\UserControls\Ausleihen_UserControl.resx">
+      <DependentUpon>Ausleihen_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frm_Menü_m\UserControls\Buchen_UserControl.resx">
+      <DependentUpon>Buchen_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frm_Menü_m\UserControls\Profil_UserControl.resx">
+      <DependentUpon>Profil_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frm_Menü_m\UserControls\Statistiken_UserControl.resx">
+      <DependentUpon>Statistiken_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frm_Menü_m\UserControls\Überischt_UserControl.resx">
+      <DependentUpon>Überischt_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frm_Menü_m\Übersicht_m.resx">
+      <DependentUpon>Übersicht_m.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\j.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profilpic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tchard_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background_Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login_Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Feedback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Postanschrift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Geschäftliches.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adressen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KONTAKT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\übersicht_tennisclub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schläger IST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schläger EXT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schläger Kids.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schläger LGT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schläger MP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schläger SPD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_Championship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_KidsBälle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_Nr1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_Pro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_Team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schläger EXT1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schläger IST1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schläger EXT2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schläger Kids1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schläger LGT1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schläger MP1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schläger SPD1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_Championship1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_Green1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_KidsBälle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_Nr11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_Pro1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Head_Team1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tennisball-ist-auf-der-aufschlagvertikale-40803477.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\+_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hilffe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profilpic1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login_Background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_upload1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload4.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
