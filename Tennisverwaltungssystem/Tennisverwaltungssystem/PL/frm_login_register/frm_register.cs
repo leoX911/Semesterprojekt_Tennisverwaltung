@@ -14,7 +14,9 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
 {
     public partial class frm_register : Form
     {
-        
+       
+        byte[] ArrNonProfil = System.IO.File.ReadAllBytes("C:\\Users\\leoxo\\Desktop\\Semesterprojekt_Tennisverwaltung\\Fotos\\ProfilPicNone.jpg");
+
         string base64text;
         User user1;
         Bitmap image;
@@ -139,17 +141,27 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
                 user1.isAdmin = 0;
                 user1.isMitglied = 0;
                 user1.Hausnummer = 0;
+
+                if (base64text == null)
+                {
+                    base64text = Convert.ToBase64String(ArrNonProfil);
+                }
+
+
                 user1.ProfilCode = base64text;
+                
+              
 
                 if (DAL.DAL_Login.IsRegistered(user1))
                 {
                     MessageBox.Show("Eingabe erfolgreich");
-                    MessageBox.Show("Du bisst jetzt in der Datenbank gespeichert");
+                   
                 }
                 else
                 {
                     MessageBox.Show("Eingabe fehlgeschlagen");
                 }
+                
             }
            
           
@@ -163,6 +175,8 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
 
         private void Btn_uploadprofil_Click(object sender, EventArgs e)
         {
+
+           
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
 
@@ -177,11 +191,13 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
            
 
             }
+           
         }
 
         private void Btn_delete_Click(object sender, EventArgs e)
         {
             picbox_profil.Image = null;
+            base64text = null;
         }
     }
 }
