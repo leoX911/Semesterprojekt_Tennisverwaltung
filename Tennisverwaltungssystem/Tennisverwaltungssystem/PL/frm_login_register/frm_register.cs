@@ -155,7 +155,10 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
                 if (DAL.DAL_Login.IsRegistered(user1))
                 {
                     MessageBox.Show("Eingabe erfolgreich");
-                   
+                    frm_login.frm_login formlogin = new frm_login.frm_login();
+                    formlogin.Show();
+                    this.Hide();
+
                 }
                 else
                 {

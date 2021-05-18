@@ -36,9 +36,12 @@ namespace Tennisverwaltungssystem.frm_login
 
             if (txtbox_EMail.Text != "" || txtbox_Passwort.Text != "")
             {
-                User user1 = new User();
-                user1.EMail = txtbox_EMail.Text;
-                user1.Passwort = txtbox_Passwort.Text;
+                User user1 = new User()
+                {
+                    EMail = txtbox_EMail.Text,
+                    Passwort = txtbox_Passwort.Text
+                };
+            
 
                 if (DAL.DAL_Login.IsLogin(user1))
                 {

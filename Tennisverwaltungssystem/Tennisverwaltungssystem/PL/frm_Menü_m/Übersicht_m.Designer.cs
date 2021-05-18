@@ -30,9 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Übersicht_M));
             this.pnl_background_home = new System.Windows.Forms.Panel();
+            this.btn_übersicht_m = new System.Windows.Forms.Button();
+            this.btn_statistiken_m = new System.Windows.Forms.Button();
             this.Membership_m = new System.Windows.Forms.Label();
+            this.btn_buchen_m = new System.Windows.Forms.Button();
             this.lbl_Username_m = new System.Windows.Forms.Label();
+            this.btn_ausleihen_m = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_profil_m = new System.Windows.Forms.Button();
             this.pnl_headerm2 = new System.Windows.Forms.Panel();
             this.btn_navbar_headline = new System.Windows.Forms.Button();
             this.pnl_header_m = new System.Windows.Forms.Panel();
@@ -46,11 +51,6 @@
             this.statistiken_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Statistiken_UserControl();
             this.überischt_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Überischt_UserControl();
             this.buchen_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Buchen_UserControl();
-            this.btn_profil_m = new System.Windows.Forms.Button();
-            this.btn_ausleihen_m = new System.Windows.Forms.Button();
-            this.btn_buchen_m = new System.Windows.Forms.Button();
-            this.btn_statistiken_m = new System.Windows.Forms.Button();
-            this.btn_übersicht_m = new System.Windows.Forms.Button();
             this.pnl_background_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_headerm2.SuspendLayout();
@@ -78,6 +78,53 @@
             this.pnl_background_home.Size = new System.Drawing.Size(241, 661);
             this.pnl_background_home.TabIndex = 0;
             // 
+            // btn_übersicht_m
+            // 
+            this.btn_übersicht_m.BackColor = System.Drawing.Color.Transparent;
+            this.btn_übersicht_m.FlatAppearance.BorderSize = 0;
+            this.btn_übersicht_m.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
+            this.btn_übersicht_m.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
+            this.btn_übersicht_m.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_übersicht_m.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_übersicht_m.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_übersicht_m.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_übersicht_m.Location = new System.Drawing.Point(-1, 226);
+            this.btn_übersicht_m.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_übersicht_m.Name = "btn_übersicht_m";
+            this.btn_übersicht_m.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn_übersicht_m.Size = new System.Drawing.Size(241, 51);
+            this.btn_übersicht_m.TabIndex = 0;
+            this.btn_übersicht_m.Tag = "lol";
+            this.btn_übersicht_m.Text = "ÜBERSICHT";
+            this.btn_übersicht_m.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_übersicht_m.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btn_übersicht_m.UseVisualStyleBackColor = false;
+            this.btn_übersicht_m.Click += new System.EventHandler(this.Btn_übersicht_m_Click);
+            this.btn_übersicht_m.Leave += new System.EventHandler(this.Btn_übersicht_m_Leave);
+            // 
+            // btn_statistiken_m
+            // 
+            this.btn_statistiken_m.BackColor = System.Drawing.Color.Transparent;
+            this.btn_statistiken_m.FlatAppearance.BorderSize = 0;
+            this.btn_statistiken_m.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
+            this.btn_statistiken_m.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
+            this.btn_statistiken_m.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_statistiken_m.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_statistiken_m.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_statistiken_m.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_statistiken_m.Location = new System.Drawing.Point(-1, 277);
+            this.btn_statistiken_m.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_statistiken_m.Name = "btn_statistiken_m";
+            this.btn_statistiken_m.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn_statistiken_m.Size = new System.Drawing.Size(241, 51);
+            this.btn_statistiken_m.TabIndex = 5;
+            this.btn_statistiken_m.Text = "STATISTIKEN";
+            this.btn_statistiken_m.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_statistiken_m.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btn_statistiken_m.UseVisualStyleBackColor = false;
+            this.btn_statistiken_m.Click += new System.EventHandler(this.Btn_statistiken_m_Click);
+            this.btn_statistiken_m.Leave += new System.EventHandler(this.Btn_statistiken_m_Leave);
+            // 
             // Membership_m
             // 
             this.Membership_m.AutoSize = true;
@@ -90,6 +137,29 @@
             this.Membership_m.TabIndex = 11;
             this.Membership_m.Text = "Mitglied";
             // 
+            // btn_buchen_m
+            // 
+            this.btn_buchen_m.BackColor = System.Drawing.Color.Transparent;
+            this.btn_buchen_m.FlatAppearance.BorderSize = 0;
+            this.btn_buchen_m.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
+            this.btn_buchen_m.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
+            this.btn_buchen_m.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buchen_m.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buchen_m.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_buchen_m.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_buchen_m.Location = new System.Drawing.Point(-1, 328);
+            this.btn_buchen_m.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_buchen_m.Name = "btn_buchen_m";
+            this.btn_buchen_m.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn_buchen_m.Size = new System.Drawing.Size(241, 51);
+            this.btn_buchen_m.TabIndex = 6;
+            this.btn_buchen_m.Text = "BUCHEN";
+            this.btn_buchen_m.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_buchen_m.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btn_buchen_m.UseVisualStyleBackColor = false;
+            this.btn_buchen_m.Click += new System.EventHandler(this.Btn_buchen_m_Click);
+            this.btn_buchen_m.Leave += new System.EventHandler(this.Btn_buchen_m_Leave);
+            // 
             // lbl_Username_m
             // 
             this.lbl_Username_m.AutoSize = true;
@@ -101,6 +171,29 @@
             this.lbl_Username_m.TabIndex = 10;
             this.lbl_Username_m.Text = "Susi Lazywoman";
             // 
+            // btn_ausleihen_m
+            // 
+            this.btn_ausleihen_m.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ausleihen_m.FlatAppearance.BorderSize = 0;
+            this.btn_ausleihen_m.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
+            this.btn_ausleihen_m.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
+            this.btn_ausleihen_m.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ausleihen_m.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ausleihen_m.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_ausleihen_m.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ausleihen_m.Location = new System.Drawing.Point(-1, 379);
+            this.btn_ausleihen_m.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_ausleihen_m.Name = "btn_ausleihen_m";
+            this.btn_ausleihen_m.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn_ausleihen_m.Size = new System.Drawing.Size(241, 51);
+            this.btn_ausleihen_m.TabIndex = 7;
+            this.btn_ausleihen_m.Text = "AUSLEIHEN";
+            this.btn_ausleihen_m.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ausleihen_m.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btn_ausleihen_m.UseVisualStyleBackColor = false;
+            this.btn_ausleihen_m.Click += new System.EventHandler(this.Btn_ausleihen_m_Click);
+            this.btn_ausleihen_m.Leave += new System.EventHandler(this.Btn_ausleihen_m_Leave);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -110,6 +203,29 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            // 
+            // btn_profil_m
+            // 
+            this.btn_profil_m.BackColor = System.Drawing.Color.Transparent;
+            this.btn_profil_m.FlatAppearance.BorderSize = 0;
+            this.btn_profil_m.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
+            this.btn_profil_m.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
+            this.btn_profil_m.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_profil_m.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_profil_m.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_profil_m.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_profil_m.Location = new System.Drawing.Point(-1, 430);
+            this.btn_profil_m.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_profil_m.Name = "btn_profil_m";
+            this.btn_profil_m.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn_profil_m.Size = new System.Drawing.Size(241, 51);
+            this.btn_profil_m.TabIndex = 8;
+            this.btn_profil_m.Text = "PROFIL";
+            this.btn_profil_m.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_profil_m.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btn_profil_m.UseVisualStyleBackColor = false;
+            this.btn_profil_m.Click += new System.EventHandler(this.Btn_profil_m_Click);
+            this.btn_profil_m.Leave += new System.EventHandler(this.Btn_profil_m_Leave);
             // 
             // pnl_headerm2
             // 
@@ -287,135 +403,19 @@
             this.buchen_UserControl1.Size = new System.Drawing.Size(943, 554);
             this.buchen_UserControl1.TabIndex = 6;
             // 
-            // btn_profil_m
-            // 
-            this.btn_profil_m.BackColor = System.Drawing.Color.Transparent;
-            this.btn_profil_m.FlatAppearance.BorderSize = 0;
-            this.btn_profil_m.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
-            this.btn_profil_m.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
-            this.btn_profil_m.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_profil_m.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_profil_m.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_profil_m.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_profil_m.Location = new System.Drawing.Point(-1, 430);
-            this.btn_profil_m.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_profil_m.Name = "btn_profil_m";
-            this.btn_profil_m.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn_profil_m.Size = new System.Drawing.Size(241, 51);
-            this.btn_profil_m.TabIndex = 8;
-            this.btn_profil_m.Text = "PROFIL";
-            this.btn_profil_m.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_profil_m.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btn_profil_m.UseVisualStyleBackColor = false;
-            this.btn_profil_m.Click += new System.EventHandler(this.Btn_profil_m_Click);
-            this.btn_profil_m.Leave += new System.EventHandler(this.Btn_profil_m_Leave);
-            // 
-            // btn_ausleihen_m
-            // 
-            this.btn_ausleihen_m.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ausleihen_m.FlatAppearance.BorderSize = 0;
-            this.btn_ausleihen_m.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
-            this.btn_ausleihen_m.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
-            this.btn_ausleihen_m.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ausleihen_m.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ausleihen_m.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_ausleihen_m.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ausleihen_m.Location = new System.Drawing.Point(-1, 379);
-            this.btn_ausleihen_m.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_ausleihen_m.Name = "btn_ausleihen_m";
-            this.btn_ausleihen_m.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn_ausleihen_m.Size = new System.Drawing.Size(241, 51);
-            this.btn_ausleihen_m.TabIndex = 7;
-            this.btn_ausleihen_m.Text = "AUSLEIHEN";
-            this.btn_ausleihen_m.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ausleihen_m.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btn_ausleihen_m.UseVisualStyleBackColor = false;
-            this.btn_ausleihen_m.Click += new System.EventHandler(this.Btn_ausleihen_m_Click);
-            this.btn_ausleihen_m.Leave += new System.EventHandler(this.Btn_ausleihen_m_Leave);
-            // 
-            // btn_buchen_m
-            // 
-            this.btn_buchen_m.BackColor = System.Drawing.Color.Transparent;
-            this.btn_buchen_m.FlatAppearance.BorderSize = 0;
-            this.btn_buchen_m.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
-            this.btn_buchen_m.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
-            this.btn_buchen_m.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buchen_m.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buchen_m.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_buchen_m.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buchen_m.Location = new System.Drawing.Point(-1, 328);
-            this.btn_buchen_m.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_buchen_m.Name = "btn_buchen_m";
-            this.btn_buchen_m.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn_buchen_m.Size = new System.Drawing.Size(241, 51);
-            this.btn_buchen_m.TabIndex = 6;
-            this.btn_buchen_m.Text = "BUCHEN";
-            this.btn_buchen_m.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buchen_m.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btn_buchen_m.UseVisualStyleBackColor = false;
-            this.btn_buchen_m.Click += new System.EventHandler(this.Btn_buchen_m_Click);
-            this.btn_buchen_m.Leave += new System.EventHandler(this.Btn_buchen_m_Leave);
-            // 
-            // btn_statistiken_m
-            // 
-            this.btn_statistiken_m.BackColor = System.Drawing.Color.Transparent;
-            this.btn_statistiken_m.FlatAppearance.BorderSize = 0;
-            this.btn_statistiken_m.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
-            this.btn_statistiken_m.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
-            this.btn_statistiken_m.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_statistiken_m.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_statistiken_m.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_statistiken_m.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_statistiken_m.Location = new System.Drawing.Point(-1, 277);
-            this.btn_statistiken_m.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_statistiken_m.Name = "btn_statistiken_m";
-            this.btn_statistiken_m.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn_statistiken_m.Size = new System.Drawing.Size(241, 51);
-            this.btn_statistiken_m.TabIndex = 5;
-            this.btn_statistiken_m.Text = "STATISTIKEN";
-            this.btn_statistiken_m.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_statistiken_m.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btn_statistiken_m.UseVisualStyleBackColor = false;
-            this.btn_statistiken_m.Click += new System.EventHandler(this.Btn_statistiken_m_Click);
-            this.btn_statistiken_m.Leave += new System.EventHandler(this.Btn_statistiken_m_Leave);
-            // 
-            // btn_übersicht_m
-            // 
-            this.btn_übersicht_m.BackColor = System.Drawing.Color.Transparent;
-            this.btn_übersicht_m.FlatAppearance.BorderSize = 0;
-            this.btn_übersicht_m.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
-            this.btn_übersicht_m.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(171)))), ((int)(((byte)(195)))));
-            this.btn_übersicht_m.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_übersicht_m.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_übersicht_m.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_übersicht_m.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_übersicht_m.Location = new System.Drawing.Point(-1, 226);
-            this.btn_übersicht_m.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_übersicht_m.Name = "btn_übersicht_m";
-            this.btn_übersicht_m.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btn_übersicht_m.Size = new System.Drawing.Size(241, 51);
-            this.btn_übersicht_m.TabIndex = 0;
-            this.btn_übersicht_m.Tag = "lol";
-            this.btn_übersicht_m.Text = "ÜBERSICHT";
-            this.btn_übersicht_m.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_übersicht_m.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btn_übersicht_m.UseVisualStyleBackColor = false;
-            this.btn_übersicht_m.Click += new System.EventHandler(this.Btn_übersicht_m_Click);
-            this.btn_übersicht_m.Leave += new System.EventHandler(this.Btn_übersicht_m_Leave);
-            // 
             // Übersicht_M
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.Controls.Add(this.ausleihen_UserControl1);
             this.Controls.Add(this.profil_UserControl1);
             this.Controls.Add(this.statistiken_UserControl1);
             this.Controls.Add(this.überischt_UserControl1);
             this.Controls.Add(this.pnl_header_m);
             this.Controls.Add(this.pnl_background_home);
             this.Controls.Add(this.buchen_UserControl1);
+            this.Controls.Add(this.ausleihen_UserControl1);
             this.Name = "Übersicht_M";
             this.ShowIcon = false;
             this.Text = "Übersicht";

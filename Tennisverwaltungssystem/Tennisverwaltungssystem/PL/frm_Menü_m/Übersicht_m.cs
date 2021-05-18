@@ -154,8 +154,13 @@ namespace Tennisverwaltungssystem
 
         private void Btn_profil_m_Leave(object sender, EventArgs e)
         {
-           
+            Button button = (Button)sender;
+            
+            if (true)
+            {
                 btn_profil_m.BackColor = Color.Transparent;
+            }
+                
             
         }
 
