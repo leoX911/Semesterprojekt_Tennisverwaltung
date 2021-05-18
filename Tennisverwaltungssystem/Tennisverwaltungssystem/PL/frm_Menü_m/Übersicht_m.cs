@@ -19,11 +19,11 @@ namespace Tennisverwaltungssystem
         public static User _user;
 
 
-        public Übersicht_M(User user1)
+        public Übersicht_M(User providedUser)
         {
-            _user = user1;
+            _user = providedUser;
             InitializeComponent();
-            Nice(user1);
+            PrepareLogin(providedUser);
 
 
 
@@ -50,7 +50,7 @@ namespace Tennisverwaltungssystem
 
 
         }
-        private void Nice(User user)
+        private void PrepareLogin(User user)
         {
 
             RoundUpPicBox();
