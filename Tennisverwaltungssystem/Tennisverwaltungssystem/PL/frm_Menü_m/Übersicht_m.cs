@@ -14,8 +14,10 @@ using Tennisverwaltungssystem.BL;
 
 namespace Tennisverwaltungssystem
 {
+   
     public partial class Übersicht_M : Form
     {
+       
         public static User _user;
 
 
@@ -87,6 +89,7 @@ namespace Tennisverwaltungssystem
         {
             btn_übersicht_m.BackColor = Color.FromArgb(135, 171, 195);
             überischt_UserControl1.BringToFront();
+            
 
         }
 
@@ -94,6 +97,7 @@ namespace Tennisverwaltungssystem
         {
             btn_statistiken_m.BackColor = Color.FromArgb(135, 171, 195);
             statistiken_UserControl1.BringToFront();
+            ClickedNavBtn = true;
 
 
         }
@@ -102,13 +106,14 @@ namespace Tennisverwaltungssystem
         {
             btn_buchen_m.BackColor = Color.FromArgb(135, 171, 195);
             buchen_UserControl1.BringToFront();
+           
 
         }
 
         private void Btn_ausleihen_m_Click(object sender, EventArgs e)
         {
             btn_ausleihen_m.BackColor = Color.FromArgb(135, 171, 195);
-            
+           
             ausleihen_UserControl1.BringToFront();
 
         }
@@ -117,6 +122,7 @@ namespace Tennisverwaltungssystem
         {
             btn_profil_m.BackColor = Color.FromArgb(135, 171, 195);
             profil_UserControl1.BringToFront();
+           
 
         }
 
