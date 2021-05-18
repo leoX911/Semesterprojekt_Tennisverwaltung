@@ -73,7 +73,7 @@ namespace Tennisverwaltungssystem
         public Übersicht_M() : this(_user)
         {
             InitializeComponent();
-            Nice(_user);
+            PrepareLogin(_user);
 
 
 

@@ -144,6 +144,7 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
                 if (DAL.DAL_Login.IsRegistered(user1))
                 {
                     MessageBox.Show("Eingabe erfolgreich");
+                    MessageBox.Show("Du bisst jetzt in der Datenbank gespeichert");
                 }
                 else
                 {
