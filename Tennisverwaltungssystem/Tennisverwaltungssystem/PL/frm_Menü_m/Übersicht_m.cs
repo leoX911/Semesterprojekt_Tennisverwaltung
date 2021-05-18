@@ -97,7 +97,7 @@ namespace Tennisverwaltungssystem
         {
             btn_statistiken_m.BackColor = Color.FromArgb(135, 171, 195);
             statistiken_UserControl1.BringToFront();
-            ClickedNavBtn = true;
+            //ClickedNavBtn = true;
 
 
         }

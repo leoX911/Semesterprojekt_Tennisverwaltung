@@ -184,6 +184,7 @@
             this.txtbox_telnummer.Name = "txtbox_telnummer";
             this.txtbox_telnummer.Size = new System.Drawing.Size(392, 25);
             this.txtbox_telnummer.TabIndex = 3;
+            this.txtbox_telnummer.TextChanged += new System.EventHandler(this.txtbox_telnummer_TextChanged);
             // 
             // textbox_straße
             // 
