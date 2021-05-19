@@ -40,7 +40,7 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
             formlogin.Show();
             this.Hide();
         }
-        private bool CheckFormatSpace()
+        public bool CheckFormatSpace()
         {
             if(txtbox_email.Text != "" && txtbox_password.Text != "" && txtbox_vornamen.Text != "" && txtbox_nachnamen.Text != "")
             {
