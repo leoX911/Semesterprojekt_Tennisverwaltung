@@ -189,6 +189,7 @@ namespace Tennisverwaltungssystem.DAL
             catch (Exception ex)
             {
                 MessageBox.Show("Serververbindung fehlgeschlagen!");
+                // TODO: Anwendung schließen
                 return false;
               
                 

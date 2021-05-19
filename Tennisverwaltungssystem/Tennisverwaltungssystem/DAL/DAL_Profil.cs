@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tennisverwaltungssystem.BL;
 
 namespace Tennisverwaltungssystem.DAL
 {
@@ -44,6 +45,11 @@ namespace Tennisverwaltungssystem.DAL
 
 
             }
+        }
+
+        public static void UpdateDataUser(User user)
+        {
+
         }
     }
 

@@ -18,7 +18,11 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         {
        
             InitializeComponent();
-             user = Übersicht_M._user;
+
+            DAL.DAL_Login.CreateConnection();
+            if (!DAL.DAL_Login.Connect()) return;
+
+            user = Übersicht_M._user;
 
             // Vorhandene Daten werden in die Textboxen eingeschrieben
             txtbox_name.Text = user.Vorname;
@@ -49,6 +53,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             user.Straße = textbox_straße.Text;
             //user.Telefonummer
 
+            DAL.DAL_Profil.UpdateDataUser(user);
             
         }
 
