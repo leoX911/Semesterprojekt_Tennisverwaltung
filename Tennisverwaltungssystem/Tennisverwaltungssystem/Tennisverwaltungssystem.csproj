@@ -62,6 +62,7 @@
     <Compile Include="BL\User.cs" />
     <Compile Include="DAL\DAL_Ausleihen.cs" />
     <Compile Include="DAL\DAL_Login.cs" />
+    <Compile Include="DAL\DAL_Profil.cs" />
     <Compile Include="PL\frm_Kontakt_Hilfe\frm_Hilfe.cs">
       <SubType>Form</SubType>
     </Compile>

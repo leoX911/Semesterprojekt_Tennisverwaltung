@@ -14,8 +14,11 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
 {
     public partial class frm_register : Form
     {
-       
+        // LEO
+        //byte[] ArrNonProfil = System.IO.File.ReadAllBytes("C:\\Users\\leoxo\\Desktop\\Semesterprojekt_Tennisverwaltung\\Fotos\\ProfilPicNone.jpg");
+        // MARVIN
         byte[] ArrNonProfil = System.IO.File.ReadAllBytes("C:\\Users\\leoxo\\Desktop\\Semesterprojekt_Tennisverwaltung\\Fotos\\ProfilPicNone.jpg");
+
 
         string base64text;
         User user1;
@@ -132,7 +135,7 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
                 user1.EMail = txtbox_email.Text;
                 user1.Passwort = txtbox_password.Text;
 
-                user1.Telefonummer = 0;
+                user1.Telefonummer ="";
                 
              
                 user1.Straße = "";
@@ -140,7 +143,7 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
                 
                 user1.isAdmin = 0;
                 user1.isMitglied = 0;
-                user1.Hausnummer = 0;
+                //user1.Hausnummer = 0;
 
                 if (base64text == null)
                 {

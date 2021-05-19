@@ -36,10 +36,10 @@ namespace Tennisverwaltungssystem.DAL
                     user2.isMitglied = Convert.ToInt32(reader["isMitglied"]);
                     user2.isAdmin = Convert.ToInt32(reader["isAdmin"]);
                     user2.Straße = Convert.ToString(reader["Straße"]);
-                    user2.Hausnummer = Convert.ToInt32(reader["Hausnummer"]);
+                    //user2.Hausnummer = Convert.ToInt32(reader["Hausnummer"]);
                  
                     user2.ProfilCode = Convert.ToString(reader["profilpicCode"]);
-                    user2.Telefonummer = Convert.ToInt32(reader["Telefonnummer"]);
+                    user2.Telefonummer = Convert.ToString(reader["Telefonnummer"]);
 
 
                     reader.Close();
@@ -103,7 +103,7 @@ namespace Tennisverwaltungssystem.DAL
         public static bool IsRegistered(User user1)
         {
             
-            string query = $"INSERT INTO user(idUser,Vorname, Nachname, Email,Passwort,isAdmin,isMitglied,Telefonnummer,Straße,Hausnummer,profilpicCode) VALUES(NULL,?vorname,?nachname, ?email, ?passwort, ?isadmin, ?ismitglied, ?telefonnummer, ?straße, ?hausnummer, ?profilpiccode)";
+            string query = $"INSERT INTO user(idUser,Vorname, Nachname, Email,Passwort,isAdmin,isMitglied,Telefonnummer,Straße,profilpicCode) VALUES(NULL,?vorname,?nachname, ?email, ?passwort, ?isadmin, ?ismitglied, ?telefonnummer, ?straße, ?profilpiccode)";
             if (Connect())
             {
                
@@ -143,7 +143,7 @@ namespace Tennisverwaltungssystem.DAL
                
 
                 cmd.Parameters.Add(new MySqlParameter("telefonnummer",
-                MySqlDbType.Int32, 30)
+                MySqlDbType.VarChar, 30)
                 { Value = user1.Telefonummer });
 
                 cmd.Parameters.Add(new MySqlParameter("straße",
@@ -155,9 +155,9 @@ namespace Tennisverwaltungssystem.DAL
                 { Value = user1.ProfilCode });
 
 
-                cmd.Parameters.Add(new MySqlParameter("hausnummer",
-              MySqlDbType.Int32, 30)
-                { Value = user1.Hausnummer });
+              //  cmd.Parameters.Add(new MySqlParameter("hausnummer",
+              //MySqlDbType.Int32, 30)
+              //  { Value = user1.Hausnummer });
 
 
                 try

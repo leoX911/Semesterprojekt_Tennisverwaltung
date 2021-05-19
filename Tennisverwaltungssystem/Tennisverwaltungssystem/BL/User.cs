@@ -14,8 +14,8 @@ namespace Tennisverwaltungssystem.BL
         public string Passwort { get; set; }
         public string EMail { get; set; }
         public string Straße { get; set; }
-        public int Hausnummer { get; set; }
-        public int Telefonummer { get; set; }
+        //public int Hausnummer { get; set; }
+        public string Telefonummer { get; set; }
        
         public string ProfilCode { get; set; }
         public int isAdmin { get; set; }

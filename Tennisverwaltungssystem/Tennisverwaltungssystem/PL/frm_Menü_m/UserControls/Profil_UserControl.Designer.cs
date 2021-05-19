@@ -81,6 +81,7 @@
             this.btn_changedata.TabIndex = 1;
             this.btn_changedata.Text = "Änderungen speichern";
             this.btn_changedata.UseVisualStyleBackColor = false;
+            this.btn_changedata.Click += new System.EventHandler(this.btn_changedata_Click);
             // 
             // btn_cleardata
             // 
