@@ -10,6 +10,8 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         public Ausleihen_UserControl()
         {
             InitializeComponent();
+            DAL.DAL_Ausleihen.CreateConnection();
+            if (!DAL.DAL_Ausleihen.Connect()) return;
             GrapheneIST = new Schläger();
             GrapheneEXT = new Schläger();
             GrapheneKIDS = new Schläger();

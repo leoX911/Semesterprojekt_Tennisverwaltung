@@ -60,7 +60,6 @@
   <ItemGroup>
     <Compile Include="BL\Schläger.cs" />
     <Compile Include="BL\User.cs" />
-    <Compile Include="DAL\DAL.cs" />
     <Compile Include="DAL\DAL_Ausleihen.cs" />
     <Compile Include="DAL\DAL_Login.cs" />
     <Compile Include="DAL\DAL_Profil.cs" />

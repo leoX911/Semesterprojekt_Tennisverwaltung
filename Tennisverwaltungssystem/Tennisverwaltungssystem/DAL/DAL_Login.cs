@@ -13,15 +13,19 @@ namespace Tennisverwaltungssystem.DAL
     public static  class DAL_Login
     {
        
+        private static MySqlConnection conn;
+        private static string server, database, un,password;
+        static string connString;
+        
       
         public static bool IsLogin(User user2)
         {
             
             string query = $"SELECT * FROM user WHERE EMail='{user2.EMail}' AND Passwort='{user2.Passwort}';";
            
-            if (DAL.Connect())
+            if (Connect())
             {
-                MySqlCommand cmd = new MySqlCommand(query, DAL.conn);
+                MySqlCommand cmd = new MySqlCommand(query, conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 if(reader.Read())
                 {
@@ -39,13 +43,13 @@ namespace Tennisverwaltungssystem.DAL
 
 
                     reader.Close();
-                    DAL.conn.Close();
+                    conn.Close();
                     return true;
                 }
                 else
                 {
                     reader.Close();
-                    DAL.conn.Close();
+                    conn.Close();
                     return false;
                 }
 
@@ -53,35 +57,43 @@ namespace Tennisverwaltungssystem.DAL
             }
             else
             {
-                DAL.conn.Close();
+                conn.Close();
                 return false;
             }
 
         }
-        
+        public static void CreateConnection()
+        {
+            server = "localhost";
+            database = "tennisverwaltung";
+            un = "root";
+            password = "";
+            connString = $"SERVER={server};DATABASE={database};UID={un};PASSWORD={password}";
+            
+        }
         public static bool CheckEmailExits(User user)
         {
             string query = $"SELECT * FROM user WHERE EMail='{user.EMail}';";
-            if (DAL.Connect())
+            if (Connect())
             {
-                MySqlCommand cmd = new MySqlCommand(query, DAL.conn);
+                MySqlCommand cmd = new MySqlCommand(query, conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
                     reader.Close();
-                    DAL.conn.Close();
+                    conn.Close();
                     return true;
                 }
                 else
                 {
                     reader.Close();
-                    DAL.conn.Close();
+                    conn.Close();
                     return false;
                 }
             }
             else
             {
-                DAL.conn.Close();
+                conn.Close();
                 return false;
             }
             
@@ -92,10 +104,10 @@ namespace Tennisverwaltungssystem.DAL
         {
             
             string query = $"INSERT INTO user(idUser,Vorname, Nachname, Email,Passwort,isAdmin,isMitglied,Telefonnummer,Straße,profilpicCode) VALUES(NULL,?vorname,?nachname, ?email, ?passwort, ?isadmin, ?ismitglied, ?telefonnummer, ?straße, ?profilpiccode)";
-            if (DAL.Connect())
+            if (Connect())
             {
                
-                MySqlCommand cmd = new MySqlCommand(query, DAL.conn);
+                MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.Add(new MySqlParameter("vorname",
                         MySqlDbType.VarChar, 30)
                 { Value = user1.Vorname });
@@ -161,12 +173,28 @@ namespace Tennisverwaltungssystem.DAL
             }
             else
             {
-                DAL.conn.Close();
+                conn.Close();
                 return false;
             }
                
         }
-       
+        public static bool Connect()
+        {
+            conn = new MySqlConnection(connString);
+            try
+            {
+                conn.Open();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Serververbindung fehlgeschlagen!");
+                // TODO: Anwendung schließen
+                return false;
+              
+                
+            }
+        }
         
 
     }
