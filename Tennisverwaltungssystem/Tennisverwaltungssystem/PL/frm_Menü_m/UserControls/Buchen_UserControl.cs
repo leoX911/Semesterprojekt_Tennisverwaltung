@@ -15,8 +15,8 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         public Buchen_UserControl()
         {
             InitializeComponent();
-            GenerateDayPanel(5*16);
-            
+            GenerateDayPanel(30);
+
 
         }
 
@@ -30,22 +30,17 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             {
                 FlowLayoutPanel f1 = new FlowLayoutPanel()
                 {
-                    Name = $"flDay{i}",
-                    Size = new Size(97, 22),
-                    BackColor = Color.White,
-                    BorderStyle = BorderStyle.FixedSingle,
-                    Margin = new Padding(0),
-
+                   Name = $"flDay{i}",
+                   Size= new Size(97, 39),
+                   BackColor=Color.Red,
+                   
 
                 };
                 
-                fp_overall.Controls.Add(f1);
+                fg.Controls.Add(f1);
             }
         }
 
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
     }
 }
