@@ -22,8 +22,8 @@ namespace Tennisverwaltungssystem.frm_login
         {
             InitializeComponent();
             txtbox_Passwort.PasswordChar = '*';
-            DAL.DAL_Login.CreateConnection();
-            if (!DAL.DAL_Login.Connect()) return;
+            
+            if (!DAL.DAL.Connect()) return;
 
             //login1.BringToFront();
             //register1.Hide();

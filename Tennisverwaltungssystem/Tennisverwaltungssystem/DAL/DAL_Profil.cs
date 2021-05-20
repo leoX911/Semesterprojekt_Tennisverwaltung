@@ -11,48 +11,16 @@ namespace Tennisverwaltungssystem.DAL
 {
     class DAL_Profil
     {
-        private static MySqlConnection conn;
-        private static string server, database, un, password;
-        static string connString;
-
-
-
-
-
-
-        public static void CreateConnection()
-        {
-            server = "localhost";
-            database = "tennisverwaltung";
-            un = "root";
-            password = "";
-            connString = $"SERVER={server};DATABASE={database};UID={un};PASSWORD={password}";
-
-        }
-
-        public static bool Connect()
-        {
-            conn = new MySqlConnection(connString);
-            try
-            {
-                conn.Open();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Serververbindung fehlgeschlagen!");
-                return false;
-
-
-            }
-        }
+        
 
         public static void UpdateDataUser(User user)
         {
-            string query = $"UPDATE user SET Vorname=?vorname, Nachname=?nachname, Email=?email, Passwort=?passwort, Telefonnummer=?telefonnummer, Straße=?straße)";
-            if (Connect())
+      
+            //string query = "SELECT * from user";
+            string query = $"UPDATE user SET Vorname=?vorname, Nachname=?nachname, Email=?email, Passwort=?passwort, Telefonnummer=?telefonnummer, Straße=?straße) WHERE Email=?email";
+            if (DAL.Connect())
             {
-                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlCommand cmd = new MySqlCommand(query, DAL.conn);
                 cmd.Parameters.Add(new MySqlParameter("vorname",
                         MySqlDbType.VarChar, 30)
                 { Value = user.Vorname });
@@ -90,20 +58,20 @@ namespace Tennisverwaltungssystem.DAL
         public static bool CheckEmailExits(User user)
         {
             string query = $"SELECT * FROM user WHERE EMail='{user.EMail}';";
-            if (Connect())
+            if (DAL.Connect())
             {
-                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlCommand cmd = new MySqlCommand(query, DAL.conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
                     reader.Close();
-                    conn.Close();
+                    DAL.conn.Close();
                     return true;
                 }
                 else
                 {
                     reader.Close();
-                    conn.Close();
+                    DAL.conn.Close();
                     return false;
                 }
                 //try
@@ -119,7 +87,7 @@ namespace Tennisverwaltungssystem.DAL
             }
             else
             {
-                conn.Close();
+                DAL.conn.Close();
                 return false;
             }
 
