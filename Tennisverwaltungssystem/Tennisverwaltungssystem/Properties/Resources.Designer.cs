@@ -493,6 +493,16 @@ namespace Tennisverwaltungssystem.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tennisball_ist_auf_der_aufschlagvertikale_408034771 {
+            get {
+                object obj = ResourceManager.GetObject("tennisball-ist-auf-der-aufschlagvertikale-408034771", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap übersicht_tennisclub {
             get {
                 object obj = ResourceManager.GetObject("übersicht_tennisclub", resourceCulture);

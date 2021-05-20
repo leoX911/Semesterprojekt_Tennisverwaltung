@@ -36,25 +36,21 @@
             this.btn_buchen_m = new System.Windows.Forms.Button();
             this.lbl_Username_m = new System.Windows.Forms.Label();
             this.btn_ausleihen_m = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_profil_m = new System.Windows.Forms.Button();
             this.pnl_headerm2 = new System.Windows.Forms.Panel();
             this.btn_navbar_headline = new System.Windows.Forms.Button();
-            this.pnl_header_m = new System.Windows.Forms.Panel();
-            this.btn_navbar_menu = new System.Windows.Forms.Button();
-            this.btn_navbar_konakt = new System.Windows.Forms.Button();
-            this.btn_navbar_hilfe = new System.Windows.Forms.Button();
             this.btn_navbar_logout = new System.Windows.Forms.Button();
+            this.btn_navbar_hilfe = new System.Windows.Forms.Button();
+            this.btn_navbar_konakt = new System.Windows.Forms.Button();
+            this.btn_navbar_menu = new System.Windows.Forms.Button();
+            this.pnl_header_m = new System.Windows.Forms.Panel();
             this.pic_TCHard_Logo = new System.Windows.Forms.PictureBox();
-            this.überischt_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Überischt_UserControl();
-            this.ausleihen_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Ausleihen_UserControl();
-            this.buchen_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Buchen_UserControl();
-            this.statistiken_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Statistiken_UserControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_background_home.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_headerm2.SuspendLayout();
             this.pnl_header_m.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_TCHard_Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_background_home
@@ -193,16 +189,6 @@
             this.btn_ausleihen_m.Click += new System.EventHandler(this.Btn_ausleihen_m_Click);
             this.btn_ausleihen_m.Leave += new System.EventHandler(this.Btn_ausleihen_m_Leave);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 142);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 57);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // btn_profil_m
             // 
             this.btn_profil_m.BackColor = System.Drawing.Color.Transparent;
@@ -255,39 +241,46 @@
             this.btn_navbar_headline.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_navbar_headline.UseVisualStyleBackColor = true;
             // 
-            // pnl_header_m
+            // btn_navbar_logout
             // 
-            this.pnl_header_m.BackColor = System.Drawing.Color.White;
-            this.pnl_header_m.Controls.Add(this.btn_navbar_menu);
-            this.pnl_header_m.Controls.Add(this.btn_navbar_konakt);
-            this.pnl_header_m.Controls.Add(this.btn_navbar_hilfe);
-            this.pnl_header_m.Controls.Add(this.btn_navbar_logout);
-            this.pnl_header_m.Controls.Add(this.pic_TCHard_Logo);
-            this.pnl_header_m.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_header_m.Location = new System.Drawing.Point(241, 0);
-            this.pnl_header_m.Name = "pnl_header_m";
-            this.pnl_header_m.Size = new System.Drawing.Size(943, 108);
-            this.pnl_header_m.TabIndex = 1;
+            this.btn_navbar_logout.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_navbar_logout.FlatAppearance.BorderSize = 0;
+            this.btn_navbar_logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_navbar_logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_navbar_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_navbar_logout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_navbar_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_navbar_logout.Location = new System.Drawing.Point(809, 0);
+            this.btn_navbar_logout.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_navbar_logout.Name = "btn_navbar_logout";
+            this.btn_navbar_logout.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btn_navbar_logout.Size = new System.Drawing.Size(134, 108);
+            this.btn_navbar_logout.TabIndex = 1;
+            this.btn_navbar_logout.Text = "LOGOUT";
+            this.btn_navbar_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_navbar_logout.UseVisualStyleBackColor = true;
+            this.btn_navbar_logout.Click += new System.EventHandler(this.Btn_navbar_logout_Click);
+            this.btn_navbar_logout.Leave += new System.EventHandler(this.Btn_navbar_logout_Leave);
             // 
-            // btn_navbar_menu
+            // btn_navbar_hilfe
             // 
-            this.btn_navbar_menu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_navbar_menu.FlatAppearance.BorderSize = 0;
-            this.btn_navbar_menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_navbar_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_navbar_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_navbar_menu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_navbar_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_navbar_menu.Location = new System.Drawing.Point(547, 0);
-            this.btn_navbar_menu.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_navbar_menu.Name = "btn_navbar_menu";
-            this.btn_navbar_menu.Padding = new System.Windows.Forms.Padding(10, 0, 5, 0);
-            this.btn_navbar_menu.Size = new System.Drawing.Size(88, 108);
-            this.btn_navbar_menu.TabIndex = 4;
-            this.btn_navbar_menu.Text = "MENÜ";
-            this.btn_navbar_menu.UseVisualStyleBackColor = true;
-            this.btn_navbar_menu.Click += new System.EventHandler(this.Btn_navbar_menu_Click);
-            this.btn_navbar_menu.Leave += new System.EventHandler(this.Btn_navbar_menu_Leave);
+            this.btn_navbar_hilfe.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_navbar_hilfe.FlatAppearance.BorderSize = 0;
+            this.btn_navbar_hilfe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_navbar_hilfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_navbar_hilfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_navbar_hilfe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_navbar_hilfe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_navbar_hilfe.Location = new System.Drawing.Point(722, 0);
+            this.btn_navbar_hilfe.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_navbar_hilfe.Name = "btn_navbar_hilfe";
+            this.btn_navbar_hilfe.Padding = new System.Windows.Forms.Padding(10, 0, 5, 0);
+            this.btn_navbar_hilfe.Size = new System.Drawing.Size(87, 108);
+            this.btn_navbar_hilfe.TabIndex = 2;
+            this.btn_navbar_hilfe.Text = "HILFE";
+            this.btn_navbar_hilfe.UseVisualStyleBackColor = true;
+            this.btn_navbar_hilfe.Click += new System.EventHandler(this.Btn_navbar_hilfe_Click);
+            this.btn_navbar_hilfe.Leave += new System.EventHandler(this.Btn_navbar_hilfe_Leave);
             // 
             // btn_navbar_konakt
             // 
@@ -310,46 +303,39 @@
             this.btn_navbar_konakt.Click += new System.EventHandler(this.Btn_navbar_konakt_Click);
             this.btn_navbar_konakt.Leave += new System.EventHandler(this.Btn_navbar_konakt_Leave);
             // 
-            // btn_navbar_hilfe
+            // btn_navbar_menu
             // 
-            this.btn_navbar_hilfe.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_navbar_hilfe.FlatAppearance.BorderSize = 0;
-            this.btn_navbar_hilfe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_navbar_hilfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_navbar_hilfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_navbar_hilfe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_navbar_hilfe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_navbar_hilfe.Location = new System.Drawing.Point(722, 0);
-            this.btn_navbar_hilfe.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_navbar_hilfe.Name = "btn_navbar_hilfe";
-            this.btn_navbar_hilfe.Padding = new System.Windows.Forms.Padding(10, 0, 5, 0);
-            this.btn_navbar_hilfe.Size = new System.Drawing.Size(87, 108);
-            this.btn_navbar_hilfe.TabIndex = 2;
-            this.btn_navbar_hilfe.Text = "HILFE";
-            this.btn_navbar_hilfe.UseVisualStyleBackColor = true;
-            this.btn_navbar_hilfe.Click += new System.EventHandler(this.Btn_navbar_hilfe_Click);
-            this.btn_navbar_hilfe.Leave += new System.EventHandler(this.Btn_navbar_hilfe_Leave);
+            this.btn_navbar_menu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_navbar_menu.FlatAppearance.BorderSize = 0;
+            this.btn_navbar_menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_navbar_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_navbar_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_navbar_menu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_navbar_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_navbar_menu.Location = new System.Drawing.Point(547, 0);
+            this.btn_navbar_menu.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_navbar_menu.Name = "btn_navbar_menu";
+            this.btn_navbar_menu.Padding = new System.Windows.Forms.Padding(10, 0, 5, 0);
+            this.btn_navbar_menu.Size = new System.Drawing.Size(88, 108);
+            this.btn_navbar_menu.TabIndex = 4;
+            this.btn_navbar_menu.Text = "MENÜ";
+            this.btn_navbar_menu.UseVisualStyleBackColor = true;
+            this.btn_navbar_menu.Click += new System.EventHandler(this.Btn_navbar_menu_Click);
+            this.btn_navbar_menu.Leave += new System.EventHandler(this.Btn_navbar_menu_Leave);
             // 
-            // btn_navbar_logout
+            // pnl_header_m
             // 
-            this.btn_navbar_logout.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_navbar_logout.FlatAppearance.BorderSize = 0;
-            this.btn_navbar_logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_navbar_logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_navbar_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_navbar_logout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_navbar_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_navbar_logout.Location = new System.Drawing.Point(809, 0);
-            this.btn_navbar_logout.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_navbar_logout.Name = "btn_navbar_logout";
-            this.btn_navbar_logout.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btn_navbar_logout.Size = new System.Drawing.Size(134, 108);
-            this.btn_navbar_logout.TabIndex = 1;
-            this.btn_navbar_logout.Text = "LOGOUT";
-            this.btn_navbar_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_navbar_logout.UseVisualStyleBackColor = true;
-            this.btn_navbar_logout.Click += new System.EventHandler(this.Btn_navbar_logout_Click);
-            this.btn_navbar_logout.Leave += new System.EventHandler(this.Btn_navbar_logout_Leave);
+            this.pnl_header_m.BackColor = System.Drawing.Color.White;
+            this.pnl_header_m.Controls.Add(this.btn_navbar_menu);
+            this.pnl_header_m.Controls.Add(this.btn_navbar_konakt);
+            this.pnl_header_m.Controls.Add(this.btn_navbar_hilfe);
+            this.pnl_header_m.Controls.Add(this.btn_navbar_logout);
+            this.pnl_header_m.Controls.Add(this.pic_TCHard_Logo);
+            this.pnl_header_m.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_header_m.Location = new System.Drawing.Point(241, 0);
+            this.pnl_header_m.Name = "pnl_header_m";
+            this.pnl_header_m.Size = new System.Drawing.Size(943, 108);
+            this.pnl_header_m.TabIndex = 1;
             // 
             // pic_TCHard_Logo
             // 
@@ -362,38 +348,15 @@
             this.pic_TCHard_Logo.TabStop = false;
             this.pic_TCHard_Logo.Click += new System.EventHandler(this.Pic_TCHard_Logo_Click);
             // 
-            // überischt_UserControl1
+            // pictureBox1
             // 
-            this.überischt_UserControl1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.überischt_UserControl1.Location = new System.Drawing.Point(241, 107);
-            this.überischt_UserControl1.Name = "überischt_UserControl1";
-            this.überischt_UserControl1.Size = new System.Drawing.Size(943, 554);
-            this.überischt_UserControl1.TabIndex = 2;
-            // 
-            // ausleihen_UserControl1
-            // 
-            this.ausleihen_UserControl1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ausleihen_UserControl1.Location = new System.Drawing.Point(241, 107);
-            this.ausleihen_UserControl1.Name = "ausleihen_UserControl1";
-            this.ausleihen_UserControl1.Size = new System.Drawing.Size(943, 554);
-            this.ausleihen_UserControl1.TabIndex = 3;
-            // 
-            // buchen_UserControl1
-            // 
-            this.buchen_UserControl1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buchen_UserControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.buchen_UserControl1.Location = new System.Drawing.Point(241, 109);
-            this.buchen_UserControl1.Name = "buchen_UserControl1";
-            this.buchen_UserControl1.Size = new System.Drawing.Size(941, 552);
-            this.buchen_UserControl1.TabIndex = 4;
-            // 
-            // statistiken_UserControl1
-            // 
-            this.statistiken_UserControl1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.statistiken_UserControl1.Location = new System.Drawing.Point(241, 109);
-            this.statistiken_UserControl1.Name = "statistiken_UserControl1";
-            this.statistiken_UserControl1.Size = new System.Drawing.Size(943, 554);
-            this.statistiken_UserControl1.TabIndex = 5;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(21, 142);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(59, 57);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // Übersicht_M
             // 
@@ -401,10 +364,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.Controls.Add(this.statistiken_UserControl1);
-            this.Controls.Add(this.buchen_UserControl1);
-            this.Controls.Add(this.ausleihen_UserControl1);
-            this.Controls.Add(this.überischt_UserControl1);
             this.Controls.Add(this.pnl_header_m);
             this.Controls.Add(this.pnl_background_home);
             this.Name = "Übersicht_M";
@@ -412,10 +371,10 @@
             this.Text = "Übersicht";
             this.pnl_background_home.ResumeLayout(false);
             this.pnl_background_home.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_headerm2.ResumeLayout(false);
             this.pnl_header_m.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_TCHard_Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -424,15 +383,9 @@
 
         private System.Windows.Forms.Panel pnl_background_home;
         private System.Windows.Forms.Panel pnl_headerm2;
-        private System.Windows.Forms.Panel pnl_header_m;
-        private System.Windows.Forms.PictureBox pic_TCHard_Logo;
         private System.Windows.Forms.Label lbl_Username_m;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Membership_m;
-        private System.Windows.Forms.Button btn_navbar_logout;
-        private System.Windows.Forms.Button btn_navbar_menu;
-        private System.Windows.Forms.Button btn_navbar_konakt;
-        private System.Windows.Forms.Button btn_navbar_hilfe;
         private System.Windows.Forms.Button btn_navbar_headline;
      
        
@@ -441,10 +394,12 @@
         private System.Windows.Forms.Button btn_buchen_m;
         private System.Windows.Forms.Button btn_ausleihen_m;
         private System.Windows.Forms.Button btn_profil_m;
-        private frm_Menü_m.UserControls.Überischt_UserControl überischt_UserControl1;
-        private frm_Menü_m.UserControls.Ausleihen_UserControl ausleihen_UserControl1;
-        private frm_Menü_m.UserControls.Buchen_UserControl buchen_UserControl1;
-        private frm_Menü_m.UserControls.Statistiken_UserControl statistiken_UserControl1;
+        private System.Windows.Forms.PictureBox pic_TCHard_Logo;
+        private System.Windows.Forms.Button btn_navbar_logout;
+        private System.Windows.Forms.Button btn_navbar_hilfe;
+        private System.Windows.Forms.Button btn_navbar_konakt;
+        private System.Windows.Forms.Button btn_navbar_menu;
+        private System.Windows.Forms.Panel pnl_header_m;
     }
 }
 
