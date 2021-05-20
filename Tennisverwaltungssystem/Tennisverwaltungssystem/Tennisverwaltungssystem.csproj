@@ -111,6 +111,12 @@
     <Compile Include="PL\frm_Menü_m\UserControls\Statistiken_UserControl.Designer.cs">
       <DependentUpon>Statistiken_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\frm_Menü_m\UserControls\Überischt_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frm_Menü_m\UserControls\Statistiken_UserControl.resx">
       <DependentUpon>Statistiken_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frm_Menü_m\UserControls\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frm_Menü_m\UserControls\Überischt_UserControl.resx">
       <DependentUpon>Überischt_UserControl.cs</DependentUpon>
