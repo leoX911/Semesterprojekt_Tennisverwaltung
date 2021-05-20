@@ -100,11 +100,11 @@
     <Compile Include="PL\frm_Menü_m\UserControls\Buchen_UserControl.Designer.cs">
       <DependentUpon>Buchen_UserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\frm_Menü_m\UserControls\Profil_UserControl.cs">
+    <Compile Include="PL\frm_Menü_m\UserControls\ProfilUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PL\frm_Menü_m\UserControls\Profil_UserControl.Designer.cs">
-      <DependentUpon>Profil_UserControl.cs</DependentUpon>
+    <Compile Include="PL\frm_Menü_m\UserControls\ProfilUser.Designer.cs">
+      <DependentUpon>ProfilUser.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\frm_Menü_m\UserControls\Statistiken_UserControl.cs">
       <SubType>UserControl</SubType>
@@ -144,8 +144,8 @@
     <EmbeddedResource Include="PL\frm_Menü_m\UserControls\Buchen_UserControl.resx">
       <DependentUpon>Buchen_UserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\frm_Menü_m\UserControls\Profil_UserControl.resx">
-      <DependentUpon>Profil_UserControl.cs</DependentUpon>
+    <EmbeddedResource Include="PL\frm_Menü_m\UserControls\ProfilUser.resx">
+      <DependentUpon>ProfilUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frm_Menü_m\UserControls\Statistiken_UserControl.resx">
       <DependentUpon>Statistiken_UserControl.cs</DependentUpon>

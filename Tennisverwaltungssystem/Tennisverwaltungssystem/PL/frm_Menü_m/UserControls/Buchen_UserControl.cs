@@ -36,8 +36,8 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
                    
 
                 };
-                
-                fg.Controls.Add(f1);
+
+                fp_overall.Controls.Add(f1);
             }
         }
 

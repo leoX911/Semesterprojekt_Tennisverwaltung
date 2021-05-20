@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 using Tennisverwaltungssystem.BL;
 
@@ -13,7 +6,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 {
     public partial class Ausleihen_UserControl : UserControl
     {
-        private readonly Schläger GrapheneIST, GrapheneEXT, GrapheneKIDS, GrapheneLGT, GrapheneSPD,GrapheneMP;
+        private readonly Schläger GrapheneIST, GrapheneEXT, GrapheneKIDS, GrapheneLGT, GrapheneSPD, GrapheneMP;
         public Ausleihen_UserControl()
         {
             InitializeComponent();
@@ -56,6 +49,6 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             }
         }
 
-       
+
     }
 }
