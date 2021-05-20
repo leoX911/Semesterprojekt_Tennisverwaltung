@@ -3,3 +3,6 @@
 /.git
 
 /Tennisverwaltungssystem/.vs
+Tennisverwaltungssystem/Tennisverwaltungssystem/bin/Debug/Tennisverwaltungssystem.exe
+*.pdb
+*.exe

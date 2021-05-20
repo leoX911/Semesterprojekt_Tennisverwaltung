@@ -18,8 +18,11 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         User user;
         public Profil_UserControl()
         {
-
+       
             InitializeComponent();
+
+            DAL.DAL_Login.CreateConnection();
+            if (!DAL.DAL_Login.Connect()) return;
 
             user = Übersicht_M._user;
 
