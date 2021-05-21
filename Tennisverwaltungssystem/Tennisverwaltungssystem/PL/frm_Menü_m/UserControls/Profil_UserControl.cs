@@ -17,16 +17,21 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         {
             InitializeComponent();
             User user = Übersicht_M._user;
+            if (user!=null)
+            {
+                // Vorhandene Daten werden in die Textboxen eingeschrieben
+                txtbox_name.Text = user.Vorname;
+                txtbox_nachname.Text = user.Nachname;
+                txtbox_email.Text = user.EMail;
 
-            // Vorhandene Daten werden in die Textboxen eingeschrieben
-            txtbox_name.Text = user.Vorname;
-            txtbox_nachname.Text = user.Nachname;
-            txtbox_email.Text = user.EMail;
+                // TODO: Passwort in Sternchen anzeigen lassen + Button 
+                txtbox_password.Text = user.Passwort;
+                textbox_straße.Text = user.Straße;
+                txtbox_tell.Text = user.Telefonummer;
+            }
+            
 
-            // TODO: Passwort in Sternchen anzeigen lassen + Button 
-            txtbox_password.Text = user.Passwort;
-            textbox_straße.Text = user.Straße;
-            txtbox_tell.Text = user.Telefonummer;
+           
 
         }
     }
