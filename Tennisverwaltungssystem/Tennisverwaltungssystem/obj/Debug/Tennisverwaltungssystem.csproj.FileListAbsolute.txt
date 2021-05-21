@@ -74,3 +74,4 @@ C:\Users\leoxo\Desktop\Semesterprojekt_Tennisverwaltung\Tennisverwaltungssystem\
 C:\Users\leoxo\Desktop\Semesterprojekt_Tennisverwaltung\Tennisverwaltungssystem\Tennisverwaltungssystem\obj\Debug\Tennisverwaltungssystem.exe.config
 C:\Users\leoxo\Desktop\Semesterprojekt_Tennisverwaltung\Tennisverwaltungssystem\Tennisverwaltungssystem\bin\Debug\System.Memory.dll
 C:\Users\leoxo\Desktop\Semesterprojekt_Tennisverwaltung\Tennisverwaltungssystem\Tennisverwaltungssystem\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Marvin\Desktop\Semesterprojekt_Tennisverwaltung\Tennisverwaltungssystem\Tennisverwaltungssystem\obj\Debug\Tennisverwaltungssystem.PL.frm_Menü_m.UserControls.Profil_Usercontrol.resources
