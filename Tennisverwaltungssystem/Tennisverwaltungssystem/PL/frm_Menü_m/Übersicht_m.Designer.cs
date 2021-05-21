@@ -36,6 +36,7 @@
             this.btn_buchen_m = new System.Windows.Forms.Button();
             this.lbl_Username_m = new System.Windows.Forms.Label();
             this.btn_ausleihen_m = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_profil_m = new System.Windows.Forms.Button();
             this.pnl_headerm2 = new System.Windows.Forms.Panel();
             this.btn_navbar_headline = new System.Windows.Forms.Button();
@@ -45,12 +46,11 @@
             this.btn_navbar_menu = new System.Windows.Forms.Button();
             this.pnl_header_m = new System.Windows.Forms.Panel();
             this.pic_TCHard_Logo = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_background_home.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_headerm2.SuspendLayout();
             this.pnl_header_m.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_TCHard_Logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_background_home
@@ -188,6 +188,16 @@
             this.btn_ausleihen_m.UseVisualStyleBackColor = false;
             this.btn_ausleihen_m.Click += new System.EventHandler(this.Btn_ausleihen_m_Click);
             this.btn_ausleihen_m.Leave += new System.EventHandler(this.Btn_ausleihen_m_Leave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(21, 142);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(59, 57);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // btn_profil_m
             // 
@@ -348,16 +358,6 @@
             this.pic_TCHard_Logo.TabStop = false;
             this.pic_TCHard_Logo.Click += new System.EventHandler(this.Pic_TCHard_Logo_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 142);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 57);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // Übersicht_M
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,10 +371,10 @@
             this.Text = "Übersicht";
             this.pnl_background_home.ResumeLayout(false);
             this.pnl_background_home.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_headerm2.ResumeLayout(false);
             this.pnl_header_m.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_TCHard_Logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
