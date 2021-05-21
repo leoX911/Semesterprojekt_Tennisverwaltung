@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tennisverwaltungssystem.BL;
 
 namespace Tennisverwaltungssystem.DAL
 {
@@ -22,6 +23,35 @@ namespace Tennisverwaltungssystem.DAL
             connString = $"SERVER={server};DATABASE={database};UID={un};PASSWORD={password}";
 
         }
+        public static bool CheckEmailExits(User user)
+        {
+            string query = $"SELECT * FROM user WHERE EMail='{user.EMail}';";
+            if (Connect())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    reader.Close();
+                    conn.Close();
+                    return true;
+                }
+                else
+                {
+                    reader.Close();
+                    conn.Close();
+                    return false;
+                }
+
+            }
+            else
+            {
+                DAL_Main.conn.Close();
+                return false;
+            }
+
+        }
+
         public static bool Connect()
         {
             conn = new MySqlConnection(connString);

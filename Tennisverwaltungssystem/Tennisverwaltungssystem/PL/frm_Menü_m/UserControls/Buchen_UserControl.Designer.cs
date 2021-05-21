@@ -30,26 +30,48 @@
         {
             this.pnl_buchung = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel22 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label20 = new System.Windows.Forms.Label();
             this.flowLayoutPanel16 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label19 = new System.Windows.Forms.Label();
             this.flowLayoutPanel15 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label18 = new System.Windows.Forms.Label();
             this.flowLayoutPanel14 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label17 = new System.Windows.Forms.Label();
             this.flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label15 = new System.Windows.Forms.Label();
             this.flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label14 = new System.Windows.Forms.Label();
             this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label13 = new System.Windows.Forms.Label();
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label12 = new System.Windows.Forms.Label();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label11 = new System.Windows.Forms.Label();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label10 = new System.Windows.Forms.Label();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label9 = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.Platz1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.Platz2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.Platz3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
             this.Platz4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.Platz5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
             this.fp_overall = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbl_text_buchungsdetails = new System.Windows.Forms.Label();
@@ -68,34 +90,14 @@
             this.lbl_summerheader = new System.Windows.Forms.Label();
             this.lbl_buchungsüberischt_sub = new System.Windows.Forms.Label();
             this.lbl_buchen = new System.Windows.Forms.Label();
-            this.flowLayoutPanel22 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.pnl_buchung.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel22.SuspendLayout();
             this.flowLayoutPanel16.SuspendLayout();
             this.flowLayoutPanel15.SuspendLayout();
             this.flowLayoutPanel14.SuspendLayout();
             this.flowLayoutPanel13.SuspendLayout();
+            this.flowLayoutPanel12.SuspendLayout();
             this.flowLayoutPanel11.SuspendLayout();
             this.flowLayoutPanel10.SuspendLayout();
             this.flowLayoutPanel9.SuspendLayout();
@@ -111,8 +113,6 @@
             this.Platz3.SuspendLayout();
             this.Platz4.SuspendLayout();
             this.Platz5.SuspendLayout();
-            this.flowLayoutPanel22.SuspendLayout();
-            this.flowLayoutPanel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_buchung
@@ -162,9 +162,28 @@
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Location = new System.Drawing.Point(509, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(96, 355);
+            this.panel1.Size = new System.Drawing.Size(96, 351);
             this.panel1.TabIndex = 53;
- 
+            // 
+            // flowLayoutPanel22
+            // 
+            this.flowLayoutPanel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel22.Controls.Add(this.label20);
+            this.flowLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel22.Location = new System.Drawing.Point(0, 330);
+            this.flowLayoutPanel22.Name = "flowLayoutPanel22";
+            this.flowLayoutPanel22.Size = new System.Drawing.Size(96, 21);
+            this.flowLayoutPanel22.TabIndex = 68;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(3, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(74, 15);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "22:00-23:00";
             // 
             // flowLayoutPanel16
             // 
@@ -176,6 +195,16 @@
             this.flowLayoutPanel16.Size = new System.Drawing.Size(96, 22);
             this.flowLayoutPanel16.TabIndex = 67;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(3, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(72, 15);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "21:00-22:00";
+            // 
             // flowLayoutPanel15
             // 
             this.flowLayoutPanel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -185,6 +214,16 @@
             this.flowLayoutPanel15.Name = "flowLayoutPanel15";
             this.flowLayoutPanel15.Size = new System.Drawing.Size(96, 22);
             this.flowLayoutPanel15.TabIndex = 66;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(3, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(72, 15);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "20:00-21:00";
             // 
             // flowLayoutPanel14
             // 
@@ -196,6 +235,16 @@
             this.flowLayoutPanel14.Size = new System.Drawing.Size(96, 22);
             this.flowLayoutPanel14.TabIndex = 65;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(3, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(72, 15);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "19:00-20:00";
+            // 
             // flowLayoutPanel13
             // 
             this.flowLayoutPanel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -205,6 +254,37 @@
             this.flowLayoutPanel13.Name = "flowLayoutPanel13";
             this.flowLayoutPanel13.Size = new System.Drawing.Size(96, 22);
             this.flowLayoutPanel13.TabIndex = 64;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(3, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(70, 15);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "18:00-19:00";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flowLayoutPanel12
+            // 
+            this.flowLayoutPanel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel12.Controls.Add(this.label15);
+            this.flowLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel12.Location = new System.Drawing.Point(0, 220);
+            this.flowLayoutPanel12.Name = "flowLayoutPanel12";
+            this.flowLayoutPanel12.Size = new System.Drawing.Size(96, 22);
+            this.flowLayoutPanel12.TabIndex = 63;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(3, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(69, 15);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "17:00-18:00";
             // 
             // flowLayoutPanel11
             // 
@@ -216,6 +296,16 @@
             this.flowLayoutPanel11.Size = new System.Drawing.Size(96, 22);
             this.flowLayoutPanel11.TabIndex = 62;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(3, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(69, 15);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "16:00-17:00";
+            // 
             // flowLayoutPanel10
             // 
             this.flowLayoutPanel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -225,6 +315,16 @@
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
             this.flowLayoutPanel10.Size = new System.Drawing.Size(96, 22);
             this.flowLayoutPanel10.TabIndex = 61;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(3, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(70, 15);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "15:00-16:00";
             // 
             // flowLayoutPanel9
             // 
@@ -236,6 +336,16 @@
             this.flowLayoutPanel9.Size = new System.Drawing.Size(96, 22);
             this.flowLayoutPanel9.TabIndex = 60;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(3, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 15);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "14:00-15:00";
+            // 
             // flowLayoutPanel8
             // 
             this.flowLayoutPanel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -245,6 +355,16 @@
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
             this.flowLayoutPanel8.Size = new System.Drawing.Size(96, 22);
             this.flowLayoutPanel8.TabIndex = 59;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 15);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "13:00-14:00";
             // 
             // flowLayoutPanel7
             // 
@@ -256,6 +376,16 @@
             this.flowLayoutPanel7.Size = new System.Drawing.Size(96, 22);
             this.flowLayoutPanel7.TabIndex = 58;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(3, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 15);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "12:00-13:00";
+            // 
             // flowLayoutPanel6
             // 
             this.flowLayoutPanel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -265,6 +395,16 @@
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(96, 22);
             this.flowLayoutPanel6.TabIndex = 57;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 15);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "11:00-12:00";
             // 
             // flowLayoutPanel4
             // 
@@ -276,6 +416,16 @@
             this.flowLayoutPanel4.Size = new System.Drawing.Size(96, 22);
             this.flowLayoutPanel4.TabIndex = 56;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 15);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "9:00-11:00";
+            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -286,6 +436,16 @@
             this.flowLayoutPanel3.Size = new System.Drawing.Size(96, 22);
             this.flowLayoutPanel3.TabIndex = 55;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 15);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "9:00-10:00";
+            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -295,6 +455,16 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(96, 22);
             this.flowLayoutPanel2.TabIndex = 54;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 15);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "8:00-9:00";
             // 
             // flowLayoutPanel1
             // 
@@ -329,6 +499,17 @@
             this.Platz1.Size = new System.Drawing.Size(97, 22);
             this.Platz1.TabIndex = 4;
             // 
+            // label1
+            // 
+            this.label1.AllowDrop = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Platz 1";
+            // 
             // Platz2
             // 
             this.Platz2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -338,6 +519,17 @@
             this.Platz2.Name = "Platz2";
             this.Platz2.Size = new System.Drawing.Size(97, 22);
             this.Platz2.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AllowDrop = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Platz 2";
             // 
             // Platz3
             // 
@@ -349,6 +541,17 @@
             this.Platz3.Size = new System.Drawing.Size(97, 22);
             this.Platz3.TabIndex = 6;
             // 
+            // label3
+            // 
+            this.label3.AllowDrop = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Platz 3";
+            // 
             // Platz4
             // 
             this.Platz4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -358,6 +561,17 @@
             this.Platz4.Name = "Platz4";
             this.Platz4.Size = new System.Drawing.Size(97, 22);
             this.Platz4.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AllowDrop = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Platz 4";
             // 
             // Platz5
             // 
@@ -369,12 +583,23 @@
             this.Platz5.Size = new System.Drawing.Size(97, 22);
             this.Platz5.TabIndex = 8;
             // 
+            // label5
+            // 
+            this.label5.AllowDrop = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 17);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Platz 5";
+            // 
             // fp_overall
             // 
             this.fp_overall.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fp_overall.Location = new System.Drawing.Point(22, 70);
             this.fp_overall.Name = "fp_overall";
-            this.fp_overall.Size = new System.Drawing.Size(487, 332);
+            this.fp_overall.Size = new System.Drawing.Size(487, 329);
             this.fp_overall.TabIndex = 51;
             // 
             // panel4
@@ -553,232 +778,6 @@
             this.lbl_buchen.TabIndex = 34;
             this.lbl_buchen.Text = "Buchen";
             // 
-            // flowLayoutPanel22
-            // 
-            this.flowLayoutPanel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel22.Controls.Add(this.label20);
-            this.flowLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel22.Location = new System.Drawing.Point(0, 330);
-            this.flowLayoutPanel22.Name = "flowLayoutPanel22";
-            this.flowLayoutPanel22.Size = new System.Drawing.Size(96, 24);
-            this.flowLayoutPanel22.TabIndex = 68;
-            // 
-            // label1
-            // 
-            this.label1.AllowDrop = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Platz 1";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 15);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "8:00-9:00";
-            // 
-            // label2
-            // 
-            this.label2.AllowDrop = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Platz 2";
-            // 
-            // label3
-            // 
-            this.label3.AllowDrop = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Platz 3";
-            // 
-            // label4
-            // 
-            this.label4.AllowDrop = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Platz 4";
-            // 
-            // label5
-            // 
-            this.label5.AllowDrop = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 17);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Platz 5";
-            // 
-            // flowLayoutPanel12
-            // 
-            this.flowLayoutPanel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel12.Controls.Add(this.label15);
-            this.flowLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel12.Location = new System.Drawing.Point(0, 220);
-            this.flowLayoutPanel12.Name = "flowLayoutPanel12";
-            this.flowLayoutPanel12.Size = new System.Drawing.Size(96, 22);
-            this.flowLayoutPanel12.TabIndex = 63;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 15);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "9:00-10:00";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 15);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "9:00-11:00";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 15);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "11:00-12:00";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 15);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "12:00-13:00";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 15);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "13:00-14:00";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(3, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 15);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "14:00-15:00";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(3, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 15);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "15:00-16:00";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(69, 15);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "16:00-17:00";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(3, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(69, 15);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "17:00-18:00";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(3, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(70, 15);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "18:00-19:00";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(3, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(72, 15);
-            this.label17.TabIndex = 2;
-            this.label17.Text = "19:00-20:00";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(3, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(72, 15);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "20:00-21:00";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(3, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(72, 15);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "21:00-22:00";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(3, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(74, 15);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "22:00-23:00";
-            // 
             // Buchen_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -793,6 +792,8 @@
             this.pnl_buchung.ResumeLayout(false);
             this.pnl_buchung.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.flowLayoutPanel22.ResumeLayout(false);
+            this.flowLayoutPanel22.PerformLayout();
             this.flowLayoutPanel16.ResumeLayout(false);
             this.flowLayoutPanel16.PerformLayout();
             this.flowLayoutPanel15.ResumeLayout(false);
@@ -801,6 +802,8 @@
             this.flowLayoutPanel14.PerformLayout();
             this.flowLayoutPanel13.ResumeLayout(false);
             this.flowLayoutPanel13.PerformLayout();
+            this.flowLayoutPanel12.ResumeLayout(false);
+            this.flowLayoutPanel12.PerformLayout();
             this.flowLayoutPanel11.ResumeLayout(false);
             this.flowLayoutPanel11.PerformLayout();
             this.flowLayoutPanel10.ResumeLayout(false);
@@ -825,10 +828,6 @@
             this.Platz3.ResumeLayout(false);
             this.Platz4.ResumeLayout(false);
             this.Platz5.ResumeLayout(false);
-            this.flowLayoutPanel22.ResumeLayout(false);
-            this.flowLayoutPanel22.PerformLayout();
-            this.flowLayoutPanel12.ResumeLayout(false);
-            this.flowLayoutPanel12.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -14,38 +14,21 @@ namespace Tennisverwaltungssystem.DAL
       
 
 
-
-
-
-
-      
-
-        
-
-        public static void UpdateDataUser(User user)
+        public static bool IsUserUpdated(User user)
         {
-            string query = $"UPDATE user SET Vorname=?vorname, Nachname=?nachname, Email=?email, Passwort=?passwort, Telefonnummer=?telefonnummer, Straße=?straße)";
+           
+            string query = $"UPDATE user SET Vorname=?vorname, Nachname=?nachname, Passwort=?passwort, Telefonnummer=?telefonnummer, Straße=?straße WHERE (Email='{user.EMail}')";
             if (DAL_Main.Connect())
             {
                 MySqlCommand cmd = new MySqlCommand(query, DAL_Main.conn);
-                cmd.Parameters.Add(new MySqlParameter("vorname",
+
+                cmd.Parameters.Add(new MySqlParameter("vorname",    
                         MySqlDbType.VarChar, 30)
                 { Value = user.Vorname });
 
                 cmd.Parameters.Add(new MySqlParameter("nachname",
                      MySqlDbType.VarChar, 30)
                 { Value = user.Nachname });
-
-                if (CheckEmailExits(user))
-                {
-                    MessageBox.Show("Die E-Mail wird schon verwendet!");
-                }
-                else
-                {
-                    cmd.Parameters.Add(new MySqlParameter("email",
-                  MySqlDbType.VarChar, 30)
-                    { Value = user.EMail });
-                }
 
 
                 cmd.Parameters.Add(new MySqlParameter("passwort",
@@ -59,48 +42,30 @@ namespace Tennisverwaltungssystem.DAL
                 cmd.Parameters.Add(new MySqlParameter("straße",
                 MySqlDbType.VarChar, 30)
                 { Value = user.Straße });
-            }
-        }
 
-        public static bool CheckEmailExits(User user)
-        {
-            string query = $"SELECT * FROM user WHERE EMail='{user.EMail}';";
-            if (DAL_Main.Connect())
-            {
-                MySqlCommand cmd = new MySqlCommand(query, DAL_Main.conn);
-                MySqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                try
                 {
-                    reader.Close();
-                    DAL_Main.conn.Close();
+                    cmd.ExecuteNonQuery();
                     return true;
                 }
-                else
+                catch (Exception ex)
                 {
-                    reader.Close();
-                    DAL_Main.conn.Close();
                     return false;
-                }
-                //try
-                //{
-                //    cmd.ExecuteNonQuery();
-                //    return true;
-                //}
-                //catch (Exception ex)
-                //{
-                //    return false;
 
-                //}
+                }
             }
             else
             {
                 DAL_Main.conn.Close();
                 return false;
             }
+        }
+
+        
 
 
 
         }
     }
 
-}
+

@@ -61,35 +61,7 @@ namespace Tennisverwaltungssystem.DAL
 
         }
       
-        public static bool CheckEmailExits(User user)
-        {
-            string query = $"SELECT * FROM user WHERE EMail='{user.EMail}';";
-            if (DAL_Main.Connect())
-            {
-                MySqlCommand cmd = new MySqlCommand(query, DAL_Main.conn);
-                MySqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    reader.Close();
-                    DAL_Main.conn.Close();
-                    return true;
-                }
-                else
-                {
-                    reader.Close();
-                    DAL_Main.conn.Close();
-                    return false;
-                }
-            }
-            else
-            {
-                DAL_Main.conn.Close();
-                return false;
-            }
-            
-
-                
-        }
+       
         public static bool IsRegistered(User user1)
         {
             
@@ -106,7 +78,7 @@ namespace Tennisverwaltungssystem.DAL
                      MySqlDbType.VarChar, 30)
                 { Value = user1.Nachname });
 
-                if (CheckEmailExits(user1))
+                if (DAL_Main.CheckEmailExits(user1))
                 {
                     MessageBox.Show("Die E-Mail wird schon verwendet!");
                 }

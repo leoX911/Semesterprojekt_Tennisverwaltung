@@ -46,6 +46,11 @@
             this.btn_navbar_menu = new System.Windows.Forms.Button();
             this.pnl_header_m = new System.Windows.Forms.Panel();
             this.pic_TCHard_Logo = new System.Windows.Forms.PictureBox();
+            this.buchen_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Buchen_UserControl();
+            this.ausleihen_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Ausleihen_UserControl();
+            this.profil_Usercontrol1 = new Tennisverwaltungssystem.PL.frm_Menü_m.UserControls.Profil_Usercontrol();
+            this.statistiken_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Statistiken_UserControl();
+            this.überischt_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Überischt_UserControl();
             this.pnl_background_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_headerm2.SuspendLayout();
@@ -358,6 +363,45 @@
             this.pic_TCHard_Logo.TabStop = false;
             this.pic_TCHard_Logo.Click += new System.EventHandler(this.Pic_TCHard_Logo_Click);
             // 
+            // buchen_UserControl1
+            // 
+            this.buchen_UserControl1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buchen_UserControl1.Location = new System.Drawing.Point(243, 109);
+            this.buchen_UserControl1.Name = "buchen_UserControl1";
+            this.buchen_UserControl1.Size = new System.Drawing.Size(941, 552);
+            this.buchen_UserControl1.TabIndex = 4;
+            // 
+            // ausleihen_UserControl1
+            // 
+            this.ausleihen_UserControl1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ausleihen_UserControl1.Location = new System.Drawing.Point(238, 107);
+            this.ausleihen_UserControl1.Name = "ausleihen_UserControl1";
+            this.ausleihen_UserControl1.Size = new System.Drawing.Size(943, 554);
+            this.ausleihen_UserControl1.TabIndex = 7;
+            // 
+            // profil_Usercontrol1
+            // 
+            this.profil_Usercontrol1.Location = new System.Drawing.Point(243, 109);
+            this.profil_Usercontrol1.Name = "profil_Usercontrol1";
+            this.profil_Usercontrol1.Size = new System.Drawing.Size(943, 554);
+            this.profil_Usercontrol1.TabIndex = 6;
+            // 
+            // statistiken_UserControl1
+            // 
+            this.statistiken_UserControl1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.statistiken_UserControl1.Location = new System.Drawing.Point(243, 109);
+            this.statistiken_UserControl1.Name = "statistiken_UserControl1";
+            this.statistiken_UserControl1.Size = new System.Drawing.Size(943, 554);
+            this.statistiken_UserControl1.TabIndex = 5;
+            // 
+            // überischt_UserControl1
+            // 
+            this.überischt_UserControl1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.überischt_UserControl1.Location = new System.Drawing.Point(243, 109);
+            this.überischt_UserControl1.Name = "überischt_UserControl1";
+            this.überischt_UserControl1.Size = new System.Drawing.Size(943, 554);
+            this.überischt_UserControl1.TabIndex = 2;
+            // 
             // Übersicht_M
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,6 +410,11 @@
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.pnl_header_m);
             this.Controls.Add(this.pnl_background_home);
+            this.Controls.Add(this.buchen_UserControl1);
+            this.Controls.Add(this.ausleihen_UserControl1);
+            this.Controls.Add(this.profil_Usercontrol1);
+            this.Controls.Add(this.statistiken_UserControl1);
+            this.Controls.Add(this.überischt_UserControl1);
             this.Name = "Übersicht_M";
             this.ShowIcon = false;
             this.Text = "Übersicht";
@@ -400,6 +449,11 @@
         private System.Windows.Forms.Button btn_navbar_konakt;
         private System.Windows.Forms.Button btn_navbar_menu;
         private System.Windows.Forms.Panel pnl_header_m;
+        private frm_Menü_m.UserControls.Überischt_UserControl überischt_UserControl1;
+        private frm_Menü_m.UserControls.Buchen_UserControl buchen_UserControl1;
+        private frm_Menü_m.UserControls.Statistiken_UserControl statistiken_UserControl1;
+        private PL.frm_Menü_m.UserControls.Profil_Usercontrol profil_Usercontrol1;
+        private frm_Menü_m.UserControls.Ausleihen_UserControl ausleihen_UserControl1;
     }
 }
 
