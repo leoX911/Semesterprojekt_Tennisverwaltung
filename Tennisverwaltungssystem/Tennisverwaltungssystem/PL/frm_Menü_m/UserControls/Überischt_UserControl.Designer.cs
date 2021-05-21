@@ -106,6 +106,7 @@
             this.btn_profil.Text = "Profil verwalten";
             this.btn_profil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_profil.UseVisualStyleBackColor = true;
+            this.btn_profil.Click += new System.EventHandler(this.Btn_profil_Click);
             // 
             // btn_bookings
             // 

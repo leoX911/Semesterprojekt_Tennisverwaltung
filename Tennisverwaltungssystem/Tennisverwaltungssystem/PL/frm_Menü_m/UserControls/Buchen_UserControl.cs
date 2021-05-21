@@ -31,7 +31,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
                 FlowLayoutPanel f1 = new FlowLayoutPanel()
                 {
                     Name = $"flDay{i}",
-                    Size = new Size(97, 21),
+                    Size = new Size(97, 22),
                     BackColor = Color.White,
                     BorderStyle = BorderStyle.FixedSingle,
                     Margin=new Padding(0),

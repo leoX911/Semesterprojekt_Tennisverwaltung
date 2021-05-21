@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tennisverwaltungssystem.BL;
 using System.Net.Mail;
+using System.Text.RegularExpressions;
+using System.ComponentModel.Design;
 
 namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
 {
@@ -43,7 +45,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
             }
             else
             {
-                MessageBox.Show("Die Eingabe ist fehlerhaft");
+                MessageBox.Show("Bitte alle Pflichtfelder ausfüllen!");
                 return false;
             }
         }
@@ -70,6 +72,19 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
             bool query = name.All(char.IsLetter) && !name.Contains(" ");
             return query;
         }
+        private bool CheckPhoneNumber()
+        {
+            if (Regex.IsMatch(txtbox_tell.Text, @"/(\b(0043|0)|\B\+43)(\s?\(0\))?(\s)?[1-9]{2}(\s)?[0-9]{3}(\s)?[0-9]{2}(\s)?[0-9]{2}\b/"))
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("falsche Tellnummer");
+                return false;
+               
+            }
+        }
 
         private bool CheckFormatVorname_Nachname()
         {
@@ -92,8 +107,10 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         #endregion 
         private void Ändern_Click(object sender, EventArgs e)
         {
-            if (CheckFormatVorname_Nachname() && CheckFormatSpace()&& CheckPassword()||user.isAdmin==1)
+            if (CheckFormatVorname_Nachname() && CheckFormatSpace()&& CheckPassword()&&CheckPhoneNumber()||user.isAdmin==1)
             {
+
+               
                 user.Vorname = txtbox_name.Text;
                 user.Nachname = txtbox_nachname.Text;
               
@@ -105,11 +122,11 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
 
                 if (DAL.DAL_Profil.IsUserUpdated(user))
                 {
-                    MessageBox.Show("Erfolgreich geupdatetd");
+                    MessageBox.Show("Erfolgreich aktualisiert");
                 }
                 else
                 {
-                    MessageBox.Show("Scheise");
+                    MessageBox.Show("Daten konnten nicht aktualisiert werden");
                 }
                
             }
