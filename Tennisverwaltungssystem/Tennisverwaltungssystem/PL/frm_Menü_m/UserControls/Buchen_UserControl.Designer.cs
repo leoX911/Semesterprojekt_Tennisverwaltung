@@ -60,17 +60,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Platz1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Platz2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Platz3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Platz4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Platz5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fl_Platz = new System.Windows.Forms.FlowLayoutPanel();
             this.fp_overall = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbl_text_buchungsdetails = new System.Windows.Forms.Label();
@@ -89,7 +80,6 @@
             this.lbl_summerheader = new System.Windows.Forms.Label();
             this.lbl_buchungsüberischt_sub = new System.Windows.Forms.Label();
             this.lbl_buchen = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnl_buchung.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel22.SuspendLayout();
@@ -107,19 +97,13 @@
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
-            this.Platz1.SuspendLayout();
-            this.Platz2.SuspendLayout();
-            this.Platz3.SuspendLayout();
-            this.Platz4.SuspendLayout();
-            this.Platz5.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_buchung
             // 
             this.pnl_buchung.BackColor = System.Drawing.Color.White;
             this.pnl_buchung.Controls.Add(this.panel1);
-            this.pnl_buchung.Controls.Add(this.flowLayoutPanel5);
+            this.pnl_buchung.Controls.Add(this.fl_Platz);
             this.pnl_buchung.Controls.Add(this.fp_overall);
             this.pnl_buchung.Controls.Add(this.panel4);
             this.pnl_buchung.Controls.Add(this.lbl_text_buchungsdetails);
@@ -482,123 +466,23 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "8:00-9:00";
             // 
-            // flowLayoutPanel5
+            // flowLayoutPanel1
             // 
-            this.flowLayoutPanel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel5.Controls.Add(this.Platz1);
-            this.flowLayoutPanel5.Controls.Add(this.Platz2);
-            this.flowLayoutPanel5.Controls.Add(this.Platz3);
-            this.flowLayoutPanel5.Controls.Add(this.Platz4);
-            this.flowLayoutPanel5.Controls.Add(this.Platz5);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(22, 48);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(487, 22);
-            this.flowLayoutPanel5.TabIndex = 52;
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(96, 22);
+            this.flowLayoutPanel1.TabIndex = 53;
             // 
-            // Platz1
+            // fl_Platz
             // 
-            this.Platz1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Platz1.Controls.Add(this.label1);
-            this.Platz1.Location = new System.Drawing.Point(0, 0);
-            this.Platz1.Margin = new System.Windows.Forms.Padding(0);
-            this.Platz1.Name = "Platz1";
-            this.Platz1.Size = new System.Drawing.Size(97, 22);
-            this.Platz1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AllowDrop = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Platz 1";
-            // 
-            // Platz2
-            // 
-            this.Platz2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Platz2.Controls.Add(this.label2);
-            this.Platz2.Location = new System.Drawing.Point(97, 0);
-            this.Platz2.Margin = new System.Windows.Forms.Padding(0);
-            this.Platz2.Name = "Platz2";
-            this.Platz2.Size = new System.Drawing.Size(97, 22);
-            this.Platz2.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AllowDrop = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Platz 2";
-            // 
-            // Platz3
-            // 
-            this.Platz3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Platz3.Controls.Add(this.label3);
-            this.Platz3.Location = new System.Drawing.Point(194, 0);
-            this.Platz3.Margin = new System.Windows.Forms.Padding(0);
-            this.Platz3.Name = "Platz3";
-            this.Platz3.Size = new System.Drawing.Size(97, 22);
-            this.Platz3.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AllowDrop = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Platz 3";
-            // 
-            // Platz4
-            // 
-            this.Platz4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Platz4.Controls.Add(this.label4);
-            this.Platz4.Location = new System.Drawing.Point(291, 0);
-            this.Platz4.Margin = new System.Windows.Forms.Padding(0);
-            this.Platz4.Name = "Platz4";
-            this.Platz4.Size = new System.Drawing.Size(97, 22);
-            this.Platz4.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AllowDrop = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Platz 4";
-            // 
-            // Platz5
-            // 
-            this.Platz5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Platz5.Controls.Add(this.label5);
-            this.Platz5.Location = new System.Drawing.Point(388, 0);
-            this.Platz5.Margin = new System.Windows.Forms.Padding(0);
-            this.Platz5.Name = "Platz5";
-            this.Platz5.Size = new System.Drawing.Size(97, 22);
-            this.Platz5.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AllowDrop = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 17);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Platz 5";
+            this.fl_Platz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fl_Platz.Location = new System.Drawing.Point(22, 48);
+            this.fl_Platz.Name = "fl_Platz";
+            this.fl_Platz.Size = new System.Drawing.Size(487, 22);
+            this.fl_Platz.TabIndex = 52;
             // 
             // fp_overall
             // 
@@ -784,16 +668,6 @@
             this.lbl_buchen.TabIndex = 34;
             this.lbl_buchen.Text = "Buchen";
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(96, 22);
-            this.flowLayoutPanel1.TabIndex = 53;
-            // 
             // Buchen_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -838,12 +712,6 @@
             this.flowLayoutPanel3.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.Platz1.ResumeLayout(false);
-            this.Platz2.ResumeLayout(false);
-            this.Platz3.ResumeLayout(false);
-            this.Platz4.ResumeLayout(false);
-            this.Platz5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -882,12 +750,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private System.Windows.Forms.FlowLayoutPanel Platz1;
-        private System.Windows.Forms.FlowLayoutPanel Platz2;
-        private System.Windows.Forms.FlowLayoutPanel Platz3;
-        private System.Windows.Forms.FlowLayoutPanel Platz4;
-        private System.Windows.Forms.FlowLayoutPanel Platz5;
+        private System.Windows.Forms.FlowLayoutPanel fl_Platz;
         private System.Windows.Forms.Label lbl_subheader_neuebuchung;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel22;
         private System.Windows.Forms.Label label20;
@@ -906,11 +769,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

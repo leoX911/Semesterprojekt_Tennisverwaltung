@@ -12,10 +12,13 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 {
     public partial class Buchen_UserControl : UserControl
     {
+        private List<FlowLayoutPanel> listFlDay = new List<FlowLayoutPanel>();
+        private List<FlowLayoutPanel> listFlPlatz = new List<FlowLayoutPanel>();
         public Buchen_UserControl()
         {
             InitializeComponent();
             GenerateDayPanel(90);
+            GeneratePlatzPanel(5);
             BorderStyle = BorderStyle.None;
 
         }
@@ -28,19 +31,67 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         {
             for (int i = 1; i < totaDays; i++)
             {
+                
                 FlowLayoutPanel f1 = new FlowLayoutPanel()
                 {
+                    
                     Name = $"flDay{i}",
                     Size = new Size(97, 22),
                     BackColor = Color.White,
                     BorderStyle = BorderStyle.FixedSingle,
-                    Margin=new Padding(0),
-                   
+                    Margin = new Padding(0),
+                    
 
                 };
-
+                listFlDay.Add(f1);
                 fp_overall.Controls.Add(f1);
             }
+
+            
+        }
+
+        private void GeneratePlatzPanel(int Plätze)
+        {
+            listFlDay.Clear();
+            for (int i = 0; i < Plätze; i++)
+            {
+                FlowLayoutPanel f2 = new FlowLayoutPanel()
+                {
+
+                    Name = $"Platz{i}",
+                    Size = new Size(97, 22),
+                    BackColor = Color.White,
+                    BorderStyle = BorderStyle.FixedSingle,
+                    Margin = new Padding(0),
+                 
+                    
+
+                   
+
+
+                };
+                fl_Platz.Controls.Add(f2);
+                listFlPlatz.Add(f2);
+            }
+        }
+        private void AddLabelToPlatzPanel()
+        {
+            for (int i = 0; i < listFlPlatz.Count; i++)
+            {
+                Label lbl = new Label()
+                {
+                    Name = $"Platz{i}",
+                    //AutoSize = false,
+                    Text= $"Platz{i}",
+                    ForeColor = Color.Black,
+                    Font= new Font("Segou UI",12),
+                    
+                };
+                listFlPlatz[i].Controls.Add(lbl);
+
+            }
+           
+
         }
 
        
