@@ -49,12 +49,18 @@
             this.lbl_summerheader = new System.Windows.Forms.Label();
             this.lbl_buchungsüberischt_sub = new System.Windows.Forms.Label();
             this.lbl_buchen = new System.Windows.Forms.Label();
+            this.btn_prevDay = new System.Windows.Forms.Button();
+            this.btn_nextday = new System.Windows.Forms.Button();
+            this.btn_today = new System.Windows.Forms.Button();
             this.pnl_buchung.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_buchung
             // 
             this.pnl_buchung.BackColor = System.Drawing.Color.White;
+            this.pnl_buchung.Controls.Add(this.btn_today);
+            this.pnl_buchung.Controls.Add(this.btn_nextday);
+            this.pnl_buchung.Controls.Add(this.btn_prevDay);
             this.pnl_buchung.Controls.Add(this.fl_Time);
             this.pnl_buchung.Controls.Add(this.fl_Platz);
             this.pnl_buchung.Controls.Add(this.fp_overall);
@@ -264,9 +270,9 @@
             this.lbl_buchungsüberischt_sub.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_buchungsüberischt_sub.Location = new System.Drawing.Point(23, 17);
             this.lbl_buchungsüberischt_sub.Name = "lbl_buchungsüberischt_sub";
-            this.lbl_buchungsüberischt_sub.Size = new System.Drawing.Size(149, 21);
+            this.lbl_buchungsüberischt_sub.Size = new System.Drawing.Size(157, 21);
             this.lbl_buchungsüberischt_sub.TabIndex = 34;
-            this.lbl_buchungsüberischt_sub.Text = "Buchungsübersicht";
+            this.lbl_buchungsüberischt_sub.Text = "Buchungsübersicht |";
             // 
             // lbl_buchen
             // 
@@ -277,6 +283,46 @@
             this.lbl_buchen.Size = new System.Drawing.Size(75, 25);
             this.lbl_buchen.TabIndex = 34;
             this.lbl_buchen.Text = "Buchen";
+            // 
+            // btn_prevDay
+            // 
+            this.btn_prevDay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_prevDay.FlatAppearance.BorderSize = 0;
+            this.btn_prevDay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_prevDay.Location = new System.Drawing.Point(467, 19);
+            this.btn_prevDay.Name = "btn_prevDay";
+            this.btn_prevDay.Size = new System.Drawing.Size(26, 23);
+            this.btn_prevDay.TabIndex = 54;
+            this.btn_prevDay.Text = "<";
+            this.btn_prevDay.UseVisualStyleBackColor = false;
+            this.btn_prevDay.Click += new System.EventHandler(this.Btn_prevDay_Click);
+            // 
+            // btn_nextday
+            // 
+            this.btn_nextday.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_nextday.FlatAppearance.BorderSize = 0;
+            this.btn_nextday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nextday.Location = new System.Drawing.Point(579, 19);
+            this.btn_nextday.Name = "btn_nextday";
+            this.btn_nextday.Size = new System.Drawing.Size(26, 23);
+            this.btn_nextday.TabIndex = 55;
+            this.btn_nextday.Text = ">";
+            this.btn_nextday.UseVisualStyleBackColor = false;
+            this.btn_nextday.Click += new System.EventHandler(this.Btn_nextday_Click);
+            // 
+            // btn_today
+            // 
+            this.btn_today.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_today.FlatAppearance.BorderSize = 0;
+            this.btn_today.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_today.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_today.Location = new System.Drawing.Point(509, 19);
+            this.btn_today.Name = "btn_today";
+            this.btn_today.Size = new System.Drawing.Size(54, 23);
+            this.btn_today.TabIndex = 56;
+            this.btn_today.Text = "Heute";
+            this.btn_today.UseVisualStyleBackColor = false;
+            this.btn_today.Click += new System.EventHandler(this.Btn_today_Click);
             // 
             // Buchen_UserControl
             // 
@@ -318,5 +364,8 @@
         private System.Windows.Forms.Panel fl_Time;
         private System.Windows.Forms.FlowLayoutPanel fl_Platz;
         private System.Windows.Forms.Label lbl_subheader_neuebuchung;
+        private System.Windows.Forms.Button btn_today;
+        private System.Windows.Forms.Button btn_nextday;
+        private System.Windows.Forms.Button btn_prevDay;
     }
 }
