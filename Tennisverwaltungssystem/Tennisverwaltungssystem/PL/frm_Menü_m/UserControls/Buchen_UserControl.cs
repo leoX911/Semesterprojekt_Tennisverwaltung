@@ -41,20 +41,21 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         private void GenerateDayPanel()
         {
 
-            for (int i = 0; i < listFlPlatz.Count; i++)
+            for (int i = 0; i < listFltime.Count; i++)
             {
               
-                for (int j = 0; j < listFltime.Count; j++)
+                for (int j = 0; j < listFlPlatz.Count; j++)
                 {
 
                     FlowLayoutPanel f1 = new FlowLayoutPanel()
                     {
 
-                        Name = $"{listFlPlatz[i].Name} + {listFltime[j].Name}",
+                        Name = $"{listFlPlatz[j].Name} | {listFltime[i].Name} ",
                         Size = new Size(97, 22),
                         BackColor = Color.White,
                         BorderStyle = BorderStyle.FixedSingle,
                         Margin = new Padding(0),
+                        
 
 
                     };
@@ -73,12 +74,12 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         private void GeneratePlatzPanel(int Plätze)
         {
             listFlDay.Clear();
-            for (int i = 0; i < Plätze; i++)
+            for (int i = 1; i <= Plätze; i++)
             {
                 FlowLayoutPanel f2 = new FlowLayoutPanel()
                 {
 
-                    Name = $"Platz{i}",
+                    Name = $"Platz {i}",
                     Size = new Size(97, 22),
                     BackColor = Color.White,
                     BorderStyle = BorderStyle.FixedSingle,
@@ -97,7 +98,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
         private void GenerateZeitPanel(int Zeit)
         {
-            int Anfangszeit1 = 22;
+            int Anfangszeit1 = 8;
             int Endzeit1 = Anfangszeit1 + 1;
             listFltime.Clear();
             for (int i =0; i < Zeit; i++)
@@ -114,8 +115,8 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
                     Dock = DockStyle.Top,
 
                 };
-                Anfangszeit1--;
-                Endzeit1--;
+                Anfangszeit1++;
+                Endzeit1++;
                 fl_Time.Controls.Add(f3);
                 listFltime.Add(f3);
 
