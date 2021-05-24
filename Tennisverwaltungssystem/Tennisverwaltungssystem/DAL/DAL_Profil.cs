@@ -64,11 +64,48 @@ namespace Tennisverwaltungssystem.DAL
             }
         }
 
+        public static bool IsUserDeleted(User user)
+        {
+            string query = $"UPDATE user SET Telefonnummer=?telefonnummer, Straße=?straße WHERE (Email='{user.EMail}')";
+            if (DAL_Main.Connect())
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, DAL_Main.conn))
+                {
+                    cmd.Parameters.Add(new MySqlParameter("telefonnummer",
+                    MySqlDbType.VarChar, 30)
+                    { Value = "" });
+
+                    cmd.Parameters.Add(new MySqlParameter("straße",
+                    MySqlDbType.VarChar, 30)
+                    { Value = "" });
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        return false;
+
+                    }
+                }
+
+            }
+            else
+            {
+                DAL_Main.conn.Close();
+                return false;
+            }
+            
+        }
+
         
 
 
 
-        }
     }
+}
 
 

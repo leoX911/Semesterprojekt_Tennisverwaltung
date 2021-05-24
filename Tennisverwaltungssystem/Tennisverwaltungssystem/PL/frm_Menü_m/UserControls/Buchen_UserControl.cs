@@ -41,6 +41,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         private void AddNewBooking(object sender, EventArgs e)
         {
             MessageBox.Show("nice");
+            
             DisplayCurrentDate();
         }
         private void Buchen_UserControl_Load(object sender, EventArgs e)

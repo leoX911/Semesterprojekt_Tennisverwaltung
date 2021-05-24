@@ -24,21 +24,21 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
             if (user != null)
             {
                 // Vorhandene Daten werden in die Textboxen eingeschrieben
-                txtbox_name.Text = user.Vorname;
-                txtbox_nachname.Text = user.Nachname;
-                txtbox_email.Text = user.EMail;
+                tbx_Vorname.Text = user.Vorname;
+                tbx_Nachname.Text = user.Nachname;
+                tbx_Email.Text = user.EMail;
 
                 // TODO: Passwort in Sternchen anzeigen lassen + Button 
-                txtbox_password.Text = user.Passwort;
-                textbox_straße.Text = user.Straße;
-                txtbox_tell.Text = user.Telefonummer;
-                txtbox_email.Enabled = false;
+                tbx_Passwort.Text = user.Passwort;
+                tbx_Straße.Text = user.Straße;
+                tbx_Telefonnummer.Text = user.Telefonummer;
+                tbx_Email.Enabled = false;
             }
         }
         #region Checknames
         public bool CheckFormatSpace()
         {
-            if (txtbox_password.Text != "" && txtbox_name.Text != "" && txtbox_nachname.Text != "")
+            if (tbx_Passwort.Text != "" && tbx_Vorname.Text != "" && tbx_Nachname.Text != "")
             {
 
                 return true;
@@ -54,7 +54,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         private bool CheckPassword()
         {
             string passwort;
-            passwort = txtbox_password.Text;
+            passwort = tbx_Passwort.Text;
             if (passwort.Length >= 8 && !passwort.Contains(" "))
             {
                 return true;
@@ -80,8 +80,8 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         private bool CheckFormatVorname_Nachname()
         {
             string vorname, nachname;
-            vorname = txtbox_name.Text;
-            nachname = txtbox_nachname.Text;
+            vorname = tbx_Vorname.Text;
+            nachname = tbx_Nachname.Text;
             if (CheckNames(vorname) && CheckNames(nachname))
             {
 
@@ -95,6 +95,11 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
             }
 
         }
+        //private bool CheckTelAndStreet()
+        //{
+            
+
+        //}
         #endregion 
         private void Ändern_Click(object sender, EventArgs e)
         {
@@ -102,14 +107,14 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
             {
 
                
-                user.Vorname = txtbox_name.Text;
-                user.Nachname = txtbox_nachname.Text;
+                user.Vorname = tbx_Vorname.Text;
+                user.Nachname = tbx_Nachname.Text;
               
-                user.Passwort = txtbox_password.Text;
-                user.Straße = textbox_straße.Text;
+                user.Passwort = tbx_Passwort.Text;
+                user.Straße = tbx_Straße.Text;
 
 
-                user.Telefonummer = txtbox_tell.Text;
+                user.Telefonummer = tbx_Telefonnummer.Text;
 
                 if (DAL.DAL_Profil.IsUserUpdated(user))
                 {
@@ -122,6 +127,37 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
                
             }
         }
+
+        private void Löschen_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Straße und Telefonnummer löschen?", "löschen Ja/Nein", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                if (DAL.DAL_Profil.IsUserDeleted(user))
+                {
+                    tbx_Straße.Text = "";
+                    tbx_Telefonnummer.Text = "";
+
+                    MessageBox.Show("Daten erfolgreich gelöscht");
+                }
+                else
+                {
+                    MessageBox.Show("Daten konnten nicht gelöscht werden");
+                }
+            }
+            else
+            {
+                
+            }
+            
+
+            
+        }
+
+        //private void Ändern_MouseHover(object sender, EventArgs e)
+        //{
+        //    Ändern.BackColor = Color.Aqua;
+        //}
 
 
         //private bool CheckFormatTelefon()

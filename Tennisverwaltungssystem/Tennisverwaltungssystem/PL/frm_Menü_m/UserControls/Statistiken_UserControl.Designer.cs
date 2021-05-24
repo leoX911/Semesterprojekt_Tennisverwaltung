@@ -227,6 +227,7 @@
             this.label9.Size = new System.Drawing.Size(101, 25);
             this.label9.TabIndex = 33;
             this.label9.Text = "Statistiken";
+            
             // 
             // chart1
             // 
