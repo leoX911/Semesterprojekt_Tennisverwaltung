@@ -52,12 +52,14 @@
             this.lbl_summerheader = new System.Windows.Forms.Label();
             this.lbl_buchungsüberischt_sub = new System.Windows.Forms.Label();
             this.lbl_buchen = new System.Windows.Forms.Label();
+            this.btn_nextpage = new System.Windows.Forms.Button();
             this.pnl_buchung.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_buchung
             // 
             this.pnl_buchung.BackColor = System.Drawing.Color.White;
+            this.pnl_buchung.Controls.Add(this.btn_nextpage);
             this.pnl_buchung.Controls.Add(this.btn_today);
             this.pnl_buchung.Controls.Add(this.btn_nextday);
             this.pnl_buchung.Controls.Add(this.btn_prevDay);
@@ -172,11 +174,11 @@
             this.lbl_click_text_booking.AutoSize = true;
             this.lbl_click_text_booking.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_click_text_booking.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_click_text_booking.Location = new System.Drawing.Point(626, 249);
+            this.lbl_click_text_booking.Location = new System.Drawing.Point(626, 248);
             this.lbl_click_text_booking.Name = "lbl_click_text_booking";
-            this.lbl_click_text_booking.Size = new System.Drawing.Size(107, 12);
+            this.lbl_click_text_booking.Size = new System.Drawing.Size(162, 24);
             this.lbl_click_text_booking.TabIndex = 49;
-            this.lbl_click_text_booking.Text = "Links Zeitraum auswählen";
+            this.lbl_click_text_booking.Text = "Links mit Mausklick Zeitraum auswählen\r\n\r\n";
             // 
             // lbl_subheader_meinebuchungen
             // 
@@ -324,6 +326,17 @@
             this.lbl_buchen.TabIndex = 34;
             this.lbl_buchen.Text = "Buchen";
             // 
+            // btn_nextpage
+            // 
+            this.btn_nextpage.Font = new System.Drawing.Font("Segoe UI Semibold", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nextpage.Location = new System.Drawing.Point(702, 375);
+            this.btn_nextpage.Name = "btn_nextpage";
+            this.btn_nextpage.Size = new System.Drawing.Size(97, 24);
+            this.btn_nextpage.TabIndex = 57;
+            this.btn_nextpage.Text = "weiter >>";
+            this.btn_nextpage.UseVisualStyleBackColor = true;
+            this.btn_nextpage.Click += new System.EventHandler(this.Btn_nextpage_Click);
+            // 
             // Buchen_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,5 +380,6 @@
         private System.Windows.Forms.Button btn_today;
         private System.Windows.Forms.Button btn_nextday;
         private System.Windows.Forms.Button btn_prevDay;
+        private System.Windows.Forms.Button btn_nextpage;
     }
 }

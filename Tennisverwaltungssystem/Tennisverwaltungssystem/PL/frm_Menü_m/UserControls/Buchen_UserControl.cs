@@ -8,18 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tennisverwaltungssystem.PL.frm_Menü_m.UserControls;
+using Tennisverwaltungssystem.PL.frm_Menü_m;
 
 namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 {
     public partial class Buchen_UserControl : UserControl
     {
-       
+        
+        private bool isLost = false;
+        private int _counterclicked=0;
         private DateTime currentdateTime = DateTime.Today;
-        private readonly List<Daypanel>  listFlDay = new List<Daypanel>();
+
+        private readonly List<Daypanel> listFlDay = new List<Daypanel>();
         private readonly List<FlowLayoutPanel> listFlPlatz = new List<FlowLayoutPanel>();
         private readonly List<FlowLayoutPanel> listFltime = new List<FlowLayoutPanel>();
         public Buchen_UserControl()
         {
+            DAL.DAL_Main.CreateConnection();
+            if (!DAL.DAL_Main.Connect()) return;
+
             InitializeComponent();
            
             GeneratePlatzPanel(5);
@@ -40,9 +47,85 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         #region GeneratePanels
         private void AddNewBooking(object sender, EventArgs e)
         {
-            MessageBox.Show("nice");
-            
-            DisplayCurrentDate();
+          
+            Daypanel clickedPanel = (Daypanel)sender;
+           
+            if (!clickedPanel.Clicked)
+            {
+                foreach (Daypanel item in listFlDay)
+                {
+
+                    if (item.Clicked && (item.Left != clickedPanel.Left|| (item.Top!=clickedPanel.Top-clickedPanel.Height)))
+                    {
+                       
+                        isLost = true;
+                        break;
+                    }
+                    else
+                    {
+                        isLost = false;
+                    }
+
+                   
+                }
+
+                if (_counterclicked < 2)
+                {
+                    if (!isLost)
+                    {
+                       
+                            _counterclicked++;
+
+
+                            clickedPanel.Clicked = true;
+                            clickedPanel.BackColor = Color.Green;
+                       
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Man kann nur untereinander Folgende auswählen...");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Du kannst maximal 2h auswählen...");
+                }
+
+
+
+
+
+            }
+            else
+            {
+               
+                _counterclicked--;
+                clickedPanel.Clicked = false;
+                clickedPanel.BackColor = Color.White;
+            }
+
+            if (_counterclicked != 0)
+            {
+                
+                btn_nextpage.Enabled = true;
+                btn_today.Enabled = false;
+                btn_nextday.Enabled = false;
+                btn_prevDay.Enabled = false;
+            }
+            else
+            {
+                btn_today.Enabled = true;
+                btn_nextday.Enabled = true;
+                btn_prevDay.Enabled = true;
+                btn_nextpage.Enabled = false;
+            }
+            //MessageBox.Show(Convert.ToString(_counterclicked));
+
+
+
+
+            //DisplayCurrentDate();
         }
         private void Buchen_UserControl_Load(object sender, EventArgs e)
         {
@@ -119,18 +202,22 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
         private void ShowBookingToFlDay()
         {
+           
             foreach (Daypanel f1 in listFlDay)
             {
-                if (DAL.DAL_Buchen.isOccupied(f1))
-                {
-                    f1.BackColor = Color.Red;
-                    f1.Occupied = true;
-                }
-                else
-                {
-                    f1.Occupied = false;
-                    f1.BackColor = Color.White;
-                }
+              
+                    if (DAL.DAL_Buchen.isOccupied(f1))
+                    {
+                        f1.BackColor = Color.Red;
+                        f1.Occupied = true;
+                    }
+                    else
+                    {
+                        f1.Occupied = false;
+                        f1.BackColor = Color.White;
+                    }
+                
+                
             }
 
         }
@@ -235,6 +322,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         }
         private void UpdateflDateToCurrentDate()
         {
+            btn_today.Enabled = true;
             foreach (Daypanel f1 in listFlDay)
             {
                 f1.Date = currentdateTime;
@@ -244,7 +332,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         private void DisplayCurrentDate()
         {
 
-           
+            _counterclicked = 0;
             UpdateflDateToCurrentDate();
        
             ShowBookingToFlDay();
@@ -279,6 +367,17 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         {
             currentdateTime = DateTime.Today;
             DisplayCurrentDate();
+        }
+
+        private void Btn_nextpage_Click(object sender, EventArgs e)
+        {
+         
+            
+            KontaktformularBuchen kontaktfrm = new KontaktformularBuchen();
+            kontaktfrm.ShowDialog();
+           
+
+         
         }
     }
 }
