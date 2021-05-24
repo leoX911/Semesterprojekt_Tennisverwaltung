@@ -74,16 +74,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         }
         private bool CheckPhoneNumber()
         {
-            if (Regex.IsMatch(txtbox_tell.Text, @"/(\b(0043|0)|\B\+43)(\s?\(0\))?(\s)?[1-9]{2}(\s)?[0-9]{3}(\s)?[0-9]{2}(\s)?[0-9]{2}\b/"))
-            {
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("falsche Tellnummer");
-                return false;
-               
-            }
+            return true;
         }
 
         private bool CheckFormatVorname_Nachname()
