@@ -101,6 +101,9 @@
     <Compile Include="PL\frm_Menü_m\UserControls\Buchen_UserControl.Designer.cs">
       <DependentUpon>Buchen_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frm_Menü_m\Daypanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="PL\frm_Menü_m\UserControls\Profil_Usercontrol.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tennisverwaltungssystem.PL.frm_Menü_m.UserControls;
 
 namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 {
@@ -14,19 +15,22 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
     {
        
         private DateTime currentdateTime = DateTime.Today;
-        private List<FlowLayoutPanel> listFlDay = new List<FlowLayoutPanel>();
+        private List<Daypanel> listFlDay = new List<Daypanel>();
         private List<FlowLayoutPanel> listFlPlatz = new List<FlowLayoutPanel>();
         private List<FlowLayoutPanel> listFltime = new List<FlowLayoutPanel>();
         public Buchen_UserControl()
         {
             InitializeComponent();
-            DisplayCurrentDate();
+           
             GeneratePlatzPanel(5);
             AddLabelToPlatzPanel();
+
             GenerateZeitPanel(16);
-            AddLabelToTimePanel(1);
+            AddLabelToTimePanel(22);
+
             GenerateDayPanel();
-            AddLabelToDayPanel();
+            DisplayCurrentDate();
+
 
 
 
@@ -40,27 +44,33 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         }
         private void GenerateDayPanel()
         {
-
+            listFlDay.Clear();
+           
             for (int i = 0; i < listFltime.Count; i++)
             {
               
                 for (int j = 0; j < listFlPlatz.Count; j++)
                 {
 
-                    FlowLayoutPanel f1 = new FlowLayoutPanel()
+                    Daypanel f1 = new Daypanel()
                     {
 
-                        Name = $"{listFlPlatz[j].Name} | {listFltime[i].Name} ",
+                        Name = $"{listFlPlatz[j].Name};{listFltime[i].Name}",
                         Size = new Size(97, 22),
                         BackColor = Color.White,
                         BorderStyle = BorderStyle.FixedSingle,
                         Margin = new Padding(0),
-                        
+                        Platznummer = Convert.ToInt32(listFlPlatz[j].Name),
+                        Anfangszeit = Convert.ToInt32(listFltime[i].Name),
+                        Endzeit = Convert.ToInt32(listFltime[i].Name) + 1,
+                        Date = currentdateTime,
 
 
                     };
                     listFlDay.Add(f1);
                     fp_overall.Controls.Add(f1);
+                   
+                    
                 }
                 
 
@@ -79,12 +89,12 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
                 FlowLayoutPanel f2 = new FlowLayoutPanel()
                 {
 
-                    Name = $"Platz {i}",
+                    Name = $"{i}",
                     Size = new Size(97, 22),
                     BackColor = Color.White,
                     BorderStyle = BorderStyle.FixedSingle,
                     Margin = new Padding(0),
-                 
+                    
                     
 
                    
@@ -96,8 +106,17 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             }
         }
 
+        private void ShowBookingToFlDay()
+        {
+            foreach (Daypanel f1 in listFlDay)
+            {
+               
+            }
+
+        }
         private void GenerateZeitPanel(int Zeit)
         {
+            
             int Anfangszeit1 = 8;
             int Endzeit1 = Anfangszeit1 + 1;
             listFltime.Clear();
@@ -107,7 +126,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
                 FlowLayoutPanel f3 = new FlowLayoutPanel()
                 {
 
-                    Name = $"{Anfangszeit1}:00-{Endzeit1}:00",
+                    Name = $"{Anfangszeit1}",
                     Size = new Size(97, 22),
                     BackColor = Color.White,
                     BorderStyle = BorderStyle.FixedSingle,
@@ -142,13 +161,17 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
         private void AddLabelToDayPanel()
         {
+            foreach (Daypanel fl in listFlDay)
+            {
+                fl.Controls.Clear();
+            }
             for (int i = 0; i < listFlDay.Count; i++)
             {
                 Label lbl1 = new Label()
                 {
                     Name = $"lbl{i}",
                     //AutoSize = false,
-                    Text = $"{listFlDay[i].Name}",
+                    Text = $"{listFlDay[i].Platznummer} ; {listFlDay[i].Anfangszeit} ; {listFlDay[i].Date.ToShortDateString()}",
                     ForeColor = Color.Black,
                     Font = new Font("Segou UI", 6),
 
@@ -158,11 +181,11 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             }
         }
 
-        private void AddLabelToTimePanel(int starttime)
+        private void AddLabelToTimePanel(int Anfangszeit1)
         {
-            int Anfangszeit1 = 22;
+            
             int Endzeit1 = Anfangszeit1 + 1;
-            for (int i = starttime; i <= listFltime.Count; i++)
+            for (int i = 1; i <= listFltime.Count-1; i++)
             {
                 
                 Label lbl = new Label()
@@ -177,17 +200,26 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
                 };
                 Anfangszeit1--;
                 Endzeit1--;
-                if (i==16)
-                {
-                    break;
-                }
+               
                 listFltime[i-1].Controls.Add(lbl);
 
+            }
+        }
+        private void UpdateflDateToCurrentDate()
+        {
+            foreach (Daypanel f1 in listFlDay)
+            {
+                f1.Date = currentdateTime;
             }
         }
         #endregion
         private void DisplayCurrentDate()
         {
+
+           
+            UpdateflDateToCurrentDate();
+            AddLabelToDayPanel();
+            ShowBookingToFlDay();
             lbl_buchungsüberischt_sub.Text = currentdateTime.ToString("dddd, MMM d");
         }
         private void PrevDay()
