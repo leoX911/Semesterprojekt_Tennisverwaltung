@@ -37,7 +37,7 @@ namespace Tennisverwaltungssystem.DAL
                             user2.Straße = Convert.ToString(reader["Straße"]);
                             user2.ProfilCode = Convert.ToString(reader["profilpicCode"]);
                             user2.Telefonummer = Convert.ToString(reader["Telefonnummer"]);
-                            user2.PLZ = Convert.ToInt32(reader["Postleitzahl"]);
+                            user2.PLZ = Convert.ToString(reader["Postleitzahl"]);
                             user2.Ort = Convert.ToString(reader["Ort"]);
 
 
@@ -127,7 +127,7 @@ namespace Tennisverwaltungssystem.DAL
                     { Value = user1.Ort });
 
                     cmd.Parameters.Add(new MySqlParameter("plz",
-                    MySqlDbType.Int32)
+                    MySqlDbType.VarChar, 30)
                     { Value = user1.PLZ });
 
 

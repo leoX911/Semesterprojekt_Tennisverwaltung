@@ -17,7 +17,7 @@ namespace Tennisverwaltungssystem.DAL
         public static bool IsUserUpdated(User user)
         {
            
-            string query = $"UPDATE user SET Vorname=?vorname, Nachname=?nachname, Passwort=?passwort, Telefonnummer=?telefonnummer, Straße=?straße WHERE (Email='{user.EMail}')";
+            string query = $"UPDATE user SET Vorname=?vorname, Nachname=?nachname, Passwort=?passwort, Telefonnummer=?telefonnummer, Straße=?straße, Ort=?ort, Postleitzahl=?plz WHERE (Email='{user.EMail}')";
             if (DAL_Main.Connect())
             {
                 using(MySqlCommand cmd = new MySqlCommand(query, DAL_Main.conn))
@@ -43,6 +43,14 @@ namespace Tennisverwaltungssystem.DAL
                     MySqlDbType.VarChar, 30)
                     { Value = user.Straße });
 
+                    cmd.Parameters.Add(new MySqlParameter("ort",
+                    MySqlDbType.VarChar, 30)
+                    { Value = user.Ort });
+
+                    cmd.Parameters.Add(new MySqlParameter("plz",
+                    MySqlDbType.VarChar, 30)
+                    { Value = user.PLZ });
+
                     try
                     {
                         cmd.ExecuteNonQuery();
@@ -66,7 +74,7 @@ namespace Tennisverwaltungssystem.DAL
 
         public static bool IsUserDeleted(User user)
         {
-            string query = $"UPDATE user SET Telefonnummer=?telefonnummer, Straße=?straße WHERE (Email='{user.EMail}')";
+            string query = $"UPDATE user SET Telefonnummer=?telefonnummer, Straße=?straße, Ort=?ort, Postleitzahl=?plz WHERE (Email='{user.EMail}')";
             if (DAL_Main.Connect())
             {
                 using (MySqlCommand cmd = new MySqlCommand(query, DAL_Main.conn))
@@ -76,6 +84,14 @@ namespace Tennisverwaltungssystem.DAL
                     { Value = "" });
 
                     cmd.Parameters.Add(new MySqlParameter("straße",
+                    MySqlDbType.VarChar, 30)
+                    { Value = "" });
+
+                    cmd.Parameters.Add(new MySqlParameter("ort",
+                   MySqlDbType.VarChar, 30)
+                    { Value = "" });
+
+                    cmd.Parameters.Add(new MySqlParameter("plz",
                     MySqlDbType.VarChar, 30)
                     { Value = "" });
 

@@ -33,7 +33,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
                 tbx_Straße.Text = user.Straße;
                 tbx_Telefonnummer.Text = user.Telefonummer;
                 tbx_Email.Enabled = false;
-                tbx_PLZ.Text = Convert.ToString(user.PLZ);
+                tbx_PLZ.Text = user.PLZ;
                 tbx_Ort.Text = user.Ort;
             }
         }
@@ -68,7 +68,30 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
             }
 
         }
-      
+        private bool CheckPostleitzahl()
+        {
+            string postleitzahl;
+            postleitzahl = tbx_PLZ.Text;
+
+            if (postleitzahl.Length == 4 && postleitzahl.All(char.IsDigit))
+            {
+                return true;
+            }
+            else
+            {
+                if (postleitzahl == "")
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Das ist keine Österreichische Postleitzahl!");
+                    return false;
+                }
+                
+            }
+
+        }
         private bool CheckNames(string name)
         {
             bool query = name.All(char.IsLetter) && !name.Contains(" ");
@@ -105,16 +128,18 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         #endregion 
         private void Ändern_Click(object sender, EventArgs e)
         {
-            if (CheckFormatVorname_Nachname() && CheckFormatSpace()&& CheckPassword()&&CheckPhoneNumber()||user.isAdmin==1)
+            if (CheckFormatVorname_Nachname() && CheckFormatSpace() && CheckPostleitzahl() && CheckPassword()&&CheckPhoneNumber()||user.isAdmin==1)
             {
+                
 
-               
+
                 user.Vorname = tbx_Vorname.Text;
                 user.Nachname = tbx_Nachname.Text;
               
                 user.Passwort = tbx_Passwort.Text;
                 user.Straße = tbx_Straße.Text;
-
+                user.PLZ = tbx_PLZ.Text;
+                user.Ort = tbx_Ort.Text;
 
                 user.Telefonummer = tbx_Telefonnummer.Text;
 
@@ -132,13 +157,15 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
 
         private void Löschen_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Straße und Telefonnummer löschen?", "löschen Ja/Nein", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Adresse und Telefonnummer löschen?", "löschen Ja/Nein", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 if (DAL.DAL_Profil.IsUserDeleted(user))
                 {
                     tbx_Straße.Text = "";
                     tbx_Telefonnummer.Text = "";
+                    tbx_PLZ.Text = "";
+                    tbx_Ort.Text = "";
 
                     MessageBox.Show("Daten erfolgreich gelöscht");
                 }

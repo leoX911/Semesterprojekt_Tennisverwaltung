@@ -16,7 +16,7 @@ namespace Tennisverwaltungssystem.BL
         public string Straße { get; set; }
         //public int Hausnummer { get; set; }
         public string Telefonummer { get; set; }
-        public int PLZ { get; set; }
+        public string PLZ { get; set; }
         public string Ort { get; set; }
 
         public string ProfilCode { get; set; }
