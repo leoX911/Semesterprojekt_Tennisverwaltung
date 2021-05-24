@@ -63,6 +63,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
                         Platznummer = Convert.ToInt32(listFlPlatz[j].Name),
                         Anfangszeit = Convert.ToInt32(listFltime[i].Name),
                         Endzeit = Convert.ToInt32(listFltime[i].Name) + 1,
+                        Occupied = false,
                         Date = currentdateTime,
 
 
@@ -110,7 +111,15 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         {
             foreach (Daypanel f1 in listFlDay)
             {
-               
+                if (DAL.DAL_Buchen.isOccupied(f1))
+                {
+                    f1.BackColor = Color.Red;
+                    f1.Occupied = true;
+                }
+                else
+                {
+                    f1.BackColor = Color.White;
+                }
             }
 
         }
@@ -161,12 +170,15 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
         private void AddLabelToDayPanel()
         {
+            
             foreach (Daypanel fl in listFlDay)
             {
                 fl.Controls.Clear();
+              
             }
             for (int i = 0; i < listFlDay.Count; i++)
             {
+            
                 Label lbl1 = new Label()
                 {
                     Name = $"lbl{i}",
@@ -177,6 +189,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
                 };
                 listFlDay[i].Controls.Add(lbl1);
+               
 
             }
         }
@@ -218,8 +231,9 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
            
             UpdateflDateToCurrentDate();
-            AddLabelToDayPanel();
+       
             ShowBookingToFlDay();
+            AddLabelToDayPanel();
             lbl_buchungsüberischt_sub.Text = currentdateTime.ToString("dddd, MMM d");
         }
         private void PrevDay()

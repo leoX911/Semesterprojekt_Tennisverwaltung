@@ -13,5 +13,6 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         public int Anfangszeit { get; set; }
         public int Endzeit { get; set; }
         public DateTime Date { get; set; }
+        public bool Occupied { get; set; }
     }
 }
