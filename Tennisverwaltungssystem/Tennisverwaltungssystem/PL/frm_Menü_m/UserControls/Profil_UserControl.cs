@@ -33,6 +33,8 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
                 tbx_Straße.Text = user.Straße;
                 tbx_Telefonnummer.Text = user.Telefonummer;
                 tbx_Email.Enabled = false;
+                tbx_PLZ.Text = Convert.ToString(user.PLZ);
+                tbx_Ort.Text = user.Ort;
             }
         }
         #region Checknames

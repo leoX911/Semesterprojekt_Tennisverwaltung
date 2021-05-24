@@ -133,7 +133,8 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
                 user1.Nachname = txtbox_nachnamen.Text;              
                 user1.EMail = txtbox_email.Text;
                 user1.Passwort = txtbox_password.Text;
-
+                user1.Ort = "";
+                user1.PLZ = 0;
                 user1.Telefonummer ="";
                 
              

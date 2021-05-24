@@ -32,14 +32,13 @@ namespace Tennisverwaltungssystem.DAL
 
                             user2.Vorname = (string)reader["Vorname"];
                             user2.Nachname = (string)reader["Nachname"];
-
                             user2.isMitglied = Convert.ToInt32(reader["isMitglied"]);
                             user2.isAdmin = Convert.ToInt32(reader["isAdmin"]);
                             user2.Straße = Convert.ToString(reader["Straße"]);
-                            //user2.Hausnummer = Convert.ToInt32(reader["Hausnummer"]);
-
                             user2.ProfilCode = Convert.ToString(reader["profilpicCode"]);
                             user2.Telefonummer = Convert.ToString(reader["Telefonnummer"]);
+                            user2.PLZ = Convert.ToInt32(reader["Postleitzahl"]);
+                            user2.Ort = Convert.ToString(reader["Ort"]);
 
 
                             reader.Close();
@@ -71,7 +70,7 @@ namespace Tennisverwaltungssystem.DAL
         public static bool IsRegistered(User user1)
         {
             
-            string query = $"INSERT INTO user(idUser,Vorname, Nachname, Email,Passwort,isAdmin,isMitglied,Telefonnummer,Straße,profilpicCode) VALUES(NULL,?vorname,?nachname, ?email, ?passwort, ?isadmin, ?ismitglied, ?telefonnummer, ?straße, ?profilpiccode)";
+            string query = $"INSERT INTO user(idUser,Vorname, Nachname, Email,Passwort,isAdmin,isMitglied,Telefonnummer,Straße,profilpicCode, Ort, Postleitzahl) VALUES(NULL,?vorname,?nachname, ?email, ?passwort, ?isadmin, ?ismitglied, ?telefonnummer, ?straße, ?profilpiccode, ?ort, ?plz)";
             if (DAL_Main.Connect())
             {
 
@@ -122,6 +121,14 @@ namespace Tennisverwaltungssystem.DAL
                     cmd.Parameters.Add(new MySqlParameter("profilpiccode",
                     MySqlDbType.LongText)
                     { Value = user1.ProfilCode });
+
+                    cmd.Parameters.Add(new MySqlParameter("ort",
+                    MySqlDbType.VarChar, 30)
+                    { Value = user1.Ort });
+
+                    cmd.Parameters.Add(new MySqlParameter("plz",
+                    MySqlDbType.Int32)
+                    { Value = user1.PLZ });
 
 
                     //  cmd.Parameters.Add(new MySqlParameter("hausnummer",

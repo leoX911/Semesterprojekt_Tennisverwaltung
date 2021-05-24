@@ -47,6 +47,10 @@
             this.Ändern = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_Profil_Heading = new System.Windows.Forms.Label();
+            this.lbl_PLZ = new System.Windows.Forms.Label();
+            this.tbx_PLZ = new System.Windows.Forms.TextBox();
+            this.lbl_Ort = new System.Windows.Forms.Label();
+            this.tbx_Ort = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -56,6 +60,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.tbx_Ort);
+            this.panel1.Controls.Add(this.lbl_Ort);
+            this.panel1.Controls.Add(this.tbx_PLZ);
+            this.panel1.Controls.Add(this.lbl_PLZ);
             this.panel1.Controls.Add(this.lbl_Straße);
             this.panel1.Controls.Add(this.lbl_Telefonnummer);
             this.panel1.Controls.Add(this.lbl_Nachname);
@@ -66,7 +74,7 @@
             this.panel1.Controls.Add(this.tbx_Vorname);
             this.panel1.Location = new System.Drawing.Point(58, 61);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(574, 243);
+            this.panel1.Size = new System.Drawing.Size(574, 311);
             this.panel1.TabIndex = 0;
             // 
             // lbl_Straße
@@ -83,7 +91,7 @@
             // 
             this.lbl_Telefonnummer.AutoSize = true;
             this.lbl_Telefonnummer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Telefonnummer.Location = new System.Drawing.Point(53, 179);
+            this.lbl_Telefonnummer.Location = new System.Drawing.Point(53, 176);
             this.lbl_Telefonnummer.Name = "lbl_Telefonnummer";
             this.lbl_Telefonnummer.Size = new System.Drawing.Size(91, 15);
             this.lbl_Telefonnummer.TabIndex = 6;
@@ -112,7 +120,7 @@
             // tbx_Telefonnummer
             // 
             this.tbx_Telefonnummer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_Telefonnummer.Location = new System.Drawing.Point(158, 176);
+            this.tbx_Telefonnummer.Location = new System.Drawing.Point(158, 173);
             this.tbx_Telefonnummer.Multiline = true;
             this.tbx_Telefonnummer.Name = "tbx_Telefonnummer";
             this.tbx_Telefonnummer.Size = new System.Drawing.Size(326, 27);
@@ -152,16 +160,16 @@
             this.panel2.Controls.Add(this.lbl_Email);
             this.panel2.Controls.Add(this.tbx_Passwort);
             this.panel2.Controls.Add(this.tbx_Email);
-            this.panel2.Location = new System.Drawing.Point(58, 330);
+            this.panel2.Location = new System.Drawing.Point(58, 391);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(574, 194);
+            this.panel2.Size = new System.Drawing.Size(574, 133);
             this.panel2.TabIndex = 1;
             // 
             // lbl_Passwort
             // 
             this.lbl_Passwort.AutoSize = true;
             this.lbl_Passwort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Passwort.Location = new System.Drawing.Point(53, 120);
+            this.lbl_Passwort.Location = new System.Drawing.Point(53, 82);
             this.lbl_Passwort.Name = "lbl_Passwort";
             this.lbl_Passwort.Size = new System.Drawing.Size(54, 15);
             this.lbl_Passwort.TabIndex = 9;
@@ -171,7 +179,7 @@
             // 
             this.lbl_Email.AutoSize = true;
             this.lbl_Email.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Email.Location = new System.Drawing.Point(53, 58);
+            this.lbl_Email.Location = new System.Drawing.Point(53, 33);
             this.lbl_Email.Name = "lbl_Email";
             this.lbl_Email.Size = new System.Drawing.Size(36, 15);
             this.lbl_Email.TabIndex = 8;
@@ -180,7 +188,7 @@
             // tbx_Passwort
             // 
             this.tbx_Passwort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_Passwort.Location = new System.Drawing.Point(158, 117);
+            this.tbx_Passwort.Location = new System.Drawing.Point(158, 79);
             this.tbx_Passwort.Multiline = true;
             this.tbx_Passwort.Name = "tbx_Passwort";
             this.tbx_Passwort.Size = new System.Drawing.Size(326, 27);
@@ -189,7 +197,7 @@
             // tbx_Email
             // 
             this.tbx_Email.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_Email.Location = new System.Drawing.Point(158, 55);
+            this.tbx_Email.Location = new System.Drawing.Point(158, 30);
             this.tbx_Email.Multiline = true;
             this.tbx_Email.Name = "tbx_Email";
             this.tbx_Email.Size = new System.Drawing.Size(326, 27);
@@ -254,6 +262,44 @@
             this.lbl_Profil_Heading.TabIndex = 34;
             this.lbl_Profil_Heading.Text = "Profil";
             // 
+            // lbl_PLZ
+            // 
+            this.lbl_PLZ.AutoSize = true;
+            this.lbl_PLZ.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PLZ.Location = new System.Drawing.Point(53, 218);
+            this.lbl_PLZ.Name = "lbl_PLZ";
+            this.lbl_PLZ.Size = new System.Drawing.Size(27, 15);
+            this.lbl_PLZ.TabIndex = 8;
+            this.lbl_PLZ.Text = "PLZ";
+            // 
+            // tbx_PLZ
+            // 
+            this.tbx_PLZ.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_PLZ.Location = new System.Drawing.Point(158, 215);
+            this.tbx_PLZ.Multiline = true;
+            this.tbx_PLZ.Name = "tbx_PLZ";
+            this.tbx_PLZ.Size = new System.Drawing.Size(326, 27);
+            this.tbx_PLZ.TabIndex = 9;
+            // 
+            // lbl_Ort
+            // 
+            this.lbl_Ort.AutoSize = true;
+            this.lbl_Ort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Ort.Location = new System.Drawing.Point(53, 265);
+            this.lbl_Ort.Name = "lbl_Ort";
+            this.lbl_Ort.Size = new System.Drawing.Size(24, 15);
+            this.lbl_Ort.TabIndex = 10;
+            this.lbl_Ort.Text = "Ort";
+            // 
+            // tbx_Ort
+            // 
+            this.tbx_Ort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_Ort.Location = new System.Drawing.Point(158, 262);
+            this.tbx_Ort.Multiline = true;
+            this.tbx_Ort.Name = "tbx_Ort";
+            this.tbx_Ort.Size = new System.Drawing.Size(326, 27);
+            this.tbx_Ort.TabIndex = 11;
+            // 
             // Profil_Usercontrol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,5 +344,9 @@
         private System.Windows.Forms.Button Löschen;
         private System.Windows.Forms.Button Ändern;
         private System.Windows.Forms.Label lbl_Profil_Heading;
+        private System.Windows.Forms.TextBox tbx_Ort;
+        private System.Windows.Forms.Label lbl_Ort;
+        private System.Windows.Forms.TextBox tbx_PLZ;
+        private System.Windows.Forms.Label lbl_PLZ;
     }
 }
