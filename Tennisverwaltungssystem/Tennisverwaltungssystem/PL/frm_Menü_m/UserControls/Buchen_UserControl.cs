@@ -15,9 +15,9 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
     {
        
         private DateTime currentdateTime = DateTime.Today;
-        private List<Daypanel> listFlDay = new List<Daypanel>();
-        private List<FlowLayoutPanel> listFlPlatz = new List<FlowLayoutPanel>();
-        private List<FlowLayoutPanel> listFltime = new List<FlowLayoutPanel>();
+        private readonly List<Daypanel>  listFlDay = new List<Daypanel>();
+        private readonly List<FlowLayoutPanel> listFlPlatz = new List<FlowLayoutPanel>();
+        private readonly List<FlowLayoutPanel> listFltime = new List<FlowLayoutPanel>();
         public Buchen_UserControl()
         {
             InitializeComponent();
@@ -38,6 +38,11 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
         }
         #region GeneratePanels
+        private void AddNewBooking(object sender, EventArgs e)
+        {
+            MessageBox.Show("nice");
+            DisplayCurrentDate();
+        }
         private void Buchen_UserControl_Load(object sender, EventArgs e)
         {
 
@@ -65,9 +70,13 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
                         Endzeit = Convert.ToInt32(listFltime[i].Name) + 1,
                         Occupied = false,
                         Date = currentdateTime,
+                        
 
+                        
 
                     };
+                    f1.Cursor = Cursors.Hand;
+                    f1.Click += AddNewBooking;
                     listFlDay.Add(f1);
                     fp_overall.Controls.Add(f1);
                    
@@ -118,6 +127,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
                 }
                 else
                 {
+                    f1.Occupied = false;
                     f1.BackColor = Color.White;
                 }
             }
@@ -183,13 +193,17 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
                 {
                     Name = $"lbl{i}",
                     //AutoSize = false,
-                    Text = $"{listFlDay[i].Platznummer} ; {listFlDay[i].Anfangszeit} ; {listFlDay[i].Date.ToShortDateString()}",
-                    ForeColor = Color.Black,
-                    Font = new Font("Segou UI", 6),
+                    Text = "besetzt",
+                    ForeColor = Color.White,
+                    Font = new Font("Segou UI", 7),
 
                 };
-                listFlDay[i].Controls.Add(lbl1);
-               
+                
+                if (listFlDay[i].Occupied)
+                {
+                    listFlDay[i].Controls.Add(lbl1);
+                }
+
 
             }
         }

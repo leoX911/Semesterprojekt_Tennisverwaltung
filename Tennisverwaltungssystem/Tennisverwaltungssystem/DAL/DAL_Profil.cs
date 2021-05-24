@@ -20,39 +20,42 @@ namespace Tennisverwaltungssystem.DAL
             string query = $"UPDATE user SET Vorname=?vorname, Nachname=?nachname, Passwort=?passwort, Telefonnummer=?telefonnummer, Straße=?straße WHERE (Email='{user.EMail}')";
             if (DAL_Main.Connect())
             {
-                MySqlCommand cmd = new MySqlCommand(query, DAL_Main.conn);
-
-                cmd.Parameters.Add(new MySqlParameter("vorname",    
-                        MySqlDbType.VarChar, 30)
-                { Value = user.Vorname });
-
-                cmd.Parameters.Add(new MySqlParameter("nachname",
-                     MySqlDbType.VarChar, 30)
-                { Value = user.Nachname });
-
-
-                cmd.Parameters.Add(new MySqlParameter("passwort",
-                     MySqlDbType.VarChar, 30)
-                { Value = user.Passwort });
-
-                cmd.Parameters.Add(new MySqlParameter("telefonnummer",
-                MySqlDbType.VarChar, 30)
-                { Value = user.Telefonummer });
-
-                cmd.Parameters.Add(new MySqlParameter("straße",
-                MySqlDbType.VarChar, 30)
-                { Value = user.Straße });
-
-                try
+                using(MySqlCommand cmd = new MySqlCommand(query, DAL_Main.conn))
                 {
-                    cmd.ExecuteNonQuery();
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    return false;
+                    cmd.Parameters.Add(new MySqlParameter("vorname",
+                      MySqlDbType.VarChar, 30)
+                    { Value = user.Vorname });
 
+                    cmd.Parameters.Add(new MySqlParameter("nachname",
+                         MySqlDbType.VarChar, 30)
+                    { Value = user.Nachname });
+
+
+                    cmd.Parameters.Add(new MySqlParameter("passwort",
+                         MySqlDbType.VarChar, 30)
+                    { Value = user.Passwort });
+
+                    cmd.Parameters.Add(new MySqlParameter("telefonnummer",
+                    MySqlDbType.VarChar, 30)
+                    { Value = user.Telefonummer });
+
+                    cmd.Parameters.Add(new MySqlParameter("straße",
+                    MySqlDbType.VarChar, 30)
+                    { Value = user.Straße });
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        return false;
+
+                    }
                 }
+              
             }
             else
             {

@@ -36,12 +36,6 @@
     <StartupObject>Tennisverwaltungssystem.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\Bunifu_UI_v1.52.dll</HintPath>
-    </Reference>
-    <Reference Include="JTextBox">
-      <HintPath>..\..\..\JTextBox.dll</HintPath>
-    </Reference>
     <Reference Include="MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -90,6 +84,12 @@
     <Compile Include="PL\frm_login_register\frm_register.Designer.cs">
       <DependentUpon>frm_register.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frm_Menü_m\KontaktformularBuchen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\KontaktformularBuchen.Designer.cs">
+      <DependentUpon>KontaktformularBuchen.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\frm_Menü_m\UserControls\Ausleihen_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,7 +102,7 @@
     <Compile Include="PL\frm_Menü_m\UserControls\Buchen_UserControl.Designer.cs">
       <DependentUpon>Buchen_UserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\frm_Menü_m\Daypanel.cs">
+    <Compile Include="BL\Daypanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="PL\frm_Menü_m\UserControls\Profil_Usercontrol.cs">
@@ -142,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frm_login_register\frm_register.resx">
       <DependentUpon>frm_register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frm_Menü_m\KontaktformularBuchen.resx">
+      <DependentUpon>KontaktformularBuchen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frm_Menü_m\UserControls\Ausleihen_UserControl.resx">
       <DependentUpon>Ausleihen_UserControl.cs</DependentUpon>

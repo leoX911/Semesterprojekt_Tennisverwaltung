@@ -28,20 +28,26 @@ namespace Tennisverwaltungssystem.DAL
             string query = $"SELECT * FROM user WHERE EMail='{user.EMail}';";
             if (Connect())
             {
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                MySqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    reader.Close();
-                    conn.Close();
-                    return true;
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            reader.Close();
+                            conn.Close();
+                            return true;
+                        }
+                        else
+                        {
+                            reader.Close();
+                            conn.Close();
+                            return false;
+                        }
+                    }
+                   
                 }
-                else
-                {
-                    reader.Close();
-                    conn.Close();
-                    return false;
-                }
+                    
 
             }
             else
@@ -63,8 +69,9 @@ namespace Tennisverwaltungssystem.DAL
             catch (Exception ex)
             {
                 MessageBox.Show("Serververbindung fehlgeschlagen!");
-                return false;
-
+                MessageBox.Show(ex.Message);
+                throw new Exception("Was mahsch du??");
+            
 
             }
         }

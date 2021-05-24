@@ -20,20 +20,26 @@ namespace Tennisverwaltungssystem.DAL
             string query = $"SELECT * FROM schläger WHERE Modell='{schläger.Modell}' AND isAvab='1';";
             if (DAL_Main.Connect())
             {
-                MySqlCommand cmd = new MySqlCommand(query, DAL_Main.conn);
-                MySqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (MySqlCommand cmd = new MySqlCommand(query, DAL_Main.conn))
                 {
-                    reader.Close();
-                    DAL_Main.conn.Close();
-                    return true;
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            reader.Close();
+                            DAL_Main.conn.Close();
+                            return true;
+                        }
+                        else
+                        {
+                            reader.Close();
+                            DAL_Main.conn.Close();
+                            return false;
+                        }
+                    }
+                   
                 }
-                else
-                {
-                    reader.Close();
-                    DAL_Main.conn.Close();
-                    return false;
-                }
+               
             }
             else
             {
