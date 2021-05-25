@@ -26,7 +26,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         {
             DAL.DAL_Main.CreateConnection();
             if (!DAL.DAL_Main.Connect()) return;
-
+           
             InitializeComponent();
            
             GeneratePlatzPanel(5);

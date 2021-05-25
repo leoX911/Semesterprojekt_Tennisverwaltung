@@ -46,11 +46,8 @@
             this.tbx_EmailK = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.lbl_BuchungsnummerK = new System.Windows.Forms.Label();
-            this.tbx_PlatznummerK = new System.Windows.Forms.TextBox();
             this.lbl_PlatznummerK = new System.Windows.Forms.Label();
-            this.tbx_ZeitraumK = new System.Windows.Forms.TextBox();
             this.lbl_ZeitraumK = new System.Windows.Forms.Label();
             this.rdb_Gast = new System.Windows.Forms.RadioButton();
             this.rdb_Mitglied = new System.Windows.Forms.RadioButton();
@@ -61,6 +58,9 @@
             this.lbl_Mitgliedschaft = new System.Windows.Forms.Label();
             this.btn_zurückK = new System.Windows.Forms.Button();
             this.btn_BuchenK = new System.Windows.Forms.Button();
+            this.lbl_zeitraum = new System.Windows.Forms.Label();
+            this.lbl_pltznummer = new System.Windows.Forms.Label();
+            this.lbl_bookingsnumber = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -249,27 +249,16 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.lbl_bookingsnumber);
+            this.panel4.Controls.Add(this.lbl_pltznummer);
+            this.panel4.Controls.Add(this.lbl_zeitraum);
             this.panel4.Controls.Add(this.lbl_BuchungsnummerK);
-            this.panel4.Controls.Add(this.tbx_PlatznummerK);
             this.panel4.Controls.Add(this.lbl_PlatznummerK);
-            this.panel4.Controls.Add(this.tbx_ZeitraumK);
             this.panel4.Controls.Add(this.lbl_ZeitraumK);
             this.panel4.Location = new System.Drawing.Point(39, 21);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(470, 107);
             this.panel4.TabIndex = 14;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(132, 77);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(265, 18);
-            this.textBox2.TabIndex = 13;
-            this.textBox2.Text = "ABC-1234567890";
             // 
             // lbl_BuchungsnummerK
             // 
@@ -281,17 +270,6 @@
             this.lbl_BuchungsnummerK.TabIndex = 12;
             this.lbl_BuchungsnummerK.Text = "Buchungsnummer:";
             // 
-            // tbx_PlatznummerK
-            // 
-            this.tbx_PlatznummerK.BackColor = System.Drawing.SystemColors.Control;
-            this.tbx_PlatznummerK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_PlatznummerK.Location = new System.Drawing.Point(132, 46);
-            this.tbx_PlatznummerK.Multiline = true;
-            this.tbx_PlatznummerK.Name = "tbx_PlatznummerK";
-            this.tbx_PlatznummerK.Size = new System.Drawing.Size(265, 18);
-            this.tbx_PlatznummerK.TabIndex = 11;
-            this.tbx_PlatznummerK.Text = "0";
-            // 
             // lbl_PlatznummerK
             // 
             this.lbl_PlatznummerK.AutoSize = true;
@@ -301,17 +279,6 @@
             this.lbl_PlatznummerK.Size = new System.Drawing.Size(82, 15);
             this.lbl_PlatznummerK.TabIndex = 10;
             this.lbl_PlatznummerK.Text = "Platznummer:";
-            // 
-            // tbx_ZeitraumK
-            // 
-            this.tbx_ZeitraumK.BackColor = System.Drawing.SystemColors.Control;
-            this.tbx_ZeitraumK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_ZeitraumK.Location = new System.Drawing.Point(132, 15);
-            this.tbx_ZeitraumK.Multiline = true;
-            this.tbx_ZeitraumK.Name = "tbx_ZeitraumK";
-            this.tbx_ZeitraumK.Size = new System.Drawing.Size(265, 18);
-            this.tbx_ZeitraumK.TabIndex = 9;
-            this.tbx_ZeitraumK.Text = "00.00.0000 00:00-00:00";
             // 
             // lbl_ZeitraumK
             // 
@@ -423,6 +390,36 @@
             this.btn_BuchenK.Text = "Buchen >>";
             this.btn_BuchenK.UseVisualStyleBackColor = false;
             // 
+            // lbl_zeitraum
+            // 
+            this.lbl_zeitraum.AutoSize = true;
+            this.lbl_zeitraum.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_zeitraum.Location = new System.Drawing.Point(75, 16);
+            this.lbl_zeitraum.Name = "lbl_zeitraum";
+            this.lbl_zeitraum.Size = new System.Drawing.Size(74, 17);
+            this.lbl_zeitraum.TabIndex = 13;
+            this.lbl_zeitraum.Text = "0000-00-00";
+            // 
+            // lbl_pltznummer
+            // 
+            this.lbl_pltznummer.AutoSize = true;
+            this.lbl_pltznummer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pltznummer.Location = new System.Drawing.Point(99, 48);
+            this.lbl_pltznummer.Name = "lbl_pltznummer";
+            this.lbl_pltznummer.Size = new System.Drawing.Size(74, 17);
+            this.lbl_pltznummer.TabIndex = 14;
+            this.lbl_pltznummer.Text = "0000-00-00";
+            // 
+            // lbl_bookingsnumber
+            // 
+            this.lbl_bookingsnumber.AutoSize = true;
+            this.lbl_bookingsnumber.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_bookingsnumber.Location = new System.Drawing.Point(120, 79);
+            this.lbl_bookingsnumber.Name = "lbl_bookingsnumber";
+            this.lbl_bookingsnumber.Size = new System.Drawing.Size(74, 17);
+            this.lbl_bookingsnumber.TabIndex = 15;
+            this.lbl_bookingsnumber.Text = "0000-00-00";
+            // 
             // KontaktformularBuchen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,13 +474,13 @@
         private System.Windows.Forms.Label lbl_AnzahlPersonenK;
         private System.Windows.Forms.Label lbl_Mitgliedschaft;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lbl_BuchungsnummerK;
-        private System.Windows.Forms.TextBox tbx_PlatznummerK;
         private System.Windows.Forms.Label lbl_PlatznummerK;
-        private System.Windows.Forms.TextBox tbx_ZeitraumK;
         private System.Windows.Forms.Label lbl_ZeitraumK;
         private System.Windows.Forms.Button btn_zurückK;
         private System.Windows.Forms.Button btn_BuchenK;
+        private System.Windows.Forms.Label lbl_bookingsnumber;
+        private System.Windows.Forms.Label lbl_pltznummer;
+        private System.Windows.Forms.Label lbl_zeitraum;
     }
 }

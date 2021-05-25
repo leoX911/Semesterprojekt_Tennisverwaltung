@@ -14,13 +14,40 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
 {
     public partial class KontaktformularBuchen : Form
     {
+        int _anfangszeit;
+        int _endzeit;
+        DateTime _date;
+        string DateToString;
+       
         readonly User user = Übersicht_M._user;
         public KontaktformularBuchen(List<Daypanel> SelectedPanels)
         {
+         
             InitializeComponent();
-            tbx_PlatznummerK.Text = Convert.ToString(SelectedPanels[1].Platznummer);
+            Random _rndGen = new Random();
+            int bookingnumber;
+            
+           
+            do
+            {
+                bookingnumber = _rndGen.Next(10000000, 999999999);
+            } while (DAL.DAL_Buchen.IsBookingNumberUsed(Convert.ToString(bookingnumber)));
+            
+            lbl_pltznummer.Text = Convert.ToString(SelectedPanels[0].Platznummer);
+
+            if (SelectedPanels.Count==1)
+            {
+                _anfangszeit=SelectedPanels[0].Anfangszeit;
+                _endzeit= SelectedPanels[0].Endzeit;
+                _date= SelectedPanels[0].Date;
+           
+            }
             if (user !=null)
             {
+                
+                tbx_Buhcungsnummer.Text = Convert.ToString(bookingnumber);
+                lbl_bookingsnumber.Text = Convert.ToString(bookingnumber);
+                tbx_Buhcungsnummer.Enabled = false;
                 tbx_VornameK.Enabled = false;
                 tbx_NachnameK.Enabled = false;
                 tbx_EmailK.Enabled = false;
