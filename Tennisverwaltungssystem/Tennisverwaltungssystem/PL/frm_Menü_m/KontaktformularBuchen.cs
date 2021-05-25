@@ -16,8 +16,8 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
     {
         int _anfangszeit;
         int _endzeit;
-        DateTime _date;
-        string DateToString;
+       
+        
        
         readonly User user = Übersicht_M._user;
         public KontaktformularBuchen(List<Daypanel> SelectedPanels)
@@ -39,7 +39,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
             {
                 _anfangszeit=SelectedPanels[0].Anfangszeit;
                 _endzeit= SelectedPanels[0].Endzeit;
-                _date= SelectedPanels[0].Date;
+               
            
             }
             if (user !=null)
