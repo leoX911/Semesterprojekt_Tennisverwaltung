@@ -11,41 +11,11 @@ namespace Tennisverwaltungssystem.DAL
 {
     class DAL_Ausleihen
     {
-        
-
-        
-     
-        public static bool isAvaiable(Schläger schläger)
+      
+        public static bool IsAvaiable(Schläger schläger)
         {
             string query = $"SELECT * FROM schläger WHERE Modell='{schläger.Modell}' AND isAvab='1';";
-            if (DAL_Main.Connect())
-            {
-                using (MySqlCommand cmd = new MySqlCommand(query, DAL_Main.conn))
-                {
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            reader.Close();
-                            DAL_Main.conn.Close();
-                            return true;
-                        }
-                        else
-                        {
-                            reader.Close();
-                            DAL_Main.conn.Close();
-                            return false;
-                        }
-                    }
-                   
-                }
-               
-            }
-            else
-            {
-                DAL_Main.conn.Close();
-                return false;
-            }
+            return DAL.DAL_Main.ReadData(query);
         }
     }
     }

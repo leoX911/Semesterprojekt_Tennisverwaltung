@@ -51,17 +51,7 @@ namespace Tennisverwaltungssystem.DAL
                     MySqlDbType.VarChar, 30)
                     { Value = user.PLZ });
 
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        return true;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                        return false;
-
-                    }
+                    return DAL.DAL_Main.TryToExecute(cmd);
                 }
               
             }
@@ -95,17 +85,7 @@ namespace Tennisverwaltungssystem.DAL
                     MySqlDbType.VarChar, 30)
                     { Value = "" });
 
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        return true;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                        return false;
-
-                    }
+                    return DAL.DAL_Main.TryToExecute(cmd);
                 }
 
             }

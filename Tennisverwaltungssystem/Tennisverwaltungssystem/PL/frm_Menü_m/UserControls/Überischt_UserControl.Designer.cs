@@ -69,7 +69,7 @@
             this.pnl_container.Name = "pnl_container";
             this.pnl_container.Size = new System.Drawing.Size(809, 269);
             this.pnl_container.TabIndex = 0;
-            this.pnl_container.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+       
             // 
             // linklbl_website
             // 
@@ -106,7 +106,7 @@
             this.btn_profil.Text = "Profil verwalten";
             this.btn_profil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_profil.UseVisualStyleBackColor = true;
-            this.btn_profil.Click += new System.EventHandler(this.Btn_profil_Click);
+       
             // 
             // btn_bookings
             // 

@@ -9,15 +9,5 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             InitializeComponent();
          
         }
-
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Btn_profil_Click(object sender, System.EventArgs e)
-        {
-            
-        }
     }
 }

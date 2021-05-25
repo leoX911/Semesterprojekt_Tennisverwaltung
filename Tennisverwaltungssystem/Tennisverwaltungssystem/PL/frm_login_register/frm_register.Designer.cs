@@ -1,6 +1,6 @@
 ﻿namespace Tennisverwaltungssystem.PL.frm_login_register
 {
-    partial class frm_register
+    partial class Frm_register
     {
         /// <summary>
         /// Required designer variable.
@@ -294,7 +294,7 @@
             this.btn_uploadprofil.Text = "Profilbild hochladen";
             this.btn_uploadprofil.UseVisualStyleBackColor = false;
             this.btn_uploadprofil.Click += new System.EventHandler(this.Btn_uploadprofil_Click);
-            this.btn_uploadprofil.MouseHover += new System.EventHandler(this.btn_uploadprofil_MouseHover);
+            this.btn_uploadprofil.MouseHover += new System.EventHandler(this.Btn_uploadprofil_MouseHover);
             // 
             // picbox_profil
             // 

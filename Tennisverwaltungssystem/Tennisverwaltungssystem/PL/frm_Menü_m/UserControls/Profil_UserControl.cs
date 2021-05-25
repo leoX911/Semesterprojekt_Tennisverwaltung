@@ -16,7 +16,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
 {
     public partial class Profil_Usercontrol : UserControl
     {
-        User user = Übersicht_M._user;
+        readonly User user = Übersicht_M._user;
         public Profil_Usercontrol()
         {
             InitializeComponent();
@@ -182,31 +182,6 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
 
             
         }
-
-        //private void Ändern_MouseHover(object sender, EventArgs e)
-        //{
-        //    Ändern.BackColor = Color.Aqua;
-        //}
-
-
-        //private bool CheckFormatTelefon()
-        //{
-        //    Console.WriteLine("Enter a phone number.");
-        //    string telNo = Console.ReadLine();
-
-        //    if (Regex.Match(user.Telefonummer, @"^(\+[0-9])$").Success)
-        //    {
-
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Die eingegebene Tel. Nummer ist falsch!");
-        //        return false;
-        //    }
-
-        //}
-
 
     }
 

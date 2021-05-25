@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
 {
-    class Daypanel: FlowLayoutPanel
+    public class Daypanel: FlowLayoutPanel
     {
         public bool Clicked { get; set; } = false;
         public int Platznummer { get; set; }

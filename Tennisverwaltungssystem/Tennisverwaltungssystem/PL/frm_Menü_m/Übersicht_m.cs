@@ -160,12 +160,9 @@ namespace Tennisverwaltungssystem
 
         private void Btn_profil_m_Leave(object sender, EventArgs e)
         {
-            Button button = (Button)sender;
-            
-            if (true)
-            {
+
                 btn_profil_m.BackColor = Color.Transparent;
-            }
+            
                 
             
         }
@@ -182,8 +179,10 @@ namespace Tennisverwaltungssystem
             btn_navbar_konakt.ForeColor = Color.FromArgb(155, 185, 205);
 
             frm_Kontakt_Hilfe.frm_Kontakt_ kontaktform = new frm_Kontakt_Hilfe.frm_Kontakt_();
-            this.Hide();
-            kontaktform.Show();
+            
+                this.Hide();
+                kontaktform.Show();
+            
 
 
 
@@ -192,17 +191,21 @@ namespace Tennisverwaltungssystem
 
         private void Btn_navbar_hilfe_Click(object sender, EventArgs e)
         {
-            frm_Kontakt_Hilfe.frm_Hilfe hilfeform = new frm_Kontakt_Hilfe.frm_Hilfe();
-            this.Hide();
-            hilfeform.Show();
+            using (frm_Kontakt_Hilfe.frm_Hilfe hilfeform = new frm_Kontakt_Hilfe.frm_Hilfe())
+            {
+                this.Hide();
+                hilfeform.Show();
+            }
 
         }
 
         private void Btn_navbar_logout_Click(object sender, EventArgs e)
         {
-            frm_login.frm_login loginfrm = new frm_login.frm_login();
+            frm_login.Frm_login loginfrm = new frm_login.Frm_login();
+            
             this.Hide();
             loginfrm.Show();
+            
 
             btn_navbar_logout.ForeColor = Color.FromArgb(155, 185, 205);
         }
@@ -236,10 +239,7 @@ namespace Tennisverwaltungssystem
 
         #endregion
 
-        private void profil_Usercontrol1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
       
 }

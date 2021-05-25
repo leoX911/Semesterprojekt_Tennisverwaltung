@@ -38,7 +38,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             GenerateDayPanel();
             DisplayCurrentDate();
 
-
+            btn_nextpage.Enabled = false;
 
 
             BorderStyle = BorderStyle.None;
@@ -107,7 +107,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
             if (_counterclicked != 0)
             {
-                
+                btn_nextday.Focus();
                 btn_nextpage.Enabled = true;
                 btn_today.Enabled = false;
                 btn_nextday.Enabled = false;
@@ -115,6 +115,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             }
             else
             {
+            
                 btn_today.Enabled = true;
                 btn_nextday.Enabled = true;
                 btn_prevDay.Enabled = true;
@@ -122,8 +123,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             }
             //MessageBox.Show(Convert.ToString(_counterclicked));
 
-
-
+     
 
             //DisplayCurrentDate();
         }
@@ -206,7 +206,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             foreach (Daypanel f1 in listFlDay)
             {
               
-                    if (DAL.DAL_Buchen.isOccupied(f1))
+                    if (DAL.DAL_Buchen.IsOccupied(f1))
                     {
                         f1.BackColor = Color.Red;
                         f1.Occupied = true;
@@ -276,7 +276,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             }
             for (int i = 0; i < listFlDay.Count; i++)
             {
-            
+
                 Label lbl1 = new Label()
                 {
                     Name = $"lbl{i}",
@@ -286,10 +286,11 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
                     Font = new Font("Segou UI", 7),
 
                 };
-                
-                if (listFlDay[i].Occupied)
                 {
-                    listFlDay[i].Controls.Add(lbl1);
+                    if (listFlDay[i].Occupied)
+                    {
+                        listFlDay[i].Controls.Add(lbl1);
+                    }
                 }
 
 
@@ -371,13 +372,22 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
         private void Btn_nextpage_Click(object sender, EventArgs e)
         {
-         
-            
-            KontaktformularBuchen kontaktfrm = new KontaktformularBuchen();
-            kontaktfrm.ShowDialog();
+            List<Daypanel> ClickedPanels = new List<Daypanel>();
+            foreach (Daypanel item in listFlDay)
+            {
+                if (item.Clicked)
+                {
+                    ClickedPanels.Add(item);
+                }
+            }
            
+            KontaktformularBuchen kontaktfrm = new KontaktformularBuchen(ClickedPanels);
+            
+            kontaktfrm.ShowDialog();
+            
 
-         
+
+
         }
     }
 }

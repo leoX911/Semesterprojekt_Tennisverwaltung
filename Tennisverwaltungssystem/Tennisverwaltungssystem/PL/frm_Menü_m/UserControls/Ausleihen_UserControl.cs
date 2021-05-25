@@ -40,7 +40,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         }
         private void CheckRackAval(Button btn_schläger, Schläger schläger)
         {
-            if (DAL.DAL_Ausleihen.isAvaiable(schläger))
+            if (DAL.DAL_Ausleihen.IsAvaiable(schläger))
             {
                 btn_schläger.Text = "verfügbar";
                 btn_schläger.BackColor = Color.Green;

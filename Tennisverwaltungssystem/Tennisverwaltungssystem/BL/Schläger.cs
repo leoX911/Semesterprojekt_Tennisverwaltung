@@ -11,7 +11,7 @@ namespace Tennisverwaltungssystem.BL
         public  string Marke { get; set; }
         public  string Modell { get; set; }
         public  string Geschlecht { get; set; }
-        public  bool isAvaiale { get; set; }
+        public  bool IsAvaiable { get; set; }
        
     }
 }

@@ -23,6 +23,52 @@ namespace Tennisverwaltungssystem.DAL
             connString = $"SERVER={server};DATABASE={database};UID={un};PASSWORD={password}";
 
         }
+        public static bool TryToExecute(MySqlCommand cmd)
+        {
+            try
+            {
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+
+            }
+        }
+        public static bool ReadData(string query)
+        {
+            if (DAL_Main.Connect())
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query,conn))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            reader.Close();
+                            conn.Close();
+                            return true;
+                        }
+                        else
+                        {
+                            reader.Close();
+                            conn.Close();
+                            return false;
+                        }
+                    }
+
+                }
+
+            }
+            else
+            {
+                conn.Close();
+                return false;
+            }
+        }
+
         public static bool CheckEmailExits(User user)
         {
             string query = $"SELECT * FROM user WHERE EMail='{user.EMail}';";

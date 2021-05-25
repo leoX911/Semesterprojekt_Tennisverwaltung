@@ -15,10 +15,10 @@ using Tennisverwaltungssystem.PL.frm_login_register;
 namespace Tennisverwaltungssystem.frm_login
 {
   
-    public partial class frm_login : Form
+    public partial class Frm_login : Form
     {
 
-        public frm_login()
+        public Frm_login()
         {
             InitializeComponent();
             txtbox_Passwort.PasswordChar = '*';
@@ -55,16 +55,22 @@ namespace Tennisverwaltungssystem.frm_login
                         }
                         else
                         {
-                            Übersicht_M überischtform = new Übersicht_M(user1);
-                            überischtform.Show();
-                            this.Hide();
+                           Übersicht_M überischtform = new Übersicht_M(user1);
+                            
+                          überischtform.Show();
+                              
+                           
+                          this.Hide();
+
                         }
 
                     }
                     else
                     {
                         Übersicht_M überischtform = new Übersicht_M(user1);
+                        
                         überischtform.Show();
+                        
                         this.Hide();
                     }
 
@@ -87,8 +93,10 @@ namespace Tennisverwaltungssystem.frm_login
 
         private void Lbl_BenutzerErstellen_Click(object sender, EventArgs e)
         {
-            frm_register formregister = new frm_register();
-            formregister.Show();
+            Frm_register formregister = new Frm_register();
+            
+           formregister.Show();
+            
             this.Hide();
         }
     }

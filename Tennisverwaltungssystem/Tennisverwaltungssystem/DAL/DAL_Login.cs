@@ -131,22 +131,7 @@ namespace Tennisverwaltungssystem.DAL
                     { Value = user1.PLZ });
 
 
-                    //  cmd.Parameters.Add(new MySqlParameter("hausnummer",
-                    //MySqlDbType.Int32, 30)
-                    //  { Value = user1.Hausnummer });
-
-
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        return true;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                        return false;
-
-                    }
+                    return DAL.DAL_Main.TryToExecute(cmd);
                 }
             }
                

@@ -37,7 +37,7 @@
             this.lbl_Name = new System.Windows.Forms.Label();
             this.lbl_Buchungsnummer = new System.Windows.Forms.Label();
             this.tbx_VornameK = new System.Windows.Forms.TextBox();
-            this.tbx_Vorname = new System.Windows.Forms.TextBox();
+            this.tbx_Buhcungsnummer = new System.Windows.Forms.TextBox();
             this.lbl_Kontaktformular = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_TelefonK = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             this.panel1.Controls.Add(this.lbl_Name);
             this.panel1.Controls.Add(this.lbl_Buchungsnummer);
             this.panel1.Controls.Add(this.tbx_VornameK);
-            this.panel1.Controls.Add(this.tbx_Vorname);
+            this.panel1.Controls.Add(this.tbx_Buhcungsnummer);
             this.panel1.Location = new System.Drawing.Point(32, 97);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(530, 288);
@@ -161,14 +161,14 @@
             this.tbx_VornameK.Size = new System.Drawing.Size(218, 27);
             this.tbx_VornameK.TabIndex = 3;
             // 
-            // tbx_Vorname
+            // tbx_Buhcungsnummer
             // 
-            this.tbx_Vorname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_Vorname.Location = new System.Drawing.Point(41, 39);
-            this.tbx_Vorname.Multiline = true;
-            this.tbx_Vorname.Name = "tbx_Vorname";
-            this.tbx_Vorname.Size = new System.Drawing.Size(468, 27);
-            this.tbx_Vorname.TabIndex = 0;
+            this.tbx_Buhcungsnummer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_Buhcungsnummer.Location = new System.Drawing.Point(41, 39);
+            this.tbx_Buhcungsnummer.Multiline = true;
+            this.tbx_Buhcungsnummer.Name = "tbx_Buhcungsnummer";
+            this.tbx_Buhcungsnummer.Size = new System.Drawing.Size(468, 27);
+            this.tbx_Buhcungsnummer.TabIndex = 0;
             // 
             // lbl_Kontaktformular
             // 
@@ -456,7 +456,7 @@
         private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.Label lbl_Buchungsnummer;
         private System.Windows.Forms.TextBox tbx_VornameK;
-        private System.Windows.Forms.TextBox tbx_Vorname;
+        private System.Windows.Forms.TextBox tbx_Buhcungsnummer;
         private System.Windows.Forms.Label lbl_Kontaktformular;
         private System.Windows.Forms.TextBox tbx_PLZortK;
         private System.Windows.Forms.Label lbl_PLZort;

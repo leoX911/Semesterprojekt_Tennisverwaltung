@@ -47,7 +47,7 @@ namespace Tennisverwaltungssystem.frm_Kontakt_Hilfe
         private void Btn_navbar_logout_Click(object sender, EventArgs e)
         {
             
-            frm_login.frm_login loginfrm = new frm_login.frm_login();
+            frm_login.Frm_login loginfrm = new frm_login.Frm_login();
             this.Hide();
             loginfrm.Show();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Tennisverwaltungssystem.frm_login
 {
-    partial class frm_login
+    partial class Frm_login
     {
         /// <summary>
         /// Required designer variable.
