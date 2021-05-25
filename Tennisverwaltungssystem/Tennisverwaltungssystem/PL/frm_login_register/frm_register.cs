@@ -141,7 +141,7 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
 
                     Straße = "",
 
-
+                    
                     isAdmin = 0,
                     isMitglied = 0
                 };

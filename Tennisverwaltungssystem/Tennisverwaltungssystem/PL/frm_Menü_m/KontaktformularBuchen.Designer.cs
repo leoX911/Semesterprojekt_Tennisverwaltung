@@ -46,26 +46,28 @@
             this.tbx_EmailK = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_bookingsnumber = new System.Windows.Forms.Label();
+            this.lbl_pltznummer = new System.Windows.Forms.Label();
+            this.lbl_zeitraum = new System.Windows.Forms.Label();
             this.lbl_BuchungsnummerK = new System.Windows.Forms.Label();
             this.lbl_PlatznummerK = new System.Windows.Forms.Label();
             this.lbl_ZeitraumK = new System.Windows.Forms.Label();
             this.rdb_Gast = new System.Windows.Forms.RadioButton();
             this.rdb_Mitglied = new System.Windows.Forms.RadioButton();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nUP_Person = new System.Windows.Forms.NumericUpDown();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lbl_AnmerkungK = new System.Windows.Forms.Label();
             this.lbl_AnzahlPersonenK = new System.Windows.Forms.Label();
             this.lbl_Mitgliedschaft = new System.Windows.Forms.Label();
             this.btn_zurückK = new System.Windows.Forms.Button();
             this.btn_BuchenK = new System.Windows.Forms.Button();
-            this.lbl_zeitraum = new System.Windows.Forms.Label();
-            this.lbl_pltznummer = new System.Windows.Forms.Label();
-            this.lbl_bookingsnumber = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_date = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUP_Person)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -236,7 +238,7 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.rdb_Gast);
             this.panel3.Controls.Add(this.rdb_Mitglied);
-            this.panel3.Controls.Add(this.numericUpDown1);
+            this.panel3.Controls.Add(this.nUP_Person);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.lbl_AnmerkungK);
             this.panel3.Controls.Add(this.lbl_AnzahlPersonenK);
@@ -249,22 +251,54 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.Controls.Add(this.lbl_date);
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.lbl_bookingsnumber);
             this.panel4.Controls.Add(this.lbl_pltznummer);
             this.panel4.Controls.Add(this.lbl_zeitraum);
             this.panel4.Controls.Add(this.lbl_BuchungsnummerK);
             this.panel4.Controls.Add(this.lbl_PlatznummerK);
             this.panel4.Controls.Add(this.lbl_ZeitraumK);
-            this.panel4.Location = new System.Drawing.Point(39, 21);
+            this.panel4.Location = new System.Drawing.Point(39, 22);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(470, 107);
             this.panel4.TabIndex = 14;
+            // 
+            // lbl_bookingsnumber
+            // 
+            this.lbl_bookingsnumber.AutoSize = true;
+            this.lbl_bookingsnumber.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_bookingsnumber.Location = new System.Drawing.Point(120, 78);
+            this.lbl_bookingsnumber.Name = "lbl_bookingsnumber";
+            this.lbl_bookingsnumber.Size = new System.Drawing.Size(74, 17);
+            this.lbl_bookingsnumber.TabIndex = 15;
+            this.lbl_bookingsnumber.Text = "0000-00-00";
+            // 
+            // lbl_pltznummer
+            // 
+            this.lbl_pltznummer.AutoSize = true;
+            this.lbl_pltznummer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pltznummer.Location = new System.Drawing.Point(99, 55);
+            this.lbl_pltznummer.Name = "lbl_pltznummer";
+            this.lbl_pltznummer.Size = new System.Drawing.Size(74, 17);
+            this.lbl_pltznummer.TabIndex = 14;
+            this.lbl_pltznummer.Text = "0000-00-00";
+            // 
+            // lbl_zeitraum
+            // 
+            this.lbl_zeitraum.AutoSize = true;
+            this.lbl_zeitraum.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_zeitraum.Location = new System.Drawing.Point(75, 33);
+            this.lbl_zeitraum.Name = "lbl_zeitraum";
+            this.lbl_zeitraum.Size = new System.Drawing.Size(74, 17);
+            this.lbl_zeitraum.TabIndex = 13;
+            this.lbl_zeitraum.Text = "0000-00-00";
             // 
             // lbl_BuchungsnummerK
             // 
             this.lbl_BuchungsnummerK.AutoSize = true;
             this.lbl_BuchungsnummerK.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BuchungsnummerK.Location = new System.Drawing.Point(11, 80);
+            this.lbl_BuchungsnummerK.Location = new System.Drawing.Point(11, 79);
             this.lbl_BuchungsnummerK.Name = "lbl_BuchungsnummerK";
             this.lbl_BuchungsnummerK.Size = new System.Drawing.Size(109, 15);
             this.lbl_BuchungsnummerK.TabIndex = 12;
@@ -274,7 +308,7 @@
             // 
             this.lbl_PlatznummerK.AutoSize = true;
             this.lbl_PlatznummerK.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PlatznummerK.Location = new System.Drawing.Point(11, 49);
+            this.lbl_PlatznummerK.Location = new System.Drawing.Point(11, 57);
             this.lbl_PlatznummerK.Name = "lbl_PlatznummerK";
             this.lbl_PlatznummerK.Size = new System.Drawing.Size(82, 15);
             this.lbl_PlatznummerK.TabIndex = 10;
@@ -284,7 +318,7 @@
             // 
             this.lbl_ZeitraumK.AutoSize = true;
             this.lbl_ZeitraumK.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ZeitraumK.Location = new System.Drawing.Point(11, 18);
+            this.lbl_ZeitraumK.Location = new System.Drawing.Point(11, 34);
             this.lbl_ZeitraumK.Name = "lbl_ZeitraumK";
             this.lbl_ZeitraumK.Size = new System.Drawing.Size(58, 15);
             this.lbl_ZeitraumK.TabIndex = 6;
@@ -315,13 +349,13 @@
             this.rdb_Mitglied.Text = "Mitglied";
             this.rdb_Mitglied.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // nUP_Person
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(41, 231);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(468, 25);
-            this.numericUpDown1.TabIndex = 11;
+            this.nUP_Person.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nUP_Person.Location = new System.Drawing.Point(41, 231);
+            this.nUP_Person.Name = "nUP_Person";
+            this.nUP_Person.Size = new System.Drawing.Size(468, 25);
+            this.nUP_Person.TabIndex = 11;
             // 
             // textBox1
             // 
@@ -375,6 +409,7 @@
             this.btn_zurückK.TabIndex = 37;
             this.btn_zurückK.Text = "<< zurück";
             this.btn_zurückK.UseVisualStyleBackColor = false;
+            this.btn_zurückK.Click += new System.EventHandler(this.Btn_zurückK_Click);
             // 
             // btn_BuchenK
             // 
@@ -389,36 +424,27 @@
             this.btn_BuchenK.TabIndex = 38;
             this.btn_BuchenK.Text = "Buchen >>";
             this.btn_BuchenK.UseVisualStyleBackColor = false;
+            this.btn_BuchenK.Click += new System.EventHandler(this.Btn_BuchenK_Click);
             // 
-            // lbl_zeitraum
+            // label1
             // 
-            this.lbl_zeitraum.AutoSize = true;
-            this.lbl_zeitraum.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_zeitraum.Location = new System.Drawing.Point(75, 16);
-            this.lbl_zeitraum.Name = "lbl_zeitraum";
-            this.lbl_zeitraum.Size = new System.Drawing.Size(74, 17);
-            this.lbl_zeitraum.TabIndex = 13;
-            this.lbl_zeitraum.Text = "0000-00-00";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 15);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Datum:";
             // 
-            // lbl_pltznummer
+            // lbl_date
             // 
-            this.lbl_pltznummer.AutoSize = true;
-            this.lbl_pltznummer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pltznummer.Location = new System.Drawing.Point(99, 48);
-            this.lbl_pltznummer.Name = "lbl_pltznummer";
-            this.lbl_pltznummer.Size = new System.Drawing.Size(74, 17);
-            this.lbl_pltznummer.TabIndex = 14;
-            this.lbl_pltznummer.Text = "0000-00-00";
-            // 
-            // lbl_bookingsnumber
-            // 
-            this.lbl_bookingsnumber.AutoSize = true;
-            this.lbl_bookingsnumber.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_bookingsnumber.Location = new System.Drawing.Point(120, 79);
-            this.lbl_bookingsnumber.Name = "lbl_bookingsnumber";
-            this.lbl_bookingsnumber.Size = new System.Drawing.Size(74, 17);
-            this.lbl_bookingsnumber.TabIndex = 15;
-            this.lbl_bookingsnumber.Text = "0000-00-00";
+            this.lbl_date.AutoSize = true;
+            this.lbl_date.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_date.Location = new System.Drawing.Point(75, 11);
+            this.lbl_date.Name = "lbl_date";
+            this.lbl_date.Size = new System.Drawing.Size(74, 17);
+            this.lbl_date.TabIndex = 17;
+            this.lbl_date.Text = "0000-00-00";
             // 
             // KontaktformularBuchen
             // 
@@ -441,7 +467,7 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUP_Person)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,7 +494,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.RadioButton rdb_Gast;
         private System.Windows.Forms.RadioButton rdb_Mitglied;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nUP_Person;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lbl_AnmerkungK;
         private System.Windows.Forms.Label lbl_AnzahlPersonenK;
@@ -482,5 +508,7 @@
         private System.Windows.Forms.Label lbl_bookingsnumber;
         private System.Windows.Forms.Label lbl_pltznummer;
         private System.Windows.Forms.Label lbl_zeitraum;
+        private System.Windows.Forms.Label lbl_date;
+        private System.Windows.Forms.Label label1;
     }
 }

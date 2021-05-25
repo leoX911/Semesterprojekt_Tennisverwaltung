@@ -22,6 +22,7 @@ namespace Tennisverwaltungssystem.BL
         public string ProfilCode { get; set; }
         public int isAdmin { get; set; }
         public int isMitglied { get; set; }
+        public int ID { get; set; }
 
 
 

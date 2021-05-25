@@ -14,18 +14,24 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
 {
     public partial class KontaktformularBuchen : Form
     {
+        string Anmerkung;
         int _anfangszeit;
         int _endzeit;
-       
-        
-       
+        List<Daypanel> _selectedpanels;
+        int bookingnumber;
+
         readonly User user = Übersicht_M._user;
         public KontaktformularBuchen(List<Daypanel> SelectedPanels)
         {
-         
+      
             InitializeComponent();
+            _selectedpanels = SelectedPanels;
             Random _rndGen = new Random();
-            int bookingnumber;
+            
+            nUP_Person.Maximum = 4;
+            nUP_Person.Value = 1;
+            nUP_Person.Minimum = 1;
+            
             
            
             do
@@ -34,14 +40,24 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
             } while (DAL.DAL_Buchen.IsBookingNumberUsed(Convert.ToString(bookingnumber)));
             
             lbl_pltznummer.Text = Convert.ToString(SelectedPanels[0].Platznummer);
+            lbl_date.Text = SelectedPanels[0].Date.ToShortDateString();
 
             if (SelectedPanels.Count==1)
             {
                 _anfangszeit=SelectedPanels[0].Anfangszeit;
                 _endzeit= SelectedPanels[0].Endzeit;
-               
+                lbl_zeitraum.Text = $"{_anfangszeit}:00-{_endzeit}:00";
+
            
             }
+            else
+            {
+                _anfangszeit = SelectedPanels[0].Anfangszeit;
+                _endzeit = SelectedPanels[1].Endzeit;
+                lbl_zeitraum.Text = $"{_anfangszeit}:00-{_endzeit}:00";
+            }
+
+
             if (user !=null)
             {
                 
@@ -82,8 +98,23 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
             }
             
         }
-      
 
-        
+        private void Btn_zurückK_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void Btn_BuchenK_Click(object sender, EventArgs e)
+        {
+            Anmerkung = textBox1.Text;
+            if (DAL.DAL_Buchen.IsInserted(user, _selectedpanels, bookingnumber, Anmerkung))
+            {
+                MessageBox.Show("nice");
+            }
+            else
+            {
+                MessageBox.Show("ok");
+            }
+        }
     }
 }

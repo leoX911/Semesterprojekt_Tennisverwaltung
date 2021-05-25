@@ -39,7 +39,7 @@ namespace Tennisverwaltungssystem.DAL
                             user2.Telefonummer = Convert.ToString(reader["Telefonnummer"]);
                             user2.PLZ = Convert.ToString(reader["Postleitzahl"]);
                             user2.Ort = Convert.ToString(reader["Ort"]);
-
+                            user2.ID= Convert.ToInt32(reader["idUser"]);
 
                             reader.Close();
                             DAL_Main.conn.Close();
