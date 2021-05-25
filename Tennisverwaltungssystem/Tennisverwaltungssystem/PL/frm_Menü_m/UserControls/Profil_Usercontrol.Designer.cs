@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbx_Ort = new System.Windows.Forms.TextBox();
+            this.lbl_Ort = new System.Windows.Forms.Label();
+            this.tbx_PLZ = new System.Windows.Forms.TextBox();
+            this.lbl_PLZ = new System.Windows.Forms.Label();
             this.lbl_Straße = new System.Windows.Forms.Label();
             this.lbl_Telefonnummer = new System.Windows.Forms.Label();
             this.lbl_Nachname = new System.Windows.Forms.Label();
@@ -47,10 +51,6 @@
             this.Ändern = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_Profil_Heading = new System.Windows.Forms.Label();
-            this.lbl_PLZ = new System.Windows.Forms.Label();
-            this.tbx_PLZ = new System.Windows.Forms.TextBox();
-            this.lbl_Ort = new System.Windows.Forms.Label();
-            this.tbx_Ort = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,6 +76,44 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(574, 311);
             this.panel1.TabIndex = 0;
+            // 
+            // tbx_Ort
+            // 
+            this.tbx_Ort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_Ort.Location = new System.Drawing.Point(158, 262);
+            this.tbx_Ort.Multiline = true;
+            this.tbx_Ort.Name = "tbx_Ort";
+            this.tbx_Ort.Size = new System.Drawing.Size(326, 27);
+            this.tbx_Ort.TabIndex = 11;
+            // 
+            // lbl_Ort
+            // 
+            this.lbl_Ort.AutoSize = true;
+            this.lbl_Ort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Ort.Location = new System.Drawing.Point(53, 265);
+            this.lbl_Ort.Name = "lbl_Ort";
+            this.lbl_Ort.Size = new System.Drawing.Size(24, 15);
+            this.lbl_Ort.TabIndex = 10;
+            this.lbl_Ort.Text = "Ort";
+            // 
+            // tbx_PLZ
+            // 
+            this.tbx_PLZ.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_PLZ.Location = new System.Drawing.Point(158, 215);
+            this.tbx_PLZ.Multiline = true;
+            this.tbx_PLZ.Name = "tbx_PLZ";
+            this.tbx_PLZ.Size = new System.Drawing.Size(326, 27);
+            this.tbx_PLZ.TabIndex = 9;
+            // 
+            // lbl_PLZ
+            // 
+            this.lbl_PLZ.AutoSize = true;
+            this.lbl_PLZ.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PLZ.Location = new System.Drawing.Point(53, 218);
+            this.lbl_PLZ.Name = "lbl_PLZ";
+            this.lbl_PLZ.Size = new System.Drawing.Size(27, 15);
+            this.lbl_PLZ.TabIndex = 8;
+            this.lbl_PLZ.Text = "PLZ";
             // 
             // lbl_Straße
             // 
@@ -134,6 +172,7 @@
             this.tbx_Straße.Name = "tbx_Straße";
             this.tbx_Straße.Size = new System.Drawing.Size(326, 27);
             this.tbx_Straße.TabIndex = 2;
+            this.tbx_Straße.TextChanged += new System.EventHandler(this.Tbx_Straße_TextChanged);
             // 
             // tbx_Nachname
             // 
@@ -261,44 +300,6 @@
             this.lbl_Profil_Heading.Size = new System.Drawing.Size(58, 25);
             this.lbl_Profil_Heading.TabIndex = 34;
             this.lbl_Profil_Heading.Text = "Profil";
-            // 
-            // lbl_PLZ
-            // 
-            this.lbl_PLZ.AutoSize = true;
-            this.lbl_PLZ.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PLZ.Location = new System.Drawing.Point(53, 218);
-            this.lbl_PLZ.Name = "lbl_PLZ";
-            this.lbl_PLZ.Size = new System.Drawing.Size(27, 15);
-            this.lbl_PLZ.TabIndex = 8;
-            this.lbl_PLZ.Text = "PLZ";
-            // 
-            // tbx_PLZ
-            // 
-            this.tbx_PLZ.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_PLZ.Location = new System.Drawing.Point(158, 215);
-            this.tbx_PLZ.Multiline = true;
-            this.tbx_PLZ.Name = "tbx_PLZ";
-            this.tbx_PLZ.Size = new System.Drawing.Size(326, 27);
-            this.tbx_PLZ.TabIndex = 9;
-            // 
-            // lbl_Ort
-            // 
-            this.lbl_Ort.AutoSize = true;
-            this.lbl_Ort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Ort.Location = new System.Drawing.Point(53, 265);
-            this.lbl_Ort.Name = "lbl_Ort";
-            this.lbl_Ort.Size = new System.Drawing.Size(24, 15);
-            this.lbl_Ort.TabIndex = 10;
-            this.lbl_Ort.Text = "Ort";
-            // 
-            // tbx_Ort
-            // 
-            this.tbx_Ort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_Ort.Location = new System.Drawing.Point(158, 262);
-            this.tbx_Ort.Multiline = true;
-            this.tbx_Ort.Name = "tbx_Ort";
-            this.tbx_Ort.Size = new System.Drawing.Size(326, 27);
-            this.tbx_Ort.TabIndex = 11;
             // 
             // Profil_Usercontrol
             // 

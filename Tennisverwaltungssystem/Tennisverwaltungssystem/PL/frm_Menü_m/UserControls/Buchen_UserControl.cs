@@ -344,7 +344,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             }
         }
         #endregion
-        private void DisplayCurrentDate()
+        public void DisplayCurrentDate()
         {
 
             _counterclicked = 0;
@@ -386,22 +386,42 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
         private void Btn_nextpage_Click(object sender, EventArgs e)
         {
+             
             List<Daypanel> ClickedPanels = new List<Daypanel>();
             foreach (Daypanel item in listFlDay)
             {
                 if (item.Clicked)
                 {
                     ClickedPanels.Add(item);
+                    item.BackColor = Color.White;
+                    item.Clicked = false;
+
                 }
+             
             }
-           
+            btn_today.Enabled = true;
+            btn_nextday.Enabled = true;
+            btn_prevDay.Enabled = true;
+            btn_nextpage.Enabled = false;
+            _counterclicked =0;
+          
             KontaktformularBuchen kontaktfrm = new KontaktformularBuchen(ClickedPanels);
             
-            kontaktfrm.ShowDialog();
+            kontaktfrm.Show();
+           
             
 
 
 
+        }
+
+        private void UpdateData(object sender, EventArgs e)
+        {
+            DisplayCurrentDate();
+        }
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            DisplayCurrentDate();
         }
     }
 }

@@ -73,6 +73,16 @@ namespace Tennisverwaltungssystem.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _61444 {
+            get {
+                object obj = ResourceManager.GetObject("61444", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Adressen {
             get {
                 object obj = ResourceManager.GetObject("Adressen", resourceCulture);
@@ -86,6 +96,16 @@ namespace Tennisverwaltungssystem.Properties {
         internal static System.Drawing.Bitmap Background_Login {
             get {
                 object obj = ResourceManager.GetObject("Background_Login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bild_7 {
+            get {
+                object obj = ResourceManager.GetObject("Bild 7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

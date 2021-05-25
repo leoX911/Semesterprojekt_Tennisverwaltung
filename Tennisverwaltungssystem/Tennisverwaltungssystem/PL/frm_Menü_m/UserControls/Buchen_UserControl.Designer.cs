@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnl_buchung = new System.Windows.Forms.Panel();
+            this.btn_nextpage = new System.Windows.Forms.Button();
             this.btn_today = new System.Windows.Forms.Button();
             this.btn_nextday = new System.Windows.Forms.Button();
             this.btn_prevDay = new System.Windows.Forms.Button();
@@ -52,13 +53,15 @@
             this.lbl_summerheader = new System.Windows.Forms.Label();
             this.lbl_buchungsüberischt_sub = new System.Windows.Forms.Label();
             this.lbl_buchen = new System.Windows.Forms.Label();
-            this.btn_nextpage = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_buchung.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_buchung
             // 
             this.pnl_buchung.BackColor = System.Drawing.Color.White;
+            this.pnl_buchung.Controls.Add(this.pictureBox1);
             this.pnl_buchung.Controls.Add(this.btn_nextpage);
             this.pnl_buchung.Controls.Add(this.btn_today);
             this.pnl_buchung.Controls.Add(this.btn_nextday);
@@ -86,6 +89,17 @@
             this.pnl_buchung.Name = "pnl_buchung";
             this.pnl_buchung.Size = new System.Drawing.Size(827, 423);
             this.pnl_buchung.TabIndex = 3;
+            // 
+            // btn_nextpage
+            // 
+            this.btn_nextpage.Font = new System.Drawing.Font("Segoe UI Semibold", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nextpage.Location = new System.Drawing.Point(702, 375);
+            this.btn_nextpage.Name = "btn_nextpage";
+            this.btn_nextpage.Size = new System.Drawing.Size(97, 24);
+            this.btn_nextpage.TabIndex = 57;
+            this.btn_nextpage.Text = "weiter >>";
+            this.btn_nextpage.UseVisualStyleBackColor = true;
+            this.btn_nextpage.Click += new System.EventHandler(this.Btn_nextpage_Click);
             // 
             // btn_today
             // 
@@ -326,16 +340,16 @@
             this.lbl_buchen.TabIndex = 34;
             this.lbl_buchen.Text = "Buchen";
             // 
-            // btn_nextpage
+            // pictureBox1
             // 
-            this.btn_nextpage.Font = new System.Drawing.Font("Segoe UI Semibold", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nextpage.Location = new System.Drawing.Point(702, 375);
-            this.btn_nextpage.Name = "btn_nextpage";
-            this.btn_nextpage.Size = new System.Drawing.Size(97, 24);
-            this.btn_nextpage.TabIndex = 57;
-            this.btn_nextpage.Text = "weiter >>";
-            this.btn_nextpage.UseVisualStyleBackColor = true;
-            this.btn_nextpage.Click += new System.EventHandler(this.Btn_nextpage_Click);
+            this.pictureBox1.Image = global::Tennisverwaltungssystem.Properties.Resources._61444;
+            this.pictureBox1.Location = new System.Drawing.Point(802, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(10, 17);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // Buchen_UserControl
             // 
@@ -350,6 +364,7 @@
             this.Load += new System.EventHandler(this.Buchen_UserControl_Load);
             this.pnl_buchung.ResumeLayout(false);
             this.pnl_buchung.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,5 +396,6 @@
         private System.Windows.Forms.Button btn_nextday;
         private System.Windows.Forms.Button btn_prevDay;
         private System.Windows.Forms.Button btn_nextpage;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

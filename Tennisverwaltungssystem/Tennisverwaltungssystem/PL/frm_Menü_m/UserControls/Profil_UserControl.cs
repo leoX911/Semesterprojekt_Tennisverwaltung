@@ -183,6 +183,10 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
             
         }
 
+        private void Tbx_Straße_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

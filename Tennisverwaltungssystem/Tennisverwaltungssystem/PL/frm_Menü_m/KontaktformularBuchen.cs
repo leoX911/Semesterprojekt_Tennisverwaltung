@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tennisverwaltungssystem.BL;
+using Tennisverwaltungssystem.frm_Menü_m.UserControls;
 using Tennisverwaltungssystem.PL.frm_Menü_m.UserControls;
 
 namespace Tennisverwaltungssystem.PL.frm_Menü_m
@@ -117,6 +118,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
         private void Btn_zurückK_Click(object sender, EventArgs e)
         {
             this.Hide();
+           
         }
         #region Checknames
         public bool CheckFormatSpace()
@@ -176,7 +178,27 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
         #endregion
         private void Btn_BuchenK_Click(object sender, EventArgs e)
         {
-         
+            buchung = new Buchung()
+            {
+                Buchender = user,
+                Anmerkung = textBox1.Text,
+                Platznummer = _selectedpanels[0].Platznummer,
+                Anfangszeit = _anfangszeit,
+                Endzeit = _endzeit,
+                Buchungsnummer = bookingidAsString,
+                Datum = _selectedpanels[0].Date,
+                AnzahlPersonen = Convert.ToInt32(nUP_Person.Value),
+
+
+            };
+            if (rdb_Mitglied.Checked)
+            {
+                buchung.isMitglied = 1;
+            }
+            else
+            {
+                buchung.isMitglied = 0;
+            }
             if (user.Straße=="" || user.Telefonummer==""|| user.Ort=="" || user.PLZ=="")
             {
                 if (CheckFormatSpace() && CheckPostleitzahl() && CheckPhoneNumber() || user.isAdmin == 1)
@@ -190,7 +212,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
 
                     if (DAL.DAL_Profil.IsUserUpdated(user))
                     {
-                        BookingAccess1 = true;
+                        InsertBuchung();
                         MessageBox.Show("Erfolgreich aktualisiert");
                     }
                     else
@@ -198,47 +220,35 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
                         MessageBox.Show("Daten konnten nicht aktualisiert werden");
                     }
                 }
-                else
-                {
-                    BookingAccess1 = false;
-                }
+              
             }
-            if (BookingAccess1 = true)
+            else
             {
-                buchung = new Buchung()
-                {
-                    Buchender = user,
-                    Anmerkung = textBox1.Text,
-                    Platznummer = _selectedpanels[0].Platznummer,
-                    Anfangszeit = _anfangszeit,
-                    Endzeit = _endzeit,
-                    Buchungsnummer = bookingidAsString,
-                    Datum = _selectedpanels[0].Date,
-                    AnzahlPersonen = Convert.ToInt32(nUP_Person.Value),
+                InsertBuchung();
 
 
-                };
-                if (rdb_Mitglied.Checked)
-                {
-                    buchung.isMitglied = 1;
-                }
-                else
-                {
-                    buchung.isMitglied = 0;
-                }
 
-                if (DAL.DAL_Buchen.IsInserted(buchung))
-                {
-                    MessageBox.Show("nice");
-                }
-                else
-                {
-                    MessageBox.Show("ok");
-                }
             }
+          
+                
+        }
+
+        private void InsertBuchung()
+        {
+            if (DAL.DAL_Buchen.IsInserted(buchung))
+            {
+                Buchungsbestätigung buchungsbestätigung = new Buchungsbestätigung(buchung);
+                buchungsbestätigung.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Buchung ist fehlgeschlagen");
+            }
+        }
           
 
 
         }
     }
-}
+

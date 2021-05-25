@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tennisverwaltungssystem.BL
 {
-    class Buchung
+    public class Buchung
     {
         public User Buchender { get; set; }
         public int Platznummer { get; set; }
