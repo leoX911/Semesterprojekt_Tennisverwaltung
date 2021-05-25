@@ -14,17 +14,23 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
 {
     public partial class KontaktformularBuchen : Form
     {
-        string Anmerkung;
+        Buchung buchung;
+        bool BookingAccess1;
         int _anfangszeit;
         int _endzeit;
         List<Daypanel> _selectedpanels;
-        int bookingnumber;
+        Guid bookingid = Guid.NewGuid();
+        string bookingidAsString;
 
         readonly User user = Übersicht_M._user;
+        
         public KontaktformularBuchen(List<Daypanel> SelectedPanels)
         {
-      
+          
+
             InitializeComponent();
+            bookingidAsString = bookingid.ToString();
+
             _selectedpanels = SelectedPanels;
             Random _rndGen = new Random();
             
@@ -34,10 +40,10 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
             
             
            
-            do
-            {
-                bookingnumber = _rndGen.Next(10000000, 999999999);
-            } while (DAL.DAL_Buchen.IsBookingNumberUsed(Convert.ToString(bookingnumber)));
+            //do
+            //{
+            //    bookingnumber = _rndGen.Next(10000000, 999999999);
+            //} while (DAL.DAL_Buchen.IsBookingNumberUsed(Convert.ToString(bookingnumber)));
             
             lbl_pltznummer.Text = Convert.ToString(SelectedPanels[0].Platznummer);
             lbl_date.Text = SelectedPanels[0].Date.ToShortDateString();
@@ -57,12 +63,13 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
                 lbl_zeitraum.Text = $"{_anfangszeit}:00-{_endzeit}:00";
             }
 
+           
 
             if (user !=null)
             {
                 
-                tbx_Buhcungsnummer.Text = Convert.ToString(bookingnumber);
-                lbl_bookingsnumber.Text = Convert.ToString(bookingnumber);
+                tbx_Buhcungsnummer.Text = Convert.ToString(bookingidAsString);
+                lbl_bookingsnumber.Text = Convert.ToString(bookingidAsString);
                 tbx_Buhcungsnummer.Enabled = false;
                 tbx_VornameK.Enabled = false;
                 tbx_NachnameK.Enabled = false;
@@ -84,17 +91,25 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
                     tbx_StraßeK.Enabled = false;
                 }
 
-                if (user.Ort!=""||user.Ort!= "")
+                if (user.Ort!="")
                 {
-                    tbx_PLZortK.Text = $"{user.PLZ} {user.Ort}";
+                    tbx_ort.Text = user.Ort;
                    
-                    tbx_PLZortK.Enabled = false;
+                    tbx_ort.Enabled = false;
 
                 }
-           
+                if (user.PLZ != "")
+                {
+                    tbx_plz.Text = user.PLZ;
+
+
+                    tbx_plz.Enabled = false;
+
+                }
+
 
                 //tbx_NachnameK.Text = user.Nachname;
-               
+
             }
             
         }
@@ -103,18 +118,127 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
         {
             this.Hide();
         }
-
-        private void Btn_BuchenK_Click(object sender, EventArgs e)
+        #region Checknames
+        public bool CheckFormatSpace()
         {
-            Anmerkung = textBox1.Text;
-            if (DAL.DAL_Buchen.IsInserted(user, _selectedpanels, bookingnumber, Anmerkung))
+            if (tbx_ort.Text != "" && tbx_plz.Text != "" && tbx_TelefonK.Text != "" && tbx_StraßeK.Text != "")
             {
-                MessageBox.Show("nice");
+
+                return true;
             }
             else
             {
-                MessageBox.Show("ok");
+                MessageBox.Show("Bitte alle Pflichtfelder ausfüllen!");
+                return false;
             }
+        }
+
+
+       
+        private bool CheckPostleitzahl()
+        {
+            string postleitzahl;
+            postleitzahl = tbx_plz.Text;
+
+            if (postleitzahl.Length == 4 && postleitzahl.All(char.IsDigit))
+            {
+                return true;
+            }
+            else
+            {
+                if (postleitzahl == "")
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Das ist keine Österreichische Postleitzahl!");
+                    return false;
+                }
+
+            }
+
+        }
+
+        
+       
+        private bool CheckPhoneNumber()
+        {
+            return true;
+        }
+
+       
+        //private bool CheckTelAndStreet()
+        //{
+
+
+        //}
+        #endregion
+        private void Btn_BuchenK_Click(object sender, EventArgs e)
+        {
+         
+            if (user.Straße=="" || user.Telefonummer==""|| user.Ort=="" || user.PLZ=="")
+            {
+                if (CheckFormatSpace() && CheckPostleitzahl() && CheckPhoneNumber() || user.isAdmin == 1)
+                {
+                    user.Straße = tbx_StraßeK.Text;
+                    user.Telefonummer = tbx_TelefonK.Text;
+                    user.PLZ = tbx_plz.Text;
+                    user.Ort = tbx_ort.Text;
+
+
+
+                    if (DAL.DAL_Profil.IsUserUpdated(user))
+                    {
+                        BookingAccess1 = true;
+                        MessageBox.Show("Erfolgreich aktualisiert");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Daten konnten nicht aktualisiert werden");
+                    }
+                }
+                else
+                {
+                    BookingAccess1 = false;
+                }
+            }
+            if (BookingAccess1 = true)
+            {
+                buchung = new Buchung()
+                {
+                    Buchender = user,
+                    Anmerkung = textBox1.Text,
+                    Platznummer = _selectedpanels[0].Platznummer,
+                    Anfangszeit = _anfangszeit,
+                    Endzeit = _endzeit,
+                    Buchungsnummer = bookingidAsString,
+                    Datum = _selectedpanels[0].Date,
+                    AnzahlPersonen = Convert.ToInt32(nUP_Person.Value),
+
+
+                };
+                if (rdb_Mitglied.Checked)
+                {
+                    buchung.isMitglied = 1;
+                }
+                else
+                {
+                    buchung.isMitglied = 0;
+                }
+
+                if (DAL.DAL_Buchen.IsInserted(buchung))
+                {
+                    MessageBox.Show("nice");
+                }
+                else
+                {
+                    MessageBox.Show("ok");
+                }
+            }
+          
+
+
         }
     }
 }

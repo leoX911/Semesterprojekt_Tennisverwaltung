@@ -191,11 +191,11 @@ namespace Tennisverwaltungssystem
 
         private void Btn_navbar_hilfe_Click(object sender, EventArgs e)
         {
-            using (frm_Kontakt_Hilfe.frm_Hilfe hilfeform = new frm_Kontakt_Hilfe.frm_Hilfe())
-            {
+            frm_Kontakt_Hilfe.frm_Hilfe hilfeform = new frm_Kontakt_Hilfe.frm_Hilfe();
+            
                 this.Hide();
                 hilfeform.Show();
-            }
+            
 
         }
 

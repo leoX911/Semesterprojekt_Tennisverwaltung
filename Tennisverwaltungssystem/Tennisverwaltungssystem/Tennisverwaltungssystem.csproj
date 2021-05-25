@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Buchung.cs" />
     <Compile Include="BL\Schläger.cs" />
     <Compile Include="BL\User.cs" />
     <Compile Include="DAL\DAL_Ausleihen.cs" />

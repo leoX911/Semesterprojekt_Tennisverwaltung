@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tbx_PLZortK = new System.Windows.Forms.TextBox();
+            this.tbx_ort = new System.Windows.Forms.TextBox();
             this.lbl_PLZort = new System.Windows.Forms.Label();
             this.tbx_StraßeK = new System.Windows.Forms.TextBox();
             this.lbl_Straße = new System.Windows.Forms.Label();
@@ -46,6 +46,8 @@
             this.tbx_EmailK = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_date = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbl_bookingsnumber = new System.Windows.Forms.Label();
             this.lbl_pltznummer = new System.Windows.Forms.Label();
             this.lbl_zeitraum = new System.Windows.Forms.Label();
@@ -61,8 +63,8 @@
             this.lbl_Mitgliedschaft = new System.Windows.Forms.Label();
             this.btn_zurückK = new System.Windows.Forms.Button();
             this.btn_BuchenK = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_date = new System.Windows.Forms.Label();
+            this.tbx_plz = new System.Windows.Forms.TextBox();
+            this.lbl_plz = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -73,7 +75,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.tbx_PLZortK);
+            this.panel1.Controls.Add(this.lbl_plz);
+            this.panel1.Controls.Add(this.tbx_plz);
+            this.panel1.Controls.Add(this.tbx_ort);
             this.panel1.Controls.Add(this.lbl_PLZort);
             this.panel1.Controls.Add(this.tbx_StraßeK);
             this.panel1.Controls.Add(this.lbl_Straße);
@@ -84,32 +88,32 @@
             this.panel1.Controls.Add(this.tbx_Buhcungsnummer);
             this.panel1.Location = new System.Drawing.Point(32, 97);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(530, 288);
+            this.panel1.Size = new System.Drawing.Size(530, 306);
             this.panel1.TabIndex = 1;
             // 
-            // tbx_PLZortK
+            // tbx_ort
             // 
-            this.tbx_PLZortK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_PLZortK.Location = new System.Drawing.Point(41, 229);
-            this.tbx_PLZortK.Multiline = true;
-            this.tbx_PLZortK.Name = "tbx_PLZortK";
-            this.tbx_PLZortK.Size = new System.Drawing.Size(468, 27);
-            this.tbx_PLZortK.TabIndex = 10;
+            this.tbx_ort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_ort.Location = new System.Drawing.Point(41, 194);
+            this.tbx_ort.Multiline = true;
+            this.tbx_ort.Name = "tbx_ort";
+            this.tbx_ort.Size = new System.Drawing.Size(468, 27);
+            this.tbx_ort.TabIndex = 10;
             // 
             // lbl_PLZort
             // 
             this.lbl_PLZort.AutoSize = true;
             this.lbl_PLZort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PLZort.Location = new System.Drawing.Point(38, 211);
+            this.lbl_PLZort.Location = new System.Drawing.Point(38, 179);
             this.lbl_PLZort.Name = "lbl_PLZort";
-            this.lbl_PLZort.Size = new System.Drawing.Size(57, 15);
+            this.lbl_PLZort.Size = new System.Drawing.Size(24, 15);
             this.lbl_PLZort.TabIndex = 9;
-            this.lbl_PLZort.Text = "PLZ/ Ort*";
+            this.lbl_PLZort.Text = "Ort";
             // 
             // tbx_StraßeK
             // 
             this.tbx_StraßeK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_StraßeK.Location = new System.Drawing.Point(41, 164);
+            this.tbx_StraßeK.Location = new System.Drawing.Point(41, 141);
             this.tbx_StraßeK.Multiline = true;
             this.tbx_StraßeK.Name = "tbx_StraßeK";
             this.tbx_StraßeK.Size = new System.Drawing.Size(468, 27);
@@ -119,7 +123,7 @@
             // 
             this.lbl_Straße.AutoSize = true;
             this.lbl_Straße.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Straße.Location = new System.Drawing.Point(38, 146);
+            this.lbl_Straße.Location = new System.Drawing.Point(38, 124);
             this.lbl_Straße.Name = "lbl_Straße";
             this.lbl_Straße.Size = new System.Drawing.Size(40, 15);
             this.lbl_Straße.TabIndex = 7;
@@ -128,7 +132,7 @@
             // tbx_NachnameK
             // 
             this.tbx_NachnameK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_NachnameK.Location = new System.Drawing.Point(291, 101);
+            this.tbx_NachnameK.Location = new System.Drawing.Point(291, 92);
             this.tbx_NachnameK.Multiline = true;
             this.tbx_NachnameK.Name = "tbx_NachnameK";
             this.tbx_NachnameK.Size = new System.Drawing.Size(218, 27);
@@ -138,7 +142,7 @@
             // 
             this.lbl_Name.AutoSize = true;
             this.lbl_Name.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Name.Location = new System.Drawing.Point(38, 83);
+            this.lbl_Name.Location = new System.Drawing.Point(38, 74);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(136, 15);
             this.lbl_Name.TabIndex = 5;
@@ -157,7 +161,7 @@
             // tbx_VornameK
             // 
             this.tbx_VornameK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_VornameK.Location = new System.Drawing.Point(41, 101);
+            this.tbx_VornameK.Location = new System.Drawing.Point(41, 92);
             this.tbx_VornameK.Multiline = true;
             this.tbx_VornameK.Name = "tbx_VornameK";
             this.tbx_VornameK.Size = new System.Drawing.Size(218, 27);
@@ -263,6 +267,26 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(470, 107);
             this.panel4.TabIndex = 14;
+            // 
+            // lbl_date
+            // 
+            this.lbl_date.AutoSize = true;
+            this.lbl_date.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_date.Location = new System.Drawing.Point(75, 11);
+            this.lbl_date.Name = "lbl_date";
+            this.lbl_date.Size = new System.Drawing.Size(74, 17);
+            this.lbl_date.TabIndex = 17;
+            this.lbl_date.Text = "0000-00-00";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 15);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Datum:";
             // 
             // lbl_bookingsnumber
             // 
@@ -426,25 +450,24 @@
             this.btn_BuchenK.UseVisualStyleBackColor = false;
             this.btn_BuchenK.Click += new System.EventHandler(this.Btn_BuchenK_Click);
             // 
-            // label1
+            // tbx_plz
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 15);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Datum:";
+            this.tbx_plz.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_plz.Location = new System.Drawing.Point(41, 250);
+            this.tbx_plz.Multiline = true;
+            this.tbx_plz.Name = "tbx_plz";
+            this.tbx_plz.Size = new System.Drawing.Size(468, 27);
+            this.tbx_plz.TabIndex = 11;
             // 
-            // lbl_date
+            // lbl_plz
             // 
-            this.lbl_date.AutoSize = true;
-            this.lbl_date.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_date.Location = new System.Drawing.Point(75, 11);
-            this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(74, 17);
-            this.lbl_date.TabIndex = 17;
-            this.lbl_date.Text = "0000-00-00";
+            this.lbl_plz.AutoSize = true;
+            this.lbl_plz.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_plz.Location = new System.Drawing.Point(38, 231);
+            this.lbl_plz.Name = "lbl_plz";
+            this.lbl_plz.Size = new System.Drawing.Size(27, 15);
+            this.lbl_plz.TabIndex = 12;
+            this.lbl_plz.Text = "PLZ";
             // 
             // KontaktformularBuchen
             // 
@@ -481,7 +504,7 @@
         private System.Windows.Forms.TextBox tbx_VornameK;
         private System.Windows.Forms.TextBox tbx_Buhcungsnummer;
         private System.Windows.Forms.Label lbl_Kontaktformular;
-        private System.Windows.Forms.TextBox tbx_PLZortK;
+        private System.Windows.Forms.TextBox tbx_ort;
         private System.Windows.Forms.Label lbl_PLZort;
         private System.Windows.Forms.TextBox tbx_StraßeK;
         private System.Windows.Forms.Label lbl_Straße;
@@ -510,5 +533,7 @@
         private System.Windows.Forms.Label lbl_zeitraum;
         private System.Windows.Forms.Label lbl_date;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_plz;
+        private System.Windows.Forms.TextBox tbx_plz;
     }
 }

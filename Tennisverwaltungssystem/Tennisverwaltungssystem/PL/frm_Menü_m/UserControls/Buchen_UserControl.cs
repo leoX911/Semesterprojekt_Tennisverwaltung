@@ -210,7 +210,21 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
                     {
                         f1.BackColor = Color.Red;
                         f1.Occupied = true;
-                    }
+
+                    //if (DAL.DAL_Buchen.Doppelbuchung)
+                    //{
+                    //    //foreach (var f2 in listFlDay)
+                    //    //{
+                    //    //    if (f2.Top == f1.Top - f1.Height)
+                    //    //    {
+                    //    //        f2.BackColor = Color.Red;
+                    //    //        f2.Occupied = true;
+                    //    //    }
+                    //    //}
+                    //}
+
+
+                }
                     else
                     {
                         f1.Occupied = false;

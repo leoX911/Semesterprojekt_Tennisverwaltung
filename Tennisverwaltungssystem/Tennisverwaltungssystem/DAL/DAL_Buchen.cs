@@ -12,12 +12,14 @@ namespace Tennisverwaltungssystem.DAL
     class DAL_Buchen
     {
 
-
+        public static bool  Doppelbuchung = false;
         public static bool IsOccupied(Daypanel f1)
         {
-            string Anfangszeit;
-            string Endzeit;
-            string query = $"SELECT * FROM user_bucht_tennisplatz WHERE Tennisplatz_id_Platznummer='{f1.Platznummer}' AND Datum='{f1.Date.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND Beginn='{f1.Anfangszeit}';";
+            int Anfangszeit;
+            int Endzeit;
+            string query = $"SELECT * FROM user_bucht_tennisplatz WHERE Tennisplatz_id_Platznummer='{f1.Platznummer}' " +
+                $"AND Datum='{f1.Date.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND (Beginn='{f1.Anfangszeit}' " +
+                $"OR (Beginn<'{f1.Anfangszeit}' AND Ende>'{f1.Anfangszeit}'));";
 
             if (DAL_Main.Connect())
             {
@@ -27,8 +29,17 @@ namespace Tennisverwaltungssystem.DAL
                     {
                         if (reader.Read())
                         {
-                            Endzeit = (string)reader["Ende"];
-                            Anfangszeit = (string)reader["Beginn"];
+                            //Endzeit = Convert.ToInt32(reader["Ende"]);
+                            //Anfangszeit = Convert.ToInt32(reader["Beginn"]);
+                            //if (Endzeit - Anfangszeit == 2)
+                            //{
+                            //    Doppelbuchung = true;
+                            //}
+                            //else
+                            //{
+                            //    Doppelbuchung = false;
+                            //}
+
                             reader.Close();
                             DAL.DAL_Main.conn.Close();
                             return true;
@@ -59,10 +70,10 @@ namespace Tennisverwaltungssystem.DAL
             return DAL.DAL_Main.ReadData(query);
         }
 
-        public static bool IsInserted(User user, List<Daypanel> _selectedpanels, int bookingnumber, string Anmerkung)
+        public static bool IsInserted(Buchung buchung)
         {
       
-            string query = $"INSERT INTO user_bucht_tennisplatz(ID_Buchungsnummer,User_idUser, Tennisplatz_id_Platznummer, Anmerkung,Datum,Beginn,Ende) VALUES(?id_buchungsnummer, ?user_userid, ?tennisplatz_id_platznummer, ?anmerkung, ?datum, ?beginn, ?ende)";
+            string query = $"INSERT INTO user_bucht_tennisplatz(ID_Buchungsnummer,User_idUser, Tennisplatz_id_Platznummer, Anmerkung,Datum,Beginn,Ende,Personenanzahl,isMitglied) VALUES(?id_buchungsnummer, ?user_userid, ?tennisplatz_id_platznummer, ?anmerkung, ?datum, ?beginn, ?ende,?personenanzahl, ?ismitglied)";
             if (DAL_Main.Connect())
             {
                 using (MySqlCommand cmd = new MySqlCommand(query, DAL_Main.conn))
@@ -71,41 +82,42 @@ namespace Tennisverwaltungssystem.DAL
 
                     cmd.Parameters.Add(new MySqlParameter("id_buchungsnummer",
                     MySqlDbType.VarChar, 30)
-                    { Value = Convert.ToString(bookingnumber) });
+                    { Value = buchung.Buchungsnummer });
 
                     cmd.Parameters.Add(new MySqlParameter("user_userid",
                     MySqlDbType.Int32)
-                    { Value = user.ID });
+                    { Value = buchung.Buchender.ID });
 
                     cmd.Parameters.Add(new MySqlParameter("tennisplatz_id_platznummer",
                     MySqlDbType.Int32)
-                    { Value = _selectedpanels[0].Platznummer });
+                    { Value = buchung.Platznummer });
 
                     cmd.Parameters.Add(new MySqlParameter("anmerkung",
                     MySqlDbType.VarChar, 30)
-                    { Value = Anmerkung });
+                    { Value = buchung.Anmerkung });
 
 
                     cmd.Parameters.Add(new MySqlParameter("datum",
                     MySqlDbType.DateTime)
-                    { Value = _selectedpanels[0].Date });
+                    { Value = buchung.Datum});
 
                     cmd.Parameters.Add(new MySqlParameter("beginn",
                     MySqlDbType.VarChar, 30)
-                    { Value = _selectedpanels[0].Anfangszeit });
+                    { Value = buchung.Anfangszeit });
 
-                    if (_selectedpanels.Count == 2)
-                    {
-                        cmd.Parameters.Add(new MySqlParameter("ende",
-                        MySqlDbType.VarChar, 30)
-                        { Value = _selectedpanels[1].Endzeit });
-                    }
-                    else
-                    {
-                        cmd.Parameters.Add(new MySqlParameter("ende",
-                        MySqlDbType.VarChar, 30)
-                        { Value = _selectedpanels[0].Endzeit });
-                    }
+                    
+                   
+                    cmd.Parameters.Add(new MySqlParameter("ende",
+                    MySqlDbType.VarChar, 30)
+                    { Value = buchung.Endzeit });
+
+                    cmd.Parameters.Add(new MySqlParameter("personenanzahl",
+                    MySqlDbType.Int32)
+                    { Value = buchung.AnzahlPersonen });
+
+                    cmd.Parameters.Add(new MySqlParameter("ismitglied",
+                    MySqlDbType.Int32)
+                    { Value = buchung.isMitglied });
                     return DAL.DAL_Main.TryToExecute(cmd);
                 }
 
