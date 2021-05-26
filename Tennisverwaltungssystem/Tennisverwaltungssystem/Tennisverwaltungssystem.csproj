@@ -112,6 +112,12 @@
     <Compile Include="BL\Daypanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\BuchungenListe_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\frm_Menü_m\UserControls\BuchungenListe_UserControl.Designer.cs">
+      <DependentUpon>BuchungenListe_UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\frm_Menü_m\UserControls\Profil_Usercontrol.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frm_Menü_m\UserControls\Buchen_UserControl.resx">
       <DependentUpon>Buchen_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frm_Menü_m\UserControls\BuchungenListe_UserControl.resx">
+      <DependentUpon>BuchungenListe_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frm_Menü_m\UserControls\Profil_Usercontrol.resx">
       <DependentUpon>Profil_Usercontrol.cs</DependentUpon>

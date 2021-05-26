@@ -28,7 +28,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             if (!DAL.DAL_Main.Connect()) return;
            
             InitializeComponent();
-           
+            lbl_click_text_booking.ForeColor = Color.FromArgb(135, 171, 195);
             GeneratePlatzPanel(5);
             AddLabelToPlatzPanel();
 
@@ -422,6 +422,23 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         private void PictureBox1_Click(object sender, EventArgs e)
         {
             DisplayCurrentDate();
+        }
+
+        private void Lbl_text_buchungsdetails_Click(object sender, EventArgs e)
+        {
+            buchungenListe_UserControl1.BringToFront();
+            lbl_text_buchungsdetails.ForeColor = Color.FromArgb(135, 171, 195);
+            lbl_click_text_booking.ForeColor = Color.Gray;
+           
+         
+        }
+
+        private void Lbl_click_text_booking_Click(object sender, EventArgs e)
+        {
+            lbl_click_text_booking.ForeColor= Color.FromArgb(135, 171, 195);
+            lbl_text_buchungsdetails.ForeColor = Color.Gray;
+            buchungenListe_UserControl1.SendToBack();
+         
         }
     }
 }
