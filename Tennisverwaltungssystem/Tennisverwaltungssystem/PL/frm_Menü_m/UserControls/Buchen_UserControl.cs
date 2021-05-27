@@ -432,7 +432,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             btn_nextday.Visible = false;
             btn_today.Visible = false;
             btn_prevDay.Visible = false;
-
+            btn_nextpage.Visible = false;
 
         }
 
@@ -445,6 +445,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
             btn_nextday.Visible = true;
             btn_today.Visible = true;
             btn_prevDay.Visible = true;
+            btn_nextpage.Visible = true;
 
         }
 

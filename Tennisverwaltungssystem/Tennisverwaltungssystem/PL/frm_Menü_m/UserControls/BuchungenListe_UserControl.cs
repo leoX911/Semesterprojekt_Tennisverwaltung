@@ -13,6 +13,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
 {
     public partial class BuchungenListe_UserControl : UserControl
     {
+        
         public static string buchungsnummer;
         User _user = Übersicht_M._user;
        
@@ -20,6 +21,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         {
             
             InitializeComponent();
+        
             if (_user!=null)
             {
                 foreach (var item in DAL.DAL_Buchen.GetData(_user))
@@ -32,13 +34,16 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        
             if (e.ColumnIndex==3)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 buchungsnummer=row.Cells[0].Value.ToString();
-                buchungsdetails1.Visible = true;
-                buchungsdetails1.BringToFront();
-               
+                Buchungsdetails bd = new Buchungsdetails(buchungsnummer);
+                this.Controls.Add(bd);
+                bd.BringToFront();
+
+
 
             }
            

@@ -16,7 +16,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         public string buchungsnummer;
            User user = Übersicht_M._user;
         
-        public Buchungsdetails()
+        public Buchungsdetails(string buchungsnummer)
         {
             
            
@@ -41,11 +41,12 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         private void Button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+            
         }
 
         private void Buchungsdetails_VisibleChanged(object sender, EventArgs e)
         {
-           string buchungsnummer = BuchungenListe_UserControl.buchungsnummer;
+           
     }
     }
 }
