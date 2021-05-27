@@ -414,7 +414,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
 
         }
-        public event eventHandlerCool eventCool;
+
 
         private void PictureBox1_Click(object sender, EventArgs e)
         {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buchungsbestätigung));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Herrxy = new System.Windows.Forms.Label();
@@ -40,6 +41,8 @@
             this.lbl_zeitraum = new System.Windows.Forms.Label();
             this.btn_buchungdrucken = new System.Windows.Forms.Button();
             this.btn_hauptmenü = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,6 +158,7 @@
             this.btn_buchungdrucken.TabIndex = 10;
             this.btn_buchungdrucken.Text = "Buchung drucken";
             this.btn_buchungdrucken.UseVisualStyleBackColor = false;
+            this.btn_buchungdrucken.Click += new System.EventHandler(this.Btn_buchungdrucken_Click);
             // 
             // btn_hauptmenü
             // 
@@ -169,6 +173,16 @@
             this.btn_hauptmenü.Text = "Hauptmenü";
             this.btn_hauptmenü.UseVisualStyleBackColor = false;
             this.btn_hauptmenü.Click += new System.EventHandler(this.Btn_hauptmenü_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Buchungsbestätigung
             // 
@@ -209,5 +223,7 @@
         private System.Windows.Forms.Label lbl_zeitraum;
         private System.Windows.Forms.Button btn_buchungdrucken;
         private System.Windows.Forms.Button btn_hauptmenü;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

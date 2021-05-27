@@ -46,11 +46,11 @@
             this.btn_navbar_menu = new System.Windows.Forms.Button();
             this.pnl_header_m = new System.Windows.Forms.Panel();
             this.pic_TCHard_Logo = new System.Windows.Forms.PictureBox();
+            this.buchen_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Buchen_UserControl();
             this.ausleihen_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Ausleihen_UserControl();
             this.profil_Usercontrol1 = new Tennisverwaltungssystem.PL.frm_Menü_m.UserControls.Profil_Usercontrol();
             this.statistiken_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Statistiken_UserControl();
             this.überischt_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Überischt_UserControl();
-            this.buchen_UserControl1 = new Tennisverwaltungssystem.frm_Menü_m.UserControls.Buchen_UserControl();
             this.pnl_background_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_headerm2.SuspendLayout();
@@ -363,6 +363,14 @@
             this.pic_TCHard_Logo.TabStop = false;
             this.pic_TCHard_Logo.Click += new System.EventHandler(this.Pic_TCHard_Logo_Click);
             // 
+            // buchen_UserControl1
+            // 
+            this.buchen_UserControl1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buchen_UserControl1.Location = new System.Drawing.Point(242, 108);
+            this.buchen_UserControl1.Name = "buchen_UserControl1";
+            this.buchen_UserControl1.Size = new System.Drawing.Size(941, 552);
+            this.buchen_UserControl1.TabIndex = 8;
+            // 
             // ausleihen_UserControl1
             // 
             this.ausleihen_UserControl1.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -395,14 +403,6 @@
             this.überischt_UserControl1.Size = new System.Drawing.Size(943, 554);
             this.überischt_UserControl1.TabIndex = 2;
             // 
-            // buchen_UserControl1
-            // 
-            this.buchen_UserControl1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buchen_UserControl1.Location = new System.Drawing.Point(242, 108);
-            this.buchen_UserControl1.Name = "buchen_UserControl1";
-            this.buchen_UserControl1.Size = new System.Drawing.Size(941, 552);
-            this.buchen_UserControl1.TabIndex = 8;
-            // 
             // Übersicht_M
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,8 +416,11 @@
             this.Controls.Add(this.profil_Usercontrol1);
             this.Controls.Add(this.statistiken_UserControl1);
             this.Controls.Add(this.überischt_UserControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.IsMdiContainer = true;
+            this.KeyPreview = true;
             this.Name = "Übersicht_M";
-            this.ShowIcon = false;
             this.Text = "Übersicht";
             this.pnl_background_home.ResumeLayout(false);
             this.pnl_background_home.PerformLayout();

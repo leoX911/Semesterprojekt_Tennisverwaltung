@@ -16,7 +16,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
     public partial class KontaktformularBuchen : Form
     {
         Buchung buchung;
-        bool BookingAccess1;
+      
         int _anfangszeit;
         int _endzeit;
         List<Daypanel> _selectedpanels;
@@ -33,19 +33,12 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
             bookingidAsString = bookingid.ToString();
 
             _selectedpanels = SelectedPanels;
-            Random _rndGen = new Random();
+      
             
             nUP_Person.Maximum = 4;
             nUP_Person.Value = 1;
             nUP_Person.Minimum = 1;
-            
-            
-           
-            //do
-            //{
-            //    bookingnumber = _rndGen.Next(10000000, 999999999);
-            //} while (DAL.DAL_Buchen.IsBookingNumberUsed(Convert.ToString(bookingnumber)));
-            
+         
             lbl_pltznummer.Text = Convert.ToString(SelectedPanels[0].Platznummer);
             lbl_date.Text = SelectedPanels[0].Date.ToShortDateString();
 

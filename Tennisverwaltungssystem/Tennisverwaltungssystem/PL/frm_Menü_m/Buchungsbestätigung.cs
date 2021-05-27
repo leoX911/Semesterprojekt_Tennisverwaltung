@@ -32,5 +32,13 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
             
             this.Hide();
         }
+
+        private void Btn_buchungdrucken_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprm", 285, 600);
+            printPreviewDialog1.ShowDialog();
+
+        }
     }
 }
