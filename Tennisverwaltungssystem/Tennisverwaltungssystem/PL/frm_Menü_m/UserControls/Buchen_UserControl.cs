@@ -427,7 +427,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
        
             lbl_text_buchungsdetails.ForeColor = Color.FromArgb(135, 171, 195);
             lbl_click_text_booking.ForeColor = Color.Gray;
-            //buchungenListe_UserControl1.Visible = true;
+            buchungenListe_UserControl1.Visible = true;
             lbl_buchungsüberischt_sub.Visible = false;
             btn_nextday.Visible = false;
             btn_today.Visible = false;
@@ -440,7 +440,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         {
             lbl_click_text_booking.ForeColor= Color.FromArgb(135, 171, 195);
             lbl_text_buchungsdetails.ForeColor = Color.Gray;
-            //buchungenListe_UserControl1.Visible = false;
+            buchungenListe_UserControl1.Visible = false;
             lbl_buchungsüberischt_sub.Visible = true;
             btn_nextday.Visible = true;
             btn_today.Visible = true;

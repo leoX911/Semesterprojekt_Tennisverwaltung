@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnl_buchung = new System.Windows.Forms.Panel();
+            this.buchungenListe_UserControl1 = new Tennisverwaltungssystem.PL.frm_Menü_m.UserControls.BuchungenListe_UserControl();
             this.btn_nextpage = new System.Windows.Forms.Button();
             this.btn_today = new System.Windows.Forms.Button();
             this.btn_nextday = new System.Windows.Forms.Button();
@@ -53,10 +54,7 @@
             this.lbl_summerheader = new System.Windows.Forms.Label();
             this.lbl_buchungsüberischt_sub = new System.Windows.Forms.Label();
             this.lbl_buchen = new System.Windows.Forms.Label();
-            this.buchungenListe_UserControl2 = new Tennisverwaltungssystem.PL.frm_Menü_m.UserControls.BuchungenListe_UserControl();
-            this.buchungenListe_UserControl1 = new Tennisverwaltungssystem.PL.frm_Menü_m.UserControls.BuchungenListe_UserControl();
             this.pnl_buchung.SuspendLayout();
-            this.fp_overall.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_buchung
@@ -90,6 +88,16 @@
             this.pnl_buchung.Name = "pnl_buchung";
             this.pnl_buchung.Size = new System.Drawing.Size(827, 423);
             this.pnl_buchung.TabIndex = 3;
+            // 
+            // buchungenListe_UserControl1
+            // 
+            this.buchungenListe_UserControl1.BackColor = System.Drawing.Color.White;
+            this.buchungenListe_UserControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buchungenListe_UserControl1.Location = new System.Drawing.Point(22, 18);
+            this.buchungenListe_UserControl1.Name = "buchungenListe_UserControl1";
+            this.buchungenListe_UserControl1.Size = new System.Drawing.Size(583, 385);
+            this.buchungenListe_UserControl1.TabIndex = 35;
+            this.buchungenListe_UserControl1.Visible = false;
             // 
             // btn_nextpage
             // 
@@ -160,7 +168,6 @@
             // fp_overall
             // 
             this.fp_overall.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fp_overall.Controls.Add(this.buchungenListe_UserControl2);
             this.fp_overall.Location = new System.Drawing.Point(22, 70);
             this.fp_overall.Name = "fp_overall";
             this.fp_overall.Size = new System.Drawing.Size(487, 330);
@@ -344,24 +351,6 @@
             this.lbl_buchen.TabIndex = 34;
             this.lbl_buchen.Text = "Buchen";
             // 
-            // buchungenListe_UserControl2
-            // 
-            this.buchungenListe_UserControl2.BackColor = System.Drawing.Color.White;
-            this.buchungenListe_UserControl2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buchungenListe_UserControl2.Location = new System.Drawing.Point(3, 3);
-            this.buchungenListe_UserControl2.Name = "buchungenListe_UserControl2";
-            this.buchungenListe_UserControl2.Size = new System.Drawing.Size(583, 385);
-            this.buchungenListe_UserControl2.TabIndex = 0;
-            // 
-            // buchungenListe_UserControl1
-            // 
-            this.buchungenListe_UserControl1.BackColor = System.Drawing.Color.White;
-            this.buchungenListe_UserControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buchungenListe_UserControl1.Location = new System.Drawing.Point(22, 16);
-            this.buchungenListe_UserControl1.Name = "buchungenListe_UserControl1";
-            this.buchungenListe_UserControl1.Size = new System.Drawing.Size(583, 385);
-            this.buchungenListe_UserControl1.TabIndex = 35;
-            // 
             // Buchen_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,7 +364,6 @@
             this.Load += new System.EventHandler(this.Buchen_UserControl_Load);
             this.pnl_buchung.ResumeLayout(false);
             this.pnl_buchung.PerformLayout();
-            this.fp_overall.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,7 +395,6 @@
         private System.Windows.Forms.Button btn_nextday;
         private System.Windows.Forms.Button btn_prevDay;
         private System.Windows.Forms.Button btn_nextpage;
-        private PL.frm_Menü_m.UserControls.BuchungenListe_UserControl buchungenListe_UserControl2;
         private PL.frm_Menü_m.UserControls.BuchungenListe_UserControl buchungenListe_UserControl1;
     }
 }

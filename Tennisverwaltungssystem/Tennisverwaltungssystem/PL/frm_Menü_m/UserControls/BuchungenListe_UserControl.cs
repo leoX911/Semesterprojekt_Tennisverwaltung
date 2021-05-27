@@ -24,10 +24,24 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
             {
                 foreach (var item in DAL.DAL_Buchen.GetData(_user))
                 {
-                    dataGridView1.Rows.Add(item.Buchungsnummer, item.Erstelldatum.ToShortDateString(), item.Datum.ToShortDateString());
+                    dataGridView1.Rows.Add(item.Buchungsnummer, item.Erstelldatum.ToShortDateString(), item.Datum.ToShortDateString(),"Details");
                 }
             }
             
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex==3)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                string buchungsnummer=row.Cells[0].Value.ToString();
+                Buchung b= DAL.DAL_Buchen.GetDataBuchung(buchungsnummer, _user);
+
+            }
+           
+
+
         }
     }
 }

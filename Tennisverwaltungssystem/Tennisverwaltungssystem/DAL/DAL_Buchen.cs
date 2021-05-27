@@ -142,6 +142,42 @@ namespace Tennisverwaltungssystem.DAL
             return Buchungen;
         }
 
+        public static Buchung GetDataBuchung(string Buchungsnummer, User user)
+        {
+            Buchung buchung= new Buchung();
+            string query = $"SELECT * FROM user_bucht_tennisplatz WHERE User_idUser='{Buchungsnummer}'";
+            if (DAL_Main.Connect())
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, DAL.DAL_Main.conn))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+
+
+                            buchung.Buchungsnummer = (string)reader["ID_Buchungsnummer"];
+                            buchung.Erstelldatum = (DateTime)reader["Erstelldatum"];
+                            buchung.Datum = (DateTime)reader["Datum"];
+                            buchung.Anfangszeit = (int)reader["Beginn"];
+                            buchung.Endzeit = (int)reader["Ende"];
+                            buchung.Platznummer = (int)reader["Tennisplatz_id_Platznummer"];
+                            buchung.Buchender = user;
+                            
+                        }
+                    }
+
+                }
+
+            }
+            else
+            {
+                DAL.DAL_Main.conn.Close();
+
+            }
+            return buchung;
+        }
+
     }
         
     }
