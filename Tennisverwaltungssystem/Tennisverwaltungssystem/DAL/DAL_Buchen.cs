@@ -145,7 +145,7 @@ namespace Tennisverwaltungssystem.DAL
         public static Buchung GetDataBuchung(string Buchungsnummer, User user)
         {
             Buchung buchung= new Buchung();
-            string query = $"SELECT * FROM user_bucht_tennisplatz WHERE User_idUser='{Buchungsnummer}'";
+            string query = $"SELECT * FROM user_bucht_tennisplatz WHERE ID_Buchungsnummer='{Buchungsnummer}'";
             if (DAL_Main.Connect())
             {
                 using (MySqlCommand cmd = new MySqlCommand(query, DAL.DAL_Main.conn))

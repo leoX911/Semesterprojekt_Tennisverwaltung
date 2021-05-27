@@ -13,7 +13,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
 {
     public partial class BuchungenListe_UserControl : UserControl
     {
-       static string buchungsnummer;
+        public static string buchungsnummer;
         User _user = Übersicht_M._user;
        
         public BuchungenListe_UserControl()
@@ -36,7 +36,9 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 buchungsnummer=row.Cells[0].Value.ToString();
-                Buchung b= DAL.DAL_Buchen.GetDataBuchung(buchungsnummer, _user);
+                buchungsdetails1.Visible = true;
+                buchungsdetails1.BringToFront();
+               
 
             }
            
