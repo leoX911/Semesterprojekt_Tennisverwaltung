@@ -26,7 +26,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
         {
             DAL.DAL_Main.CreateConnection();
             if (!DAL.DAL_Main.Connect()) return;
-           
+        
             InitializeComponent();
             lbl_click_text_booking.ForeColor = Color.FromArgb(135, 171, 195);
             GeneratePlatzPanel(5);
@@ -335,7 +335,7 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
             }
         }
-        private void UpdateflDateToCurrentDate()
+        private void  UpdateflDateToCurrentDate()
         {
             btn_today.Enabled = true;
             foreach (Daypanel f1 in listFlDay)
@@ -414,31 +414,43 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
 
         }
+        public event eventHandlerCool eventCool;
 
-        private void UpdateData(object sender, EventArgs e)
-        {
-            DisplayCurrentDate();
-        }
         private void PictureBox1_Click(object sender, EventArgs e)
         {
             DisplayCurrentDate();
+         
         }
 
         private void Lbl_text_buchungsdetails_Click(object sender, EventArgs e)
         {
-            buchungenListe_UserControl1.BringToFront();
+       
             lbl_text_buchungsdetails.ForeColor = Color.FromArgb(135, 171, 195);
             lbl_click_text_booking.ForeColor = Color.Gray;
-           
-         
+            //buchungenListe_UserControl1.Visible = true;
+            lbl_buchungsüberischt_sub.Visible = false;
+            btn_nextday.Visible = false;
+            btn_today.Visible = false;
+            btn_prevDay.Visible = false;
+
+
         }
 
         private void Lbl_click_text_booking_Click(object sender, EventArgs e)
         {
             lbl_click_text_booking.ForeColor= Color.FromArgb(135, 171, 195);
             lbl_text_buchungsdetails.ForeColor = Color.Gray;
-            buchungenListe_UserControl1.SendToBack();
-         
+            //buchungenListe_UserControl1.Visible = false;
+            lbl_buchungsüberischt_sub.Visible = true;
+            btn_nextday.Visible = true;
+            btn_today.Visible = true;
+            btn_prevDay.Visible = true;
+
+        }
+
+        private void BuchungenListe_UserControl1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

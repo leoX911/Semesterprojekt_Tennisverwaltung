@@ -188,7 +188,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
                 Buchungsnummer = bookingidAsString,
                 Datum = _selectedpanels[0].Date,
                 AnzahlPersonen = Convert.ToInt32(nUP_Person.Value),
-
+                Erstelldatum = DateTime.Today,
 
             };
             if (rdb_Mitglied.Checked)

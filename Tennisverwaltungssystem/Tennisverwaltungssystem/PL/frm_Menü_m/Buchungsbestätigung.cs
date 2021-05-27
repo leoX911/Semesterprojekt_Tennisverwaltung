@@ -12,6 +12,7 @@ using Tennisverwaltungssystem.frm_Menü_m.UserControls;
 
 namespace Tennisverwaltungssystem.PL.frm_Menü_m
 {
+    public delegate void eventHandlerCool();
     public partial class Buchungsbestätigung : Form
     {
         public Buchungsbestätigung(Buchung buchung)
@@ -23,12 +24,13 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
             lbl_Name.Text = buchung.Buchender.Vorname + " " + buchung.Buchender.Nachname;
             Herrxy.Text = "Hallo Herr/Frau " + buchung.Buchender.Nachname;
         }
-
+        
         private void Btn_hauptmenü_Click(object sender, EventArgs e)
         {
-           
-            this.Hide();
             
+          
+            
+            this.Hide();
         }
     }
 }

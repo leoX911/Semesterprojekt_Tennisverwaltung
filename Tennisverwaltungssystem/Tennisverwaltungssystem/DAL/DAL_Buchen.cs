@@ -15,51 +15,12 @@ namespace Tennisverwaltungssystem.DAL
         public static bool  Doppelbuchung = false;
         public static bool IsOccupied(Daypanel f1)
         {
-            int Anfangszeit;
-            int Endzeit;
+          
             string query = $"SELECT * FROM user_bucht_tennisplatz WHERE Tennisplatz_id_Platznummer='{f1.Platznummer}' " +
                 $"AND Datum='{f1.Date.Date.ToString("yyyy-MM-dd HH:mm:ss")}' AND (Beginn='{f1.Anfangszeit}' " +
                 $"OR (Beginn<'{f1.Anfangszeit}' AND Ende>'{f1.Anfangszeit}'));";
 
-            if (DAL_Main.Connect())
-            {
-                using (MySqlCommand cmd = new MySqlCommand(query, DAL.DAL_Main.conn))
-                {
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            //Endzeit = Convert.ToInt32(reader["Ende"]);
-                            //Anfangszeit = Convert.ToInt32(reader["Beginn"]);
-                            //if (Endzeit - Anfangszeit == 2)
-                            //{
-                            //    Doppelbuchung = true;
-                            //}
-                            //else
-                            //{
-                            //    Doppelbuchung = false;
-                            //}
-
-                            reader.Close();
-                            DAL.DAL_Main.conn.Close();
-                            return true;
-                        }
-                        else
-                        {
-                            reader.Close();
-                            DAL.DAL_Main.conn.Close();
-                            return false;
-                        }
-                    }
-
-                }
-
-            }
-            else
-            {
-                DAL.DAL_Main.conn.Close();
-                return false;
-            }
+            return DAL.DAL_Main.ReadData(query);
         }
 
        
@@ -73,7 +34,7 @@ namespace Tennisverwaltungssystem.DAL
         public static bool IsInserted(Buchung buchung)
         {
       
-            string query = $"INSERT INTO user_bucht_tennisplatz(ID_Buchungsnummer,User_idUser, Tennisplatz_id_Platznummer, Anmerkung,Datum,Beginn,Ende,Personenanzahl,isMitglied) VALUES(?id_buchungsnummer, ?user_userid, ?tennisplatz_id_platznummer, ?anmerkung, ?datum, ?beginn, ?ende,?personenanzahl, ?ismitglied)";
+            string query = $"INSERT INTO user_bucht_tennisplatz(ID_Buchungsnummer,User_idUser, Tennisplatz_id_Platznummer, Anmerkung,Datum,Beginn,Ende,Personenanzahl,isMitglied,Erstelldatum) VALUES(?id_buchungsnummer, ?user_userid, ?tennisplatz_id_platznummer, ?anmerkung, ?datum, ?beginn, ?ende,?personenanzahl, ?ismitglied,?erstelldatum)";
             if (DAL_Main.Connect())
             {
                 using (MySqlCommand cmd = new MySqlCommand(query, DAL_Main.conn))
@@ -118,6 +79,11 @@ namespace Tennisverwaltungssystem.DAL
                     cmd.Parameters.Add(new MySqlParameter("ismitglied",
                     MySqlDbType.Int32)
                     { Value = buchung.isMitglied });
+
+                    cmd.Parameters.Add(new MySqlParameter("erstelldatum",
+                   MySqlDbType.DateTime)
+                    { Value = buchung.Erstelldatum });
+
                     return DAL.DAL_Main.TryToExecute(cmd);
                 }
 
@@ -140,6 +106,41 @@ namespace Tennisverwaltungssystem.DAL
 
         }
 
+        public static List<Buchung> GetData(User user)
+        {
+            string query = $"SELECT * FROM user_bucht_tennisplatz WHERE User_idUser='{user.ID}'";
+            List<Buchung> Buchungen = new List<Buchung>();
+            if (DAL_Main.Connect())
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, DAL.DAL_Main.conn))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Buchungen.Add(new Buchung()
+                            {
+                                Buchungsnummer = (string)reader["ID_Buchungsnummer"],
+                                Erstelldatum = (DateTime)reader["Erstelldatum"],
+                                Datum = (DateTime)reader["Datum"],
+                                Anfangszeit = (int)reader["Beginn"],
+                                Endzeit = (int)reader["Ende"],
+                                Platznummer = (int)reader["Tennisplatz_id_Platznummer"],
+                                Buchender = user,
+                            }); 
+                        }
+                    }
+
+                }
+
+            }
+            else
+            {
+                DAL.DAL_Main.conn.Close();
+               
+            }
+            return Buchungen;
+        }
 
     }
         
