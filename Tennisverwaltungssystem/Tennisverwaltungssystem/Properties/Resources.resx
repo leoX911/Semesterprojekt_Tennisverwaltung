@@ -148,6 +148,9 @@
   <data name="Schläger IST" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Schläger IST.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="61444" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\61444.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Bild 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bild 7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,6 +166,9 @@
   <data name="Head_Nr11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Head_Nr11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Head_Team" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Head_Team.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="+_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\+_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -177,9 +183,6 @@
   </data>
   <data name="Head_Pro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Head_Pro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Schläger LGT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Schläger LGT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_upload1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_upload1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,11 +205,14 @@
   <data name="Head_Pro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Head_Pro1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Head_Team" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Head_Team.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Schläger EXT1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Schläger EXT1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Geschäftliches" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Geschäftliches.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unnamed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Feedback" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Feedback.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,8 +226,8 @@
   <data name="übersicht_tennisclub" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\übersicht_tennisclub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Login_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login_Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Schläger LGT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Schläger LGT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="KONTAKT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KONTAKT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,8 +244,8 @@
   <data name="Schläger SPD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Schläger SPD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Schläger EXT1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Schläger EXT1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Login_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login_Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tennisball-ist-auf-der-aufschlagvertikale-40803477" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tennisball-ist-auf-der-aufschlagvertikale-40803477.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,7 +265,7 @@
   <data name="j" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\j.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="61444" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\61444.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arnold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arnold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

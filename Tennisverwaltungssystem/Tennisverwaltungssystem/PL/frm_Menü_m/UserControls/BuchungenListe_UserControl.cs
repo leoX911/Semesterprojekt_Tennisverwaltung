@@ -21,17 +21,27 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         {
             
             InitializeComponent();
-        
-            if (_user!=null)
+            Buchungsbestätigung.UpdateBuchung += Buchungsbestätigung_UpdateBuchung;
+            UpdateData();
+
+
+        }
+
+        private void Buchungsbestätigung_UpdateBuchung(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void UpdateData()
+        {
+            if (_user != null)
             {
                 foreach (var item in DAL.DAL_Buchen.GetData(_user))
                 {
-                    dataGridView1.Rows.Add(item.Buchungsnummer, item.Erstelldatum.ToShortDateString(), item.Datum.ToShortDateString(),"Details");
+                    dataGridView1.Rows.Add(item.Buchungsnummer, item.Erstelldatum.ToShortDateString(), item.Datum.ToShortDateString(), "...");
                 }
             }
-            
         }
-
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         

@@ -60,7 +60,7 @@ namespace Tennisverwaltungssystem.frm_login
                             this.Hide();
                             überischtform.Show();
 
-                            GC.Collect();
+                     
                            
 
                         }

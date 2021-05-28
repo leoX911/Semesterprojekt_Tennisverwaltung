@@ -24,8 +24,15 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
             if (buchungsnummer!=null && user!= null)
             {
                 Buchung b = DAL.DAL_Buchen.GetDataBuchung(buchungsnummer, user);
-                tbx_buchungsnummer.Text = b.Buchungsnummer;
-                tbx_buchender.Text = b.Buchender.Nachname;
+                tbx_Tellnummer.Text = b.Buchender.Telefonummer;
+                tbx_Vorname.Text = b.Buchender.Vorname;
+                tbx_Nachname.Text = b.Buchender.Nachname;
+                tbx_Email.Text = b.Buchender.EMail;
+                tbx_Adresse.Text = b.Buchender.Straße;
+                lbl_actualBuchungsnummer.Text = buchungsnummer;
+                lbl_Platznummer.Text = "Platznummer: " + b.Platznummer;
+                lbl_Zeitraum.Text = b.Datum.ToShortDateString();
+                lbl_zeitttt.Text = b.Anfangszeit+ " - " + b.Endzeit;
             }
            
 
@@ -33,10 +40,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
 
         }
 
-        private void TextBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -48,5 +52,10 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         {
            
     }
+
+        private void Buchungsdetails_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

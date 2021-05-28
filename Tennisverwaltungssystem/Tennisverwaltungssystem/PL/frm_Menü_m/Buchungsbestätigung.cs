@@ -12,12 +12,15 @@ using Tennisverwaltungssystem.frm_Menü_m.UserControls;
 
 namespace Tennisverwaltungssystem.PL.frm_Menü_m
 {
-    public delegate void eventHandlerCool();
+    
     public partial class Buchungsbestätigung : Form
     {
+        public static event EventHandler UpdateBuchung;
+        public static event EventHandler UpdateUser;
         public Buchungsbestätigung(Buchung buchung)
         {
             InitializeComponent();
+            this.ControlBox = false;
             lbl_buchungsnummer.Text ="Buchungsnummer: "+buchung.Buchungsnummer;
             lbl_datum.Text = buchung.Datum.ToShortDateString();
             lbl_zeitraum.Text= "Zeitraum: " + Convert.ToString(buchung.Anfangszeit) + ":00-"+ Convert.ToString(buchung.Endzeit) + ":00";
@@ -27,9 +30,10 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
         
         private void Btn_hauptmenü_Click(object sender, EventArgs e)
         {
-            
-          
-            
+
+
+            UpdateUser?.Invoke(this, null);
+            UpdateBuchung?.Invoke(this, null);
             this.Hide();
         }
 

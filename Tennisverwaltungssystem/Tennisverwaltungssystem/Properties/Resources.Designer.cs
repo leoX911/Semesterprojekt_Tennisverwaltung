@@ -93,6 +93,16 @@ namespace Tennisverwaltungssystem.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arnold {
+            get {
+                object obj = ResourceManager.GetObject("arnold", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Background_Login {
             get {
                 object obj = ResourceManager.GetObject("Background_Login", resourceCulture);
@@ -526,6 +536,16 @@ namespace Tennisverwaltungssystem.Properties {
         internal static System.Drawing.Bitmap übersicht_tennisclub {
             get {
                 object obj = ResourceManager.GetObject("übersicht_tennisclub", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unnamed {
+            get {
+                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

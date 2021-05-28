@@ -409,13 +409,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.Controls.Add(this.buchen_UserControl1);
             this.Controls.Add(this.pnl_header_m);
             this.Controls.Add(this.pnl_background_home);
-            this.Controls.Add(this.ausleihen_UserControl1);
             this.Controls.Add(this.profil_Usercontrol1);
             this.Controls.Add(this.statistiken_UserControl1);
             this.Controls.Add(this.überischt_UserControl1);
+            this.Controls.Add(this.buchen_UserControl1);
+            this.Controls.Add(this.ausleihen_UserControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.IsMdiContainer = true;

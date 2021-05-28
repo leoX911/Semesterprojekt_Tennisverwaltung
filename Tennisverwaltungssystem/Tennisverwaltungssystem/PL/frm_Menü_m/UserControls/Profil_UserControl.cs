@@ -16,11 +16,23 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
 {
     public partial class Profil_Usercontrol : UserControl
     {
+        public event EventHandler OnComplete;
         readonly User user = Übersicht_M._user;
         public Profil_Usercontrol()
         {
             InitializeComponent();
-            
+            UpdateUser();
+            Buchungsbestätigung.UpdateUser += Buchungsbestätigung_UpdateUser;
+           
+        }
+
+        private void Buchungsbestätigung_UpdateUser(object sender, EventArgs e)
+        {
+            UpdateUser();
+        }
+
+        private void UpdateUser()
+        {
             if (user != null)
             {
                 // Vorhandene Daten werden in die Textboxen eingeschrieben
@@ -151,7 +163,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
                 {
                     MessageBox.Show("Daten konnten nicht aktualisiert werden");
                 }
-               
+                OnComplete?.Invoke(this,null);
             }
         }
 

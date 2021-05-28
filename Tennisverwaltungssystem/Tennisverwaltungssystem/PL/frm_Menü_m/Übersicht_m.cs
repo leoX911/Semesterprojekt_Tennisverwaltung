@@ -26,7 +26,7 @@ namespace Tennisverwaltungssystem
             _user = providedUser;
             InitializeComponent();
             PrepareLogin();
-
+          
 
 
         }
@@ -68,7 +68,7 @@ namespace Tennisverwaltungssystem
         }
         private void PrepareLogin()
         {
-
+            profil_Usercontrol1.OnComplete += Profil_Usercontrol1_OnComplete;
             RoundUpPicBox();
             UpdateUser();
           
@@ -77,6 +77,12 @@ namespace Tennisverwaltungssystem
             überischt_UserControl1.BringToFront();
             btn_navbar_menu.ForeColor = Color.FromArgb(155, 185, 205);
         }
+
+        private void Profil_Usercontrol1_OnComplete(object sender, EventArgs e)
+        {
+            UpdateUser();
+        }
+
         public Übersicht_M() : this(_user)
         {
             InitializeComponent();
