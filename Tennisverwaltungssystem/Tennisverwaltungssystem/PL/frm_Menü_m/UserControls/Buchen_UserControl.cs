@@ -367,7 +367,11 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
         private void Btn_prevDay_Click(object sender, EventArgs e)
         {
-            PrevDay();
+            if (currentdateTime>=DateTime.Now)
+            {
+                PrevDay();
+            }
+       
           
 
         }

@@ -51,6 +51,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
                 buchungsnummer=row.Cells[0].Value.ToString();
                 Buchungsdetails bd = new Buchungsdetails(buchungsnummer);
                 this.Controls.Add(bd);
+                bd.Visible = true;
                 bd.BringToFront();
 
 

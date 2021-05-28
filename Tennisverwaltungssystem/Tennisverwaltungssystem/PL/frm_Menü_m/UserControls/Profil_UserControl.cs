@@ -49,98 +49,11 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
                 tbx_Ort.Text = user.Ort;
             }
         }
-        #region Checknames
-        public bool CheckFormatSpace()
-        {
-            if (tbx_Passwort.Text != "" && tbx_Vorname.Text != "" && tbx_Nachname.Text != "")
-            {
-
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Bitte alle Pflichtfelder ausfüllen!");
-                return false;
-            }
-        }
-
-      
-        private bool CheckPassword()
-        {
-            string passwort;
-            passwort = tbx_Passwort.Text;
-            if (passwort.Length >= 8 && !passwort.Contains(" "))
-            {
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Passwort muss mindestens 8. Zeichen lang sein\nDarf keine Leerzeichen beeinhalten.");
-                return false;
-            }
-
-        }
-        private bool CheckPostleitzahl()
-        {
-            string postleitzahl;
-            postleitzahl = tbx_PLZ.Text;
-
-            if (postleitzahl.Length == 4 && postleitzahl.All(char.IsDigit))
-            {
-                return true;
-            }
-            else
-            {
-                if (postleitzahl == "")
-                {
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("Das ist keine Österreichische Postleitzahl!");
-                    return false;
-                }
-                
-            }
-
-        }
-        private bool CheckNames(string name)
-        {
-            bool query = name.All(char.IsLetter) && !name.Contains(" ");
-            return query;
-        }
-        private bool CheckPhoneNumber()
-        {
-            return true;
-        }
-
-        private bool CheckFormatVorname_Nachname()
-        {
-            string vorname, nachname;
-            vorname = tbx_Vorname.Text;
-            nachname = tbx_Nachname.Text;
-            if (CheckNames(vorname) && CheckNames(nachname))
-            {
-
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Der Vor- oder Nachname hat das falsche Format!\nNur Buchstaben angeben und keine Leerzeichen!");
-                return false;
-
-            }
-
-        }
-        //private bool CheckTelAndStreet()
-        //{
-            
-
-        //}
-        #endregion 
+     
         private void Ändern_Click(object sender, EventArgs e)
         {
-            if (CheckFormatVorname_Nachname() && CheckFormatSpace() && CheckPostleitzahl() && CheckPassword()&&CheckPhoneNumber()||user.isAdmin==1)
+            if (Checkdata.CheckFormatVorname_Nachname(tbx_Vorname,tbx_Nachname) && Checkdata.CheckFormatSpaceLogin(tbx_Passwort,tbx_Vorname,tbx_Nachname)
+                && Checkdata.CheckPostleitzahl(tbx_PLZ) && Checkdata.CheckPassword(tbx_Passwort)&&Checkdata.CheckPhoneNumber()||user.isAdmin==1)
             {
                 
 

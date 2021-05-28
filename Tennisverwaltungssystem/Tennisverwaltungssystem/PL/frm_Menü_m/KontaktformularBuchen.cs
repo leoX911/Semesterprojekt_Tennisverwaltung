@@ -113,62 +113,18 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
             this.Hide();
            
         }
-        #region Checknames
-        public bool CheckFormatSpace()
-        {
-            if (tbx_ort.Text != "" && tbx_plz.Text != "" && tbx_TelefonK.Text != "" && tbx_StraßeK.Text != "")
-            {
-
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Bitte alle Pflichtfelder ausfüllen!");
-                return false;
-            }
-        }
+       
 
 
        
-        private bool CheckPostleitzahl()
-        {
-            string postleitzahl;
-            postleitzahl = tbx_plz.Text;
-
-            if (postleitzahl.Length == 4 && postleitzahl.All(char.IsDigit))
-            {
-                return true;
-            }
-            else
-            {
-                if (postleitzahl == "")
-                {
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("Das ist keine Österreichische Postleitzahl!");
-                    return false;
-                }
-
-            }
-
-        }
+       
 
         
        
-        private bool CheckPhoneNumber()
-        {
-            return true;
-        }
-
        
-        //private bool CheckTelAndStreet()
-        //{
+       
+   
 
-
-        //}
-        #endregion
         private void Btn_BuchenK_Click(object sender, EventArgs e)
         {
             buchung = new Buchung()
@@ -194,7 +150,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
             }
             if (user.Straße=="" || user.Telefonummer==""|| user.Ort=="" || user.PLZ=="")
             {
-                if (CheckFormatSpace() && CheckPostleitzahl() && CheckPhoneNumber() || user.isAdmin == 1)
+                if (Checkdata.CheckFormatSpaceElse(tbx_ort,tbx_plz,tbx_TelefonK,tbx_StraßeK)&& Checkdata.CheckPostleitzahl(tbx_plz) && Checkdata.CheckPhoneNumber() || user.isAdmin == 1)
                 {
                     user.Straße = tbx_StraßeK.Text;
                     user.Telefonummer = tbx_TelefonK.Text;
@@ -206,7 +162,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
                     if (DAL.DAL_Profil.IsUserUpdated(user))
                     {
                         InsertBuchung();
-                        MessageBox.Show("Erfolgreich aktualisiert");
+                      
                     }
                     else
                     {

@@ -39,19 +39,7 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
             
             this.Hide();
         }
-        public bool CheckFormatSpace()
-        {
-            if(txtbox_email.Text != "" && txtbox_password.Text != "" && txtbox_vornamen.Text != "" && txtbox_nachnamen.Text != "")
-            {
-
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Die Eingabe ist fehlerhaft");
-                return false;
-            }
-        }
+       
 
         private static bool IsValidEmail(string testemail)
         {
@@ -68,21 +56,8 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
 
             throw new NotImplementedException();
         }
-        private bool CheckPassword()
-        {
-            string passwort;
-            passwort = txtbox_password.Text;
-            if (passwort.Length>=8 &&!passwort.Contains(" "))
-            {
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Passwort muss mindestens 8. Zeichen lang sein\nDarf keine Leerzeichen beeinhalten.");
-                return false;
-            }
-     
-        }
+       
+       
         private bool CheckFormatEMail()
         {
             string email;
@@ -99,23 +74,17 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
             }
            
         }
-        private bool CheckFormatVorname_Nachname()
+        private bool CheckSpaceEmail()
         {
-            string vorname,nachname;           
-            vorname = txtbox_vornamen.Text;
-            nachname= txtbox_nachnamen.Text;
-            if (CheckNames(vorname)&& CheckNames(nachname))
+            if (txtbox_email.Text!="")
             {
-                
                 return true;
             }
             else
             {
-                MessageBox.Show("Der Vor- oder Nachname hat das falsche Format!\nNur Buchstaben angeben und keine Leerzeichen!");
+                MessageBox.Show("Die Email darf nicht leer sein");
                 return false;
-                
             }
-           
         }
         private bool CheckNames(string name)
         {
@@ -125,7 +94,7 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
 
         private void Btn_registrieren_Click(object sender, EventArgs e)
         {
-            if (CheckFormatVorname_Nachname()&&CheckFormatSpace()&& CheckFormatEMail()&& CheckPassword())
+            if (CheckSpaceEmail()&&Checkdata.CheckFormatVorname_Nachname(txtbox_vornamen,txtbox_nachnamen)&&Checkdata.CheckFormatSpaceLogin(txtbox_password,txtbox_vornamen,txtbox_nachnamen)&& CheckFormatEMail()&&Checkdata.CheckPassword(txtbox_password))
             {
 
                 user1 = new User
