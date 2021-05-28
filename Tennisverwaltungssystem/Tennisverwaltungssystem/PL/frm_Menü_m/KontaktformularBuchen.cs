@@ -231,8 +231,8 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
             if (DAL.DAL_Buchen.IsInserted(buchung))
             {
                 Buchungsbestätigung buchungsbestätigung = new Buchungsbestätigung(buchung);
-                buchungsbestätigung.Show();
-                this.Hide();
+                buchungsbestätigung.ShowDialog();
+                this.Close();
             }
             else
             {

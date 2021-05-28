@@ -57,11 +57,11 @@ namespace Tennisverwaltungssystem.frm_login
                         {
                            
                            Übersicht_M überischtform = new Übersicht_M(user1);
-                            
-                          überischtform.Show();
-                              
+                            this.Hide();
+                            überischtform.Show();
+
+                            GC.Collect();
                            
-                          this.Hide();
 
                         }
 
@@ -69,10 +69,10 @@ namespace Tennisverwaltungssystem.frm_login
                     else
                     {
                         Übersicht_M überischtform = new Übersicht_M(user1);
-                        
-                        überischtform.Show();
-                        
                         this.Hide();
+                        überischtform.Show();
+
+                     
                     }
 
                 }

@@ -23,7 +23,7 @@ namespace Tennisverwaltungssystem.frm_Kontakt_Hilfe
         private void Btn_navbar_menu_Click(object sender, EventArgs e)
         {
             Übersicht_M überischtform = new Übersicht_M();
-            
+
             this.Hide();
             überischtform.Show();
             
@@ -32,7 +32,7 @@ namespace Tennisverwaltungssystem.frm_Kontakt_Hilfe
         private void Btn_navbar_konakt_Click(object sender, EventArgs e)
         {
             frm_Kontakt_ kontaktform = new frm_Kontakt_();
-            
+
             this.Hide();
             kontaktform.Show();
             
@@ -41,7 +41,7 @@ namespace Tennisverwaltungssystem.frm_Kontakt_Hilfe
         private void Btn_navbar_logout_Click(object sender, EventArgs e)
         {
             frm_login.Frm_login loginfrm = new frm_login.Frm_login();
-            
+
             this.Hide();
             loginfrm.Show();
             

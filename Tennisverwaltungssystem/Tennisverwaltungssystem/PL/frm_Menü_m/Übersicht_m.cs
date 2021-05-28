@@ -185,7 +185,7 @@ namespace Tennisverwaltungssystem
 
             frm_Kontakt_Hilfe.frm_Kontakt_ kontaktform = new frm_Kontakt_Hilfe.frm_Kontakt_();
             
-                this.Hide();
+                this.Close();
                 kontaktform.Show();
             
 

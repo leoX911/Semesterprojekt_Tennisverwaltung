@@ -407,9 +407,9 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
           
             KontaktformularBuchen kontaktfrm = new KontaktformularBuchen(ClickedPanels);
             
-            kontaktfrm.Show();
-           
-            
+            kontaktfrm.ShowDialog();
+            DisplayCurrentDate();
+
 
 
 

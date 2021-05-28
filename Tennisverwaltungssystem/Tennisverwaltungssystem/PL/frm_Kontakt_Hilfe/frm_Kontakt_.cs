@@ -24,8 +24,9 @@ namespace Tennisverwaltungssystem.frm_Kontakt_Hilfe
         {
             btn_navbar_menu.ForeColor = Color.FromArgb(155, 185, 205);
             Übersicht_M überischtform = new Übersicht_M();
-            überischtform.Show();
             this.Hide();
+            überischtform.Show();
+         
           
 
 
