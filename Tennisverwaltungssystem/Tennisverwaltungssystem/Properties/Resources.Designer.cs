@@ -153,6 +153,16 @@ namespace Tennisverwaltungssystem.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hakbregenz_logo_09ed6f1b {
+            get {
+                object obj = ResourceManager.GetObject("hakbregenz_logo.09ed6f1b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Head_Championship {
             get {
                 object obj = ResourceManager.GetObject("Head_Championship", resourceCulture);
@@ -373,6 +383,16 @@ namespace Tennisverwaltungssystem.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ru {
+            get {
+                object obj = ResourceManager.GetObject("ru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Schläger_EXT {
             get {
                 object obj = ResourceManager.GetObject("Schläger EXT", resourceCulture);
@@ -503,6 +523,16 @@ namespace Tennisverwaltungssystem.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2021_05_29_123449 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2021-05-29 123449", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tchard_logo {
             get {
                 object obj = ResourceManager.GetObject("tchard_logo", resourceCulture);
@@ -556,6 +586,16 @@ namespace Tennisverwaltungssystem.Properties {
         internal static System.Drawing.Bitmap upload4 {
             get {
                 object obj = ResourceManager.GetObject("upload4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2020_05_12_at_22_10_57 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2020-05-12 at 22.10.57", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

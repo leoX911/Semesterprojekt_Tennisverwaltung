@@ -32,7 +32,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
                 lbl_actualBuchungsnummer.Text = buchungsnummer;
                 lbl_Platznummer.Text = "Platznummer: " + b.Platznummer;
                 lbl_Zeitraum.Text = b.Datum.ToShortDateString();
-                lbl_zeitttt.Text = b.Anfangszeit+ " - " + b.Endzeit;
+                lbl_zeitttt.Text = b.Anfangszeit+ ":00 - " + b.Endzeit+":00";
             }
            
 

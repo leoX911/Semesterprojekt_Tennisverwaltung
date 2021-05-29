@@ -103,7 +103,7 @@
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Details";
+            this.Column4.HeaderText = "";
             this.Column4.Name = "Column4";
             this.Column4.Width = 115;
             // 

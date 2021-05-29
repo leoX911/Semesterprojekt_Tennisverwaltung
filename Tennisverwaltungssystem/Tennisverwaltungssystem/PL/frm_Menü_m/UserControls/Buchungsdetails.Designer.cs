@@ -43,10 +43,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Zeitraum = new System.Windows.Forms.Label();
             this.lbl_Platznummer = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbx_Tellnummer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_zeitttt = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +62,9 @@
             // 
             // tbx_Nachname
             // 
+            this.tbx_Nachname.BackColor = System.Drawing.Color.White;
             this.tbx_Nachname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_Nachname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbx_Nachname.Location = new System.Drawing.Point(189, 107);
             this.tbx_Nachname.Multiline = true;
             this.tbx_Nachname.Name = "tbx_Nachname";
@@ -72,7 +74,9 @@
             // 
             // tbx_Adresse
             // 
+            this.tbx_Adresse.BackColor = System.Drawing.Color.White;
             this.tbx_Adresse.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_Adresse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbx_Adresse.Location = new System.Drawing.Point(17, 165);
             this.tbx_Adresse.Multiline = true;
             this.tbx_Adresse.Name = "tbx_Adresse";
@@ -102,7 +106,9 @@
             // 
             // tbx_Email
             // 
+            this.tbx_Email.BackColor = System.Drawing.Color.White;
             this.tbx_Email.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbx_Email.Location = new System.Drawing.Point(17, 220);
             this.tbx_Email.Multiline = true;
             this.tbx_Email.Name = "tbx_Email";
@@ -124,7 +130,7 @@
             // btn_storno
             // 
             this.btn_storno.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_storno.Location = new System.Drawing.Point(468, 344);
+            this.btn_storno.Location = new System.Drawing.Point(483, 344);
             this.btn_storno.Name = "btn_storno";
             this.btn_storno.Size = new System.Drawing.Size(75, 23);
             this.btn_storno.TabIndex = 20;
@@ -133,7 +139,9 @@
             // 
             // tbx_Vorname
             // 
+            this.tbx_Vorname.BackColor = System.Drawing.Color.White;
             this.tbx_Vorname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_Vorname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbx_Vorname.Location = new System.Drawing.Point(17, 107);
             this.tbx_Vorname.Multiline = true;
             this.tbx_Vorname.Name = "tbx_Vorname";
@@ -155,6 +163,7 @@
             // 
             this.lbl_Buchungsnummer.AutoSize = true;
             this.lbl_Buchungsnummer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Buchungsnummer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbl_Buchungsnummer.Location = new System.Drawing.Point(14, 21);
             this.lbl_Buchungsnummer.Name = "lbl_Buchungsnummer";
             this.lbl_Buchungsnummer.Size = new System.Drawing.Size(106, 15);
@@ -183,7 +192,7 @@
             // 
             this.lbl_Zeitraum.AutoSize = true;
             this.lbl_Zeitraum.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Zeitraum.Location = new System.Drawing.Point(367, 54);
+            this.lbl_Zeitraum.Location = new System.Drawing.Point(350, 54);
             this.lbl_Zeitraum.Name = "lbl_Zeitraum";
             this.lbl_Zeitraum.Size = new System.Drawing.Size(107, 25);
             this.lbl_Zeitraum.TabIndex = 27;
@@ -199,19 +208,11 @@
             this.lbl_Platznummer.TabIndex = 28;
             this.lbl_Platznummer.Text = "Platznummer:  9";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Tennisverwaltungssystem.Properties.Resources.arnold;
-            this.pictureBox1.Location = new System.Drawing.Point(372, 119);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(171, 186);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // tbx_Tellnummer
             // 
+            this.tbx_Tellnummer.BackColor = System.Drawing.Color.White;
             this.tbx_Tellnummer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_Tellnummer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbx_Tellnummer.Location = new System.Drawing.Point(17, 278);
             this.tbx_Tellnummer.Multiline = true;
             this.tbx_Tellnummer.Name = "tbx_Tellnummer";
@@ -233,11 +234,21 @@
             // 
             this.lbl_zeitttt.AutoSize = true;
             this.lbl_zeitttt.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_zeitttt.Location = new System.Drawing.Point(473, 54);
+            this.lbl_zeitttt.Location = new System.Drawing.Point(459, 54);
             this.lbl_zeitttt.Name = "lbl_zeitttt";
             this.lbl_zeitttt.Size = new System.Drawing.Size(107, 25);
             this.lbl_zeitttt.TabIndex = 31;
             this.lbl_zeitttt.Text = "24.03.2021";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Tennisverwaltungssystem.Properties.Resources.Screenshot_2021_05_29_123449;
+            this.pictureBox1.Location = new System.Drawing.Point(349, 107);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(222, 197);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Buchungsdetails
             // 
