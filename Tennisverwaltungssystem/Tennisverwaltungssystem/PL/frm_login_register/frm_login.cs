@@ -21,6 +21,9 @@ namespace Tennisverwaltungssystem.frm_login
         public Frm_login()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+            MaximizeBox = false;
+            MinimizeBox = false;
             txtbox_Passwort.PasswordChar = '*';
             DAL.DAL_Main.CreateConnection();
             if (!DAL.DAL_Main.Connect()) return;
@@ -45,7 +48,7 @@ namespace Tennisverwaltungssystem.frm_login
 
                 if (DAL.DAL_Login.IsLogin(user1))
                 {
-                    if (user1.isAdmin == 1)
+                    if (user1.IsAdmin == 1)
                     {
                         DialogResult result = MessageBox.Show("Willst du dich als Admin anmelden", "Admin/Mitglied", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
@@ -53,27 +56,16 @@ namespace Tennisverwaltungssystem.frm_login
                         {
                             Close();
                         }
-                        else
-                        {
-                           
-                           Übersicht_M überischtform = new Übersicht_M(user1);
-                            this.Hide();
-                            überischtform.Show();
-
-                     
-                           
-
-                        }
-
-                    }
-                    else
-                    {
-                        Übersicht_M überischtform = new Übersicht_M(user1);
-                        this.Hide();
-                        überischtform.Show();
-
                      
                     }
+                  
+                    Übersicht_M überischtform = new Übersicht_M(user1);
+                    Hide();
+                    überischtform.ShowDialog();
+                    Close();
+
+
+                    
 
                 }
                 else
@@ -94,11 +86,15 @@ namespace Tennisverwaltungssystem.frm_login
 
         private void Lbl_BenutzerErstellen_Click(object sender, EventArgs e)
         {
-            Frm_register formregister = new Frm_register();
+         
+            Hide();
+            Hide();
+            using (Frm_register register = new Frm_register())
+            {
+                register.ShowDialog();
+
+            }
             
-           formregister.Show();
-            
-            this.Hide();
         }
     }
 }

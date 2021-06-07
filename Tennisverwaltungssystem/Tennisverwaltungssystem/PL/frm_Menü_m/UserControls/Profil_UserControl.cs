@@ -53,7 +53,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         private void Ändern_Click(object sender, EventArgs e)
         {
             if (Checkdata.CheckFormatVorname_Nachname(tbx_Vorname,tbx_Nachname) && Checkdata.CheckFormatSpaceLogin(tbx_Passwort,tbx_Vorname,tbx_Nachname)
-                && Checkdata.CheckPostleitzahl(tbx_PLZ) && Checkdata.CheckPassword(tbx_Passwort)&&Checkdata.CheckPhoneNumber()||user.isAdmin==1)
+                && Checkdata.CheckPostleitzahl(tbx_PLZ) && Checkdata.CheckPassword(tbx_Passwort)&&Checkdata.CheckPhoneNumber())
             {
                 
 

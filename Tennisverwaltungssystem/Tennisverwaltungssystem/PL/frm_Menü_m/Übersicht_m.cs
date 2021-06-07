@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tennisverwaltungssystem.BL;
-
+using Tennisverwaltungssystem.frm_Kontakt_Hilfe;
 
 namespace Tennisverwaltungssystem
 {
@@ -56,7 +56,7 @@ namespace Tennisverwaltungssystem
         {
             lbl_Username_m.Text = _user.Vorname + " " + _user.Nachname;
             pictureBox1.Image = LoadBase64(_user.ProfilCode);
-            if (_user.isAdmin == 1 && _user.isMitglied == 1)
+            if (_user.IsAdmin == 1 && _user.IsMitglied == 1)
 
             {
                 Membership_m.Text = "Admin";
@@ -68,6 +68,9 @@ namespace Tennisverwaltungssystem
         }
         private void PrepareLogin()
         {
+            StartPosition= FormStartPosition.CenterScreen;
+            MaximizeBox = false;
+            MinimizeBox = false;
             profil_Usercontrol1.OnComplete += Profil_Usercontrol1_OnComplete;
             RoundUpPicBox();
             UpdateUser();
@@ -189,34 +192,38 @@ namespace Tennisverwaltungssystem
         {
             btn_navbar_konakt.ForeColor = Color.FromArgb(155, 185, 205);
 
-            frm_Kontakt_Hilfe.frm_Kontakt_ kontaktform = new frm_Kontakt_Hilfe.frm_Kontakt_();
-            
-                this.Close();
-                kontaktform.Show();
-            
 
+            Hide();
+            using (frm_Kontakt_ kontaktform = new frm_Kontakt_())
+            {
+                kontaktform.ShowDialog();
 
-
-
+            }
         }
 
         private void Btn_navbar_hilfe_Click(object sender, EventArgs e)
         {
-            frm_Kontakt_Hilfe.frm_Hilfe hilfeform = new frm_Kontakt_Hilfe.frm_Hilfe();
+            Hide();
+            using (frm_Hilfe hilfeform = new frm_Hilfe())
+            {
+                hilfeform.ShowDialog();
+            }
+
             
-                this.Hide();
-                hilfeform.Show();
-            
+
+
+
 
         }
 
         private void Btn_navbar_logout_Click(object sender, EventArgs e)
         {
-            frm_login.Frm_login loginfrm = new frm_login.Frm_login();
-            
-            this.Hide();
-            loginfrm.Show();
-           
+          
+            using (frm_login.Frm_login loginfrm = new frm_login.Frm_login())
+            {
+                loginfrm.ShowDialog();
+            }
+
 
             btn_navbar_logout.ForeColor = Color.FromArgb(155, 185, 205);
         }

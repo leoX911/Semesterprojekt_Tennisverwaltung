@@ -16,12 +16,11 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
     public partial class KontaktformularBuchen : Form
     {
         Buchung buchung;
-      
-        int _anfangszeit;
-        int _endzeit;
-        List<Daypanel> _selectedpanels;
+        readonly int _anfangszeit;
+        readonly int _endzeit;
+        readonly List<Daypanel> _selectedpanels;
         Guid bookingid = Guid.NewGuid();
-        string bookingidAsString;
+        readonly string bookingidAsString;
 
         readonly User user = Übersicht_M._user;
         
@@ -30,6 +29,9 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
           
 
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+            MaximizeBox = false;
+            MinimizeBox = false;
             bookingidAsString = bookingid.ToString();
 
             _selectedpanels = SelectedPanels;
@@ -150,7 +152,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
             }
             if (user.Straße=="" || user.Telefonummer==""|| user.Ort=="" || user.PLZ=="")
             {
-                if (Checkdata.CheckFormatSpaceElse(tbx_ort,tbx_plz,tbx_TelefonK,tbx_StraßeK)&& Checkdata.CheckPostleitzahl(tbx_plz) && Checkdata.CheckPhoneNumber() || user.isAdmin == 1)
+                if (Checkdata.CheckFormatSpaceElse(tbx_ort,tbx_plz,tbx_TelefonK,tbx_StraßeK)&& Checkdata.CheckPostleitzahl(tbx_plz) && Checkdata.CheckPhoneNumber())
                 {
                     user.Straße = tbx_StraßeK.Text;
                     user.Telefonummer = tbx_TelefonK.Text;

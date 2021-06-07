@@ -17,18 +17,19 @@ namespace Tennisverwaltungssystem.frm_Kontakt_Hilfe
         public frm_Kontakt_()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+            MaximizeBox = false;
+            MinimizeBox = false;
             btn_navbar_konakt.ForeColor = Color.FromArgb(155, 185, 205);
         }
 
         private void Btn_navbar_menu_Click(object sender, EventArgs e)
         {
-            btn_navbar_menu.ForeColor = Color.FromArgb(155, 185, 205);
-            Übersicht_M überischtform = new Übersicht_M();
-            this.Hide();
-            überischtform.Show();
-         
-          
-
+            Hide();
+            using (Übersicht_M l = new Übersicht_M())
+            {
+                l.ShowDialog();
+            }
 
         }
 
@@ -39,18 +40,22 @@ namespace Tennisverwaltungssystem.frm_Kontakt_Hilfe
 
         private void Btn_navbar_hilfe_Click(object sender, EventArgs e)
         {
-           frm_Hilfe hilfeform = new frm_Hilfe();
-            this.Hide();
-            hilfeform.Show();
+            Hide();
+            using (frm_Hilfe hile = new frm_Hilfe())
+            {
+                hile.ShowDialog();
+
+            }
 
         }
 
         private void Btn_navbar_logout_Click(object sender, EventArgs e)
         {
-            
-            frm_login.Frm_login loginfrm = new frm_login.Frm_login();
-            this.Hide();
-            loginfrm.Show();
+            Hide();
+            using (frm_login.Frm_login loginfrm = new frm_login.Frm_login())
+            {
+                loginfrm.ShowDialog();
+            }
         }
 
         private void Btn_navbar_logout_Leave(object sender, EventArgs e)

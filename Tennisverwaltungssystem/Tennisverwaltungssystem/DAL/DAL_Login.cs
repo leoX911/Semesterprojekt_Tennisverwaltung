@@ -32,8 +32,8 @@ namespace Tennisverwaltungssystem.DAL
 
                             user2.Vorname = (string)reader["Vorname"];
                             user2.Nachname = (string)reader["Nachname"];
-                            user2.isMitglied = Convert.ToInt32(reader["isMitglied"]);
-                            user2.isAdmin = Convert.ToInt32(reader["isAdmin"]);
+                            user2.IsMitglied = Convert.ToInt32(reader["isMitglied"]);
+                            user2.IsAdmin = Convert.ToInt32(reader["isAdmin"]);
                             user2.Straße = Convert.ToString(reader["Straße"]);
                             user2.ProfilCode = Convert.ToString(reader["profilpicCode"]);
                             user2.Telefonummer = Convert.ToString(reader["Telefonnummer"]);
@@ -87,12 +87,14 @@ namespace Tennisverwaltungssystem.DAL
                     if (DAL_Main.CheckEmailExits(user1))
                     {
                         MessageBox.Show("Die E-Mail wird schon verwendet!");
+                        return false;
                     }
                     else
                     {
                         cmd.Parameters.Add(new MySqlParameter("email",
                       MySqlDbType.VarChar, 30)
                         { Value = user1.EMail });
+                   
                     }
 
 
@@ -102,11 +104,11 @@ namespace Tennisverwaltungssystem.DAL
 
                     cmd.Parameters.Add(new MySqlParameter("isadmin",
                      MySqlDbType.Int32, 30)
-                    { Value = user1.isAdmin });
+                    { Value = user1.IsAdmin });
 
                     cmd.Parameters.Add(new MySqlParameter("ismitglied",
                      MySqlDbType.Int32, 30)
-                    { Value = user1.isMitglied });
+                    { Value = user1.IsMitglied });
 
 
 

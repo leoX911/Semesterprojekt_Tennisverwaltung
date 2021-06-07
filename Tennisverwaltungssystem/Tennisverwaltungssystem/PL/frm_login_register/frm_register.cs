@@ -24,20 +24,25 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
         public Frm_register()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
             txtbox_password.PasswordChar = '*';
-         
-            
+            StartPosition = FormStartPosition.CenterScreen;
+            MaximizeBox = false;
+            MinimizeBox = false;
+
+
         }
 
   
 
         private void Lbl_zurückzumlogin_Click(object sender, EventArgs e)
         {
-            frm_login.Frm_login formlogin = new frm_login.Frm_login();
-            
-            formlogin.Show();
-            
-            this.Hide();
+
+            Hide();
+            using (frm_login.Frm_login loginfrm = new frm_login.Frm_login())
+            {
+                loginfrm.ShowDialog();
+            }
         }
        
 
@@ -86,11 +91,7 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
                 return false;
             }
         }
-        private bool CheckNames(string name)
-        {
-            bool query = name.All(char.IsLetter) && !name.Contains(" ");
-            return query;
-        }
+      
 
         private void Btn_registrieren_Click(object sender, EventArgs e)
         {
@@ -111,8 +112,8 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
                     Straße = "",
 
                     
-                    isAdmin = 0,
-                    isMitglied = 0
+                    IsAdmin = 0,
+                    IsMitglied = 0
                 };
                 //user1.Hausnummer = 0;
 
@@ -128,17 +129,15 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
 
                 if (DAL.DAL_Login.IsRegistered(user1))
                 {
-                    MessageBox.Show("Eingabe erfolgreich");
-                    frm_login.Frm_login formlogin = new frm_login.Frm_login();
-                    
-                    formlogin.Show();
-                    
-                    this.Hide();
+                    Übersicht_M überischtform = new Übersicht_M(user1);
+                    Hide();
+                    überischtform.ShowDialog();
+                    Close();
 
                 }
                 else
                 {
-                    MessageBox.Show("Eingabe fehlgeschlagen");
+                    MessageBox.Show("Bitte erneut versuchen!");
                 }
                 
             }
