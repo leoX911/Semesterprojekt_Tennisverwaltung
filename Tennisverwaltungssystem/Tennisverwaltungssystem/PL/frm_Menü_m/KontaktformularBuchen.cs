@@ -144,11 +144,11 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
             };
             if (rdb_Mitglied.Checked)
             {
-                buchung.isMitglied = 1;
+                buchung.IsMitglied = 1;
             }
             else
             {
-                buchung.isMitglied = 0;
+                buchung.IsMitglied = 0;
             }
             if (user.Straße=="" || user.Telefonummer==""|| user.Ort=="" || user.PLZ=="")
             {
@@ -161,7 +161,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m
 
 
 
-                    if (DAL.DAL_Profil.IsUserUpdated(user))
+                    if (DAL.DAL_Profil.UpdateUser(user))
                     {
                         InsertBuchung();
                       

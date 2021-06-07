@@ -12,10 +12,10 @@ namespace Tennisverwaltungssystem.DAL
 {
     public static  class DAL_Login
     {
-       
-       
-        
-      
+
+
+
+        // TODO Warum werden die Daten im Parameter überschrieben?
         public static bool IsLogin(User user2)
         {
             

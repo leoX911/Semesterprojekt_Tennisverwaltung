@@ -68,7 +68,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
 
                 user.Telefonummer = tbx_Telefonnummer.Text;
 
-                if (DAL.DAL_Profil.IsUserUpdated(user))
+                if (DAL.DAL_Profil.UpdateUser(user))
                 {
                     MessageBox.Show("Erfolgreich aktualisiert");
                 }
@@ -108,10 +108,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
             
         }
 
-        private void Tbx_Straße_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 
 

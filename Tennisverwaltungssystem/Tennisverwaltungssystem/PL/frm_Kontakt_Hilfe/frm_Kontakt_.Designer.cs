@@ -112,7 +112,7 @@
             this.btn_navbar_menu.Text = "MENÜ";
             this.btn_navbar_menu.UseVisualStyleBackColor = true;
             this.btn_navbar_menu.Click += new System.EventHandler(this.Btn_navbar_menu_Click);
-            this.btn_navbar_menu.Leave += new System.EventHandler(this.Btn_navbar_menu_Leave);
+           
             // 
             // btn_navbar_konakt
             // 
@@ -133,7 +133,7 @@
             this.btn_navbar_konakt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_navbar_konakt.UseVisualStyleBackColor = true;
             this.btn_navbar_konakt.Click += new System.EventHandler(this.Btn_navbar_konakt_Click);
-            this.btn_navbar_konakt.Leave += new System.EventHandler(this.Btn_navbar_konakt_Leave);
+           
             // 
             // btn_navbar_hilfe
             // 
@@ -153,7 +153,7 @@
             this.btn_navbar_hilfe.Text = "HILFE";
             this.btn_navbar_hilfe.UseVisualStyleBackColor = true;
             this.btn_navbar_hilfe.Click += new System.EventHandler(this.Btn_navbar_hilfe_Click);
-            this.btn_navbar_hilfe.Leave += new System.EventHandler(this.Btn_navbar_hilfe_Leave);
+        
             // 
             // btn_navbar_logout
             // 
@@ -174,7 +174,7 @@
             this.btn_navbar_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_navbar_logout.UseVisualStyleBackColor = true;
             this.btn_navbar_logout.Click += new System.EventHandler(this.Btn_navbar_logout_Click);
-            this.btn_navbar_logout.Leave += new System.EventHandler(this.Btn_navbar_logout_Leave);
+         
             // 
             // pic_TCHard_Logo
             // 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+// MACO: Das hier ist ein Steuerelement für die Benutzeroberfläche und gehört somit in den Presentation Layer!
 namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
 {
     public class Daypanel: FlowLayoutPanel

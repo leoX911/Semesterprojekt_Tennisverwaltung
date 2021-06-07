@@ -48,14 +48,6 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
             
         }
 
-        private void Buchungsdetails_VisibleChanged(object sender, EventArgs e)
-        {
-           
-    }
-
-        private void Buchungsdetails_Load(object sender, EventArgs e)
-        {
-
-        }
+   
     }
 }

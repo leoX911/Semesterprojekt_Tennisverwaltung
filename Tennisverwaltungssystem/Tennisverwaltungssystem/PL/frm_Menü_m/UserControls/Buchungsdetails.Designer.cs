@@ -275,8 +275,7 @@
             this.Controls.Add(this.lbl_Vorname);
             this.Name = "Buchungsdetails";
             this.Size = new System.Drawing.Size(583, 385);
-            this.Load += new System.EventHandler(this.Buchungsdetails_Load);
-            this.VisibleChanged += new System.EventHandler(this.Buchungsdetails_VisibleChanged);
+           
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -25,18 +25,15 @@ namespace Tennisverwaltungssystem.frm_login
             MaximizeBox = false;
             MinimizeBox = false;
             txtbox_Passwort.PasswordChar = '*';
+            // MACO: Was nützt euch dieses Return noch? Die Methode ist danach eh vorbei.
             DAL.DAL_Main.CreateConnection();
             if (!DAL.DAL_Main.Connect()) return;
 
-            //login1.BringToFront();
-            //register1.Hide();
         }
 
         private void Btn_login_Click(object sender, EventArgs e)
         {
-            //zewas do war der Patrick
-            //zewas i ibin leo
-
+       
             if (txtbox_EMail.Text != "" || txtbox_Passwort.Text != "")
             {
                 User user1 = new User()

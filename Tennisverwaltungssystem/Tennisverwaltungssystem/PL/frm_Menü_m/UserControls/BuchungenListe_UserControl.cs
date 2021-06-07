@@ -36,7 +36,7 @@ namespace Tennisverwaltungssystem.PL.frm_Menü_m.UserControls
         {
             if (_user != null)
             {
-                foreach (var item in DAL.DAL_Buchen.GetData(_user))
+                foreach (var item in DAL.DAL_Buchen.ReadBooking(_user))
                 {
                     dataGridView1.Rows.Add(item.Buchungsnummer, item.Erstelldatum.ToShortDateString(), item.Datum.ToShortDateString(), "...");
                 }

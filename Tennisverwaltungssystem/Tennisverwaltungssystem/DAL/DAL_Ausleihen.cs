@@ -9,7 +9,7 @@ using Tennisverwaltungssystem.BL;
 
 namespace Tennisverwaltungssystem.DAL
 {
-    class DAL_Ausleihen
+    public static class DAL_Ausleihen
     {
       
         public static bool IsAvaiable(Schläger schläger)

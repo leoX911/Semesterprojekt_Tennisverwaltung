@@ -172,8 +172,7 @@
             this.tbx_Straße.Name = "tbx_Straße";
             this.tbx_Straße.Size = new System.Drawing.Size(326, 27);
             this.tbx_Straße.TabIndex = 2;
-            this.tbx_Straße.TextChanged += new System.EventHandler(this.Tbx_Straße_TextChanged);
-            // 
+           
             // tbx_Nachname
             // 
             this.tbx_Nachname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -9,11 +9,13 @@ using Tennisverwaltungssystem.BL;
 
 namespace Tennisverwaltungssystem.DAL
 {
-    class DAL_Main
+    public static class DAL_Main
     {
         public static MySqlConnection conn;
         private static string server, database, un, password;
         static string connString;
+        // MACO: Warum wird diese Methode öfter als ein Mal aufgerufen? Würde es nicht reichen, das einfach ein Mal beim
+        // Start des Programmes zu machen und fertig?
         public static void CreateConnection()
         {
             server = "localhost";
@@ -32,7 +34,7 @@ namespace Tennisverwaltungssystem.DAL
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               
                 return false;
 
             }
@@ -45,11 +47,15 @@ namespace Tennisverwaltungssystem.DAL
                 {
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
+                       
                         if (reader.Read())
                         {
+                            // MACO: Die nächsten zwei Zeilen passieren sowohl im if als auch im else (= auf jeden Fall).
+                            // -> vor oder nach die if-Anweisung verschieben, dann müsst ihr sie nicht doppelt haben. (**)
                             reader.Close();
                             conn.Close();
                             return true;
+                         
                         }
                         else
                         {
@@ -114,9 +120,10 @@ namespace Tennisverwaltungssystem.DAL
             }
             catch (Exception ex)
             {
+               
                 MessageBox.Show("Serververbindung fehlgeschlagen!");
                 MessageBox.Show(ex.Message);
-                throw new Exception("Was mahsch du??");
+                return false;
             
 
             }

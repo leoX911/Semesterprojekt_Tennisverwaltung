@@ -58,24 +58,6 @@ namespace Tennisverwaltungssystem.frm_Kontakt_Hilfe
             }
         }
 
-        private void Btn_navbar_logout_Leave(object sender, EventArgs e)
-        {
-            btn_navbar_logout.ForeColor = Color.FromArgb(64, 64, 64); 
-        }
-
-        private void Btn_navbar_hilfe_Leave(object sender, EventArgs e)
-        {
-            btn_navbar_hilfe.ForeColor = Color.FromArgb(64, 64, 64);
-        }
-
-        private void Btn_navbar_konakt_Leave(object sender, EventArgs e)
-        {
-            btn_navbar_konakt.ForeColor = Color.FromArgb(64, 64, 64);
-        }
-
-        private void Btn_navbar_menu_Leave(object sender, EventArgs e)
-        {
-            btn_navbar_menu.ForeColor = Color.FromArgb(64, 64, 64);
-        }
+    
     }
 }

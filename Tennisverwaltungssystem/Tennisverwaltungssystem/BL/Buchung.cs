@@ -15,7 +15,7 @@ namespace Tennisverwaltungssystem.BL
         public int Anfangszeit { get; set; }
         public int Endzeit { get; set; }
         public DateTime Datum { get; set; }
-        public int isMitglied { get; set; }
+        public int IsMitglied { get; set; }
         public int AnzahlPersonen { get; set; }
 
         public DateTime Erstelldatum { get; set; }

@@ -9,12 +9,14 @@ using Tennisverwaltungssystem.BL;
 
 namespace Tennisverwaltungssystem.DAL
 {
-    class DAL_Profil
+    public static class DAL_Profil
     {
-      
 
+        // MACO: Hier ist die Benennung etwas irreführend, denn die Hauptaufgabe dieser Methode ist ja schon den Benutzer
+        // zu aktualisieren. Sie gibt halt dann noch zurück, ob das geklappt hat oder nicht. Daher würde ich die Methode
+        // eher "UpdateUser" oder Ähnliches nennen.
 
-        public static bool IsUserUpdated(User user)
+        public static bool UpdateUser(User user)
         {
            
             string query = $"UPDATE user SET Vorname=?vorname, Nachname=?nachname, Passwort=?passwort, Telefonnummer=?telefonnummer, Straße=?straße, Ort=?ort, Postleitzahl=?plz WHERE (Email='{user.EMail}')";

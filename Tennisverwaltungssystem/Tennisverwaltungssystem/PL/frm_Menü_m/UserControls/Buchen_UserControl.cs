@@ -453,9 +453,6 @@ namespace Tennisverwaltungssystem.frm_Menü_m.UserControls
 
         }
 
-        private void BuchungenListe_UserControl1_Load(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

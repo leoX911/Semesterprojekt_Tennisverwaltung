@@ -23,8 +23,9 @@ namespace Tennisverwaltungssystem.DAL
             return DAL.DAL_Main.ReadData(query);
         }
 
-       
 
+        // MACO: Es sollte vom Programm sichergestellt werden, dass die Buchungsnummer eindeutig ist. Werft mal einen Blick
+        // auf die GUID-Klasse!
         public static bool IsBookingNumberUsed(string bookingnumber)
         {
             string query = $"SELECT * FROM user_bucht_tennisplatz WHERE ID_Buchungsnummer={bookingnumber};";
@@ -78,7 +79,7 @@ namespace Tennisverwaltungssystem.DAL
 
                     cmd.Parameters.Add(new MySqlParameter("ismitglied",
                     MySqlDbType.Int32)
-                    { Value = buchung.isMitglied });
+                    { Value = buchung.IsMitglied });
 
                     cmd.Parameters.Add(new MySqlParameter("erstelldatum",
                    MySqlDbType.DateTime)
@@ -106,7 +107,7 @@ namespace Tennisverwaltungssystem.DAL
 
         }
 
-        public static List<Buchung> GetData(User user)
+        public static List<Buchung> ReadBooking(User user)
         {
             string query = $"SELECT * FROM user_bucht_tennisplatz WHERE User_idUser='{user.ID}'";
             List<Buchung> Buchungen = new List<Buchung>();
@@ -141,7 +142,9 @@ namespace Tennisverwaltungssystem.DAL
             }
             return Buchungen;
         }
-
+        // MACO: Der zur Buchung gehörende User sollte nicht übergeben und in die Buchung eingepflanzt, sondern einfach genau-
+        // so aus der DB ausgelesen werden (mittels zweitem Statement oder Join). Sonst habt ihr hier eine Methode, mit der
+        // potenziell falsche Userdaten mit einer Buchung kombiniert werden können -> nicht optimal!
         public static Buchung GetDataBuchung(string Buchungsnummer, User user)
         {
             Buchung buchung= new Buchung();

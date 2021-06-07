@@ -59,7 +59,7 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
                 return false;
             }
 
-            throw new NotImplementedException();
+        
         }
        
        
@@ -115,8 +115,7 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
                     IsAdmin = 0,
                     IsMitglied = 0
                 };
-                //user1.Hausnummer = 0;
-
+               
                 if (base64text == null)
                 {
                     base64text = base64nonProfil;
@@ -183,9 +182,6 @@ namespace Tennisverwaltungssystem.PL.frm_login_register
             base64text = null;
         }
 
-        private void Btn_uploadprofil_MouseHover(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }
